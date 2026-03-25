@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { ArrowRight, MapPin, Check, Camera, ScanLine, Search, Leaf, FileCheck, ClipboardList, Handshake, ShieldCheck } from "lucide-react";
 import { Hero } from "@/components/sections/hero";
 import { ValueProps } from "@/components/sections/value-props";
@@ -8,47 +9,140 @@ import { Container } from "@/components/layout/container";
 import { Button } from "@/components/ui/button";
 import { equipment } from "@/lib/data/equipment";
 
+export const metadata: Metadata = {
+  title: "Electric Construction Equipment Rental California",
+  description:
+    "Rent electric skid steers in California. Zero emissions, whisper quiet. DVBE certified for government contractors. Free pickup Salinas & Lodi.",
+  alternates: {
+    canonical: "https://frontline.rentals",
+  },
+};
+
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  name: "Frontline EV Rentals",
-  description:
-    "Electric construction equipment rentals for California contractors. DVBE certified.",
-  url: "https://frontline.rentals",
-  telephone: "(209) 470-6385",
-  email: "alex@frontline.rentals",
-  areaServed: {
-    "@type": "State",
-    name: "California",
-  },
-  hasOfferCatalog: {
-    "@type": "OfferCatalog",
-    name: "Electric Equipment Rentals",
-    itemListElement: [
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Product",
-          name: "FirstGreen Elise 1200",
-          description: "Wheeled Electric Skid Steer - Compact power for tight spaces",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://frontline.rentals/#business",
+      name: "Frontline Equipment Rentals",
+      alternateName: "Frontline EV Rentals",
+      description:
+        "Electric construction equipment rentals for California contractors. DVBE certified small business offering electric skid steers, LiDAR mapping, and project management services.",
+      url: "https://frontline.rentals",
+      telephone: "(209) 470-6385",
+      email: "alex@frontline.rentals",
+      image: "https://frontline.rentals/images/og-image.jpg",
+      logo: "https://frontline.rentals/images/logo.png",
+      priceRange: "$450-$525/day",
+      address: [
+        {
+          "@type": "PostalAddress",
+          addressLocality: "Salinas",
+          addressRegion: "CA",
+          addressCountry: "US",
         },
+        {
+          "@type": "PostalAddress",
+          addressLocality: "Lodi",
+          addressRegion: "CA",
+          addressCountry: "US",
+        },
+      ],
+      areaServed: {
+        "@type": "State",
+        name: "California",
+      },
+      knowsAbout: [
+        "Electric Skid Steer Rental",
+        "LiDAR Mapping",
+        "Drone Aerial Services",
+        "Project Management Consulting",
+        "DVBE Certification",
+      ],
+      hasCredential: [
+        {
+          "@type": "EducationalOccupationalCredential",
+          credentialCategory: "certification",
+          name: "DVBE Certified",
+          description: "Disabled Veteran Business Enterprise - California #2048632",
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          credentialCategory: "certification",
+          name: "Small Business - Micro",
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          credentialCategory: "license",
+          name: "FAA Part 107 Certified",
+          description: "Commercial drone operations license",
+        },
+      ],
+      makesOffer: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Electric Skid Steer Rental",
+            description: "Zero emission electric skid steers for construction sites",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "LiDAR Mapping & 3D Scanning",
+            description: "Professional drone-based LiDAR mapping and aerial documentation",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Project Management Consulting",
+            description: "Compliance, quality control, and project coordination services",
+          },
+        },
+      ],
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://frontline.rentals/#website",
+      url: "https://frontline.rentals",
+      name: "Frontline EV Rentals",
+      publisher: { "@id": "https://frontline.rentals/#business" },
+    },
+    {
+      "@type": "Product",
+      name: "FirstGreen Elise 1200 Electric Skid Steer",
+      description: "Wheeled electric skid steer - compact power for tight spaces. Zero emissions, full-day battery life.",
+      image: "https://frontline.rentals/images/elise-1200.jpg",
+      brand: { "@type": "Brand", name: "FirstGreen" },
+      offers: {
+        "@type": "Offer",
         price: "525",
         priceCurrency: "USD",
         unitText: "DAY",
+        availability: "https://schema.org/InStock",
+        priceValidUntil: "2026-12-31",
       },
-      {
+    },
+    {
+      "@type": "Product",
+      name: "FirstGreen CBL 1200 Electric Skid Steer",
+      description: "Wheeled electric skid steer - compact and maneuverable for any job site. Zero emissions, full-day battery life.",
+      image: "https://frontline.rentals/images/cbl-1200.jpg",
+      brand: { "@type": "Brand", name: "FirstGreen" },
+      offers: {
         "@type": "Offer",
-        itemOffered: {
-          "@type": "Product",
-          name: "FirstGreen CBL 1200",
-          description: "Wheeled Electric Skid Steer - Compact and maneuverable for any job site",
-        },
         price: "450",
         priceCurrency: "USD",
         unitText: "DAY",
+        availability: "https://schema.org/InStock",
+        priceValidUntil: "2026-12-31",
       },
-    ],
-  },
+    },
+  ],
 };
 
 export default function HomePage() {

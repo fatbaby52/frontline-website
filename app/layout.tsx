@@ -23,7 +23,11 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Electric Skid Steer Rentals | DVBE Certified | Frontline EV Rentals",
+  metadataBase: new URL("https://frontline.rentals"),
+  title: {
+    default: "Electric Skid Steer Rental California | Frontline",
+    template: "%s | Frontline EV Rentals",
+  },
   description:
     "Rent electric skid steers in California. Zero emissions, whisper quiet. DVBE certified for government contractors. Free pickup Salinas & Lodi.",
   keywords: [
@@ -31,14 +35,50 @@ export const metadata: Metadata = {
     "DVBE equipment rental",
     "California skid steer",
     "zero emission construction equipment",
+    "electric construction equipment",
+    "Salinas equipment rental",
+    "Lodi equipment rental",
   ],
+  authors: [{ name: "Frontline EV Rentals" }],
+  creator: "Frontline EV Rentals",
+  publisher: "Frontline EV Rentals",
   openGraph: {
-    title: "Electric Skid Steer Rentals | Frontline EV Rentals",
-    description: "Zero emissions. Full power. DVBE certified.",
+    title: "Electric Skid Steer Rental | Frontline EV Rentals",
+    description:
+      "Rent electric skid steers in California. Zero emissions, full power. DVBE certified for government contractors.",
     url: "https://frontline.rentals",
     siteName: "Frontline EV Rentals",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Frontline EV Rentals - Electric Construction Equipment",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Electric Skid Steer Rental | Frontline EV Rentals",
+    description:
+      "Rent electric skid steers in California. Zero emissions, full power. DVBE certified.",
+    images: ["/images/og-image.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "SjMBuuW3vklC-arT0XDj4Ec_DSLeY20WY09I_mnVGyU",
   },
 };
 

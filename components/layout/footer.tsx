@@ -16,18 +16,25 @@ const footerLinks = [
     ],
   },
   {
+    title: "Locations",
+    links: [
+      { name: "Salinas Rentals", href: "/salinas-rentals" },
+      { name: "Lodi Rentals", href: "/lodi-rentals" },
+      { name: "Statewide Delivery", href: "/contact" },
+    ],
+  },
+  {
     title: "Services",
     links: [
-      { name: "Equipment Rental", href: "/equipment" },
-      { name: "Drone Services", href: "/services/drone-lidar" },
+      { name: "Drone & LiDAR", href: "/services/drone-lidar" },
       { name: "Project Support", href: "/services/project-management" },
+      { name: "For Contractors", href: "/for-contractors" },
     ],
   },
   {
     title: "Company",
     links: [
       { name: "About", href: "/about" },
-      { name: "For Contractors", href: "/for-contractors" },
       { name: "FAQ", href: "/faq" },
       { name: "Contact", href: "/contact" },
     ],
@@ -39,7 +46,7 @@ export function Footer() {
     <footer className="bg-primary text-white">
       <Container>
         <div className="py-16 lg:py-20">
-          <div className="grid gap-12 lg:grid-cols-5 lg:gap-8">
+          <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-6 lg:gap-8">
             {/* Company info */}
             <div className="lg:col-span-2">
               <Image
