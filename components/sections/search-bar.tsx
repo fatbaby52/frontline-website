@@ -91,7 +91,7 @@ export function SearchBar({ onResponse }: SearchBarProps) {
       <Container>
         <div className="mx-auto max-w-3xl">
           {/* Search Input */}
-          <div className="rounded-2xl border border-border bg-white p-2 shadow-2xl shadow-primary/10">
+          <div className="animate-glow-pulse rounded-2xl border border-lime bg-white p-2 shadow-2xl shadow-primary/10">
             <form onSubmit={handleSubmit} className="flex gap-2">
               <div className="relative flex-1">
                 <input
