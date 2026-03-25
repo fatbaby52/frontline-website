@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { ArrowRight, MapPin, Check, Camera, ScanLine, Search, Leaf, FileCheck, ClipboardList, Handshake, ShieldCheck } from "lucide-react";
 import { Hero } from "@/components/sections/hero";
+import { SearchBar } from "@/components/sections/search-bar";
 import { ValueProps } from "@/components/sections/value-props";
 import { CtaBand } from "@/components/sections/cta-band";
 import { EquipmentCard } from "@/components/equipment/equipment-card";
@@ -161,6 +162,9 @@ export default function HomePage() {
         secondaryCta={{ label: "View Equipment", href: "/equipment" }}
         showBadges
       />
+
+      {/* Search Bar */}
+      <SearchBar />
 
       {/* Value Props */}
       <ValueProps />

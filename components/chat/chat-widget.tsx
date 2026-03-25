@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { MessageCircle, X, Send, Loader2 } from "lucide-react";
+import { MessageCircle, X, Send, Loader2, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface Message {
@@ -14,6 +14,9 @@ export function ChatWidget() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [showForm, setShowForm] = useState(false);
+  const [formData, setFormData] = useState({ name: "", email: "", phone: "" });
+  const [formSubmitted, setFormSubmitted] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -23,7 +26,7 @@ export function ChatWidget() {
 
   useEffect(() => {
     scrollToBottom();
-  }, [messages]);
+  }, [messages, showForm]);
 
   useEffect(() => {
     if (isOpen && inputRef.current) {
@@ -56,7 +59,11 @@ export function ChatWidget() {
         ...prev,
         { role: "assistant", content: data.message },
       ]);
-    } catch (error) {
+      // Show form after first assistant response
+      if (messages.length === 0) {
+        setShowForm(true);
+      }
+    } catch {
       setMessages((prev) => [
         ...prev,
         {
@@ -68,6 +75,13 @@ export function ChatWidget() {
     } finally {
       setIsLoading(false);
     }
+  };
+
+  const handleFormSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    // In a real implementation, this would send to your CRM/email service
+    setFormSubmitted(true);
+    setShowForm(false);
   };
 
   return (
@@ -166,6 +180,66 @@ export function ChatWidget() {
                   </div>
                 </div>
               )}
+
+              {/* Lead Capture Form */}
+              {showForm && !formSubmitted && !isLoading && (
+                <div className="rounded-xl bg-teal-light/50 p-4">
+                  <p className="mb-3 text-sm font-medium text-foreground">
+                    Want us to follow up?
+                  </p>
+                  <form onSubmit={handleFormSubmit} className="space-y-2">
+                    <input
+                      type="text"
+                      placeholder="Your name"
+                      value={formData.name}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      className="w-full rounded-lg border border-border bg-white px-3 py-2 text-sm outline-none focus:border-primary"
+                      required
+                    />
+                    <input
+                      type="email"
+                      placeholder="Email address"
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      className="w-full rounded-lg border border-border bg-white px-3 py-2 text-sm outline-none focus:border-primary"
+                      required
+                    />
+                    <input
+                      type="tel"
+                      placeholder="Phone (optional)"
+                      value={formData.phone}
+                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      className="w-full rounded-lg border border-border bg-white px-3 py-2 text-sm outline-none focus:border-primary"
+                    />
+                    <div className="flex gap-2 pt-1">
+                      <button
+                        type="submit"
+                        className="flex-1 rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-primary/90"
+                      >
+                        Send
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => setShowForm(false)}
+                        className="rounded-lg border border-border px-4 py-2 text-sm text-muted-foreground transition-colors hover:bg-muted"
+                      >
+                        Skip
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              )}
+
+              {/* Success Message */}
+              {formSubmitted && (
+                <div className="rounded-xl bg-lime/20 p-4">
+                  <div className="flex items-center gap-2 text-primary">
+                    <Sparkles className="h-4 w-4" />
+                    <span className="text-sm font-semibold">Thanks! We'll be in touch soon.</span>
+                  </div>
+                </div>
+              )}
+
               <div ref={messagesEndRef} />
             </div>
           )}
