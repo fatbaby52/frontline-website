@@ -103,6 +103,41 @@ export default function RootLayout({
         <main id="main-content" className="min-h-screen">{children}</main>
         <Footer />
         <ChatWidget />
+
+        {/* Hidden forms for Netlify Forms detection */}
+        <form name="chat-lead" data-netlify="true" netlify-honeypot="bot-field" hidden>
+          <input type="hidden" name="form-name" value="chat-lead" />
+          <input type="text" name="name" />
+          <input type="email" name="email" />
+          <input type="tel" name="phone" />
+          <input type="text" name="question" />
+          <input type="text" name="answer" />
+        </form>
+        <form name="search-lead" data-netlify="true" netlify-honeypot="bot-field" hidden>
+          <input type="hidden" name="form-name" value="search-lead" />
+          <input type="text" name="name" />
+          <input type="email" name="email" />
+          <input type="tel" name="phone" />
+          <input type="text" name="question" />
+          <input type="text" name="answer" />
+        </form>
+        <form name="quote-request" data-netlify="true" netlify-honeypot="bot-field" hidden>
+          <input type="hidden" name="form-name" value="quote-request" />
+          <input type="text" name="equipment" />
+          <input type="text" name="projectType" />
+          <input type="text" name="projectLocation" />
+          <input type="text" name="zipCode" />
+          <input type="text" name="startDate" />
+          <input type="text" name="duration" />
+          <input type="text" name="deliveryPreference" />
+          <input type="text" name="companyName" />
+          <input type="text" name="contactName" />
+          <input type="email" name="email" />
+          <input type="tel" name="phone" />
+          <input type="text" name="hearAboutUs" />
+          <textarea name="notes"></textarea>
+          <input type="checkbox" name="needDvbeDocs" />
+        </form>
       </body>
     </html>
   );

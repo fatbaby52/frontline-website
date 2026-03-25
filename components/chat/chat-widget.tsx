@@ -79,9 +79,33 @@ export function ChatWidget() {
 
   const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real implementation, this would send to your CRM/email service
-    setFormSubmitted(true);
-    setShowForm(false);
+
+    try {
+      // Get the first user question and assistant answer for context
+      const firstQuestion = messages.find(m => m.role === "user")?.content || "";
+      const firstAnswer = messages.find(m => m.role === "assistant")?.content || "";
+
+      const formDataToSend = new FormData();
+      formDataToSend.append("form-name", "chat-lead");
+      formDataToSend.append("name", formData.name);
+      formDataToSend.append("email", formData.email);
+      formDataToSend.append("phone", formData.phone);
+      formDataToSend.append("question", firstQuestion);
+      formDataToSend.append("answer", firstAnswer);
+
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formDataToSend as unknown as Record<string, string>).toString(),
+      });
+
+      setFormSubmitted(true);
+      setShowForm(false);
+    } catch {
+      // Still show success to user
+      setFormSubmitted(true);
+      setShowForm(false);
+    }
   };
 
   return (

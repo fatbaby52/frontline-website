@@ -137,10 +137,28 @@ export function QuoteWizard() {
     setSubmitError("");
 
     try {
-      const response = await fetch("/api/quote", {
+      // Submit to Netlify Forms
+      const formDataToSend = new FormData();
+      formDataToSend.append("form-name", "quote-request");
+      formDataToSend.append("equipment", data.equipment.join(", "));
+      formDataToSend.append("projectType", data.projectType);
+      formDataToSend.append("projectLocation", data.projectLocation);
+      formDataToSend.append("zipCode", data.zipCode);
+      formDataToSend.append("startDate", data.startDate);
+      formDataToSend.append("duration", data.duration);
+      formDataToSend.append("deliveryPreference", data.deliveryPreference);
+      formDataToSend.append("companyName", data.companyName || "");
+      formDataToSend.append("contactName", data.contactName);
+      formDataToSend.append("email", data.email);
+      formDataToSend.append("phone", data.phone);
+      formDataToSend.append("hearAboutUs", data.hearAboutUs || "");
+      formDataToSend.append("notes", data.notes || "");
+      formDataToSend.append("needDvbeDocs", data.needDvbeDocs ? "Yes" : "No");
+
+      const response = await fetch("/", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formDataToSend as unknown as Record<string, string>).toString(),
       });
 
       if (!response.ok) throw new Error("Failed to submit");
