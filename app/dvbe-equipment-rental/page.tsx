@@ -188,8 +188,37 @@ export default function DVBEEquipmentRentalPage() {
         </Container>
       </section>
 
-      {/* What is DVBE */}
+      {/* More Than a Certification Box */}
       <section className="py-16 lg:py-24">
+        <Container>
+          <div className="mx-auto max-w-3xl">
+            <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground lg:text-4xl">
+              More Than a Certification Box
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Frontline is a DVBE-certified electric equipment rental company, but the value we provide is not limited to certification status. Contractors use Frontline because we offer real equipment, real availability, and practical project support that can fit actual job needs.
+            </p>
+            <ul className="mt-6 space-y-3">
+              {[
+                "In-fleet electric skid steers based in Salinas and Lodi",
+                "Fast documentation support for bids",
+                "Other legitimate project services available when equipment is not the right fit",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-success" />
+                  <span className="text-foreground">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-6 text-muted-foreground">
+              That makes Frontline a practical DVBE vendor for contractors who need real scope, not just paperwork.
+            </p>
+          </div>
+        </Container>
+      </section>
+
+      {/* What is DVBE */}
+      <section className="bg-muted py-16 lg:py-24">
         <Container>
           <div className="mx-auto max-w-3xl">
             <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground lg:text-4xl">
@@ -442,7 +471,7 @@ export default function DVBEEquipmentRentalPage() {
             </div>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
               <Button asChild size="lg">
-                <Link href="/quote">Get a Quote</Link>
+                <Link href="/quote">Request Bid Documentation</Link>
               </Button>
               <Button asChild size="lg" variant="outline">
                 <Link href="/for-contractors">Contractor Information</Link>
@@ -452,13 +481,32 @@ export default function DVBEEquipmentRentalPage() {
         </Container>
       </section>
 
+      {/* Related Contractor Resources */}
+      <section className="bg-muted py-12">
+        <Container>
+          <div className="mx-auto max-w-3xl">
+            <h3 className="text-center font-heading text-lg font-bold text-foreground">
+              Related Contractor Resources
+            </h3>
+            <div className="mt-6 flex flex-wrap justify-center gap-4">
+              <Link href="/dvbe-participation" className="text-sm text-primary hover:underline">DVBE Participation Support</Link>
+              <Link href="/for-contractors" className="text-sm text-primary hover:underline">Contractor Information</Link>
+              <Link href="/zero-emission-equipment-california" className="text-sm text-primary hover:underline">Zero Emission Equipment CA</Link>
+              <Link href="/utility-public-works" className="text-sm text-primary hover:underline">Utility & Public Works</Link>
+              <Link href="/salinas-rentals" className="text-sm text-primary hover:underline">Salinas Rentals</Link>
+              <Link href="/lodi-rentals" className="text-sm text-primary hover:underline">Lodi Rentals</Link>
+            </div>
+          </div>
+        </Container>
+      </section>
+
       <CtaBand
         headline="Need DVBE Documentation for Your Bid?"
         subhead="We provide certification letters and compliance paperwork. Contact us for quick turnaround."
-        ctaLabel="Get a Quote"
-        ctaHref="/quote"
-        secondaryCtaLabel="Contact Us"
-        secondaryCtaHref="/contact"
+        ctaLabel="Contact for Bid Help"
+        ctaHref="/contact"
+        secondaryCtaLabel="Request Documentation"
+        secondaryCtaHref="/quote"
       />
     </>
   );

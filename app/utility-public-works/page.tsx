@@ -437,13 +437,32 @@ export default function UtilityPublicWorksPage() {
         </Container>
       </section>
 
+      {/* Related Contractor Resources */}
+      <section className="py-12">
+        <Container>
+          <div className="mx-auto max-w-3xl">
+            <h3 className="text-center font-heading text-lg font-bold text-foreground">
+              Related Contractor Resources
+            </h3>
+            <div className="mt-6 flex flex-wrap justify-center gap-4">
+              <Link href="/dvbe-equipment-rental" className="text-sm text-primary hover:underline">DVBE Equipment Rental</Link>
+              <Link href="/dvbe-participation" className="text-sm text-primary hover:underline">DVBE Participation Support</Link>
+              <Link href="/for-contractors" className="text-sm text-primary hover:underline">Contractor Information</Link>
+              <Link href="/zero-emission-equipment-california" className="text-sm text-primary hover:underline">Zero Emission Equipment CA</Link>
+              <Link href="/salinas-rentals" className="text-sm text-primary hover:underline">Salinas Rentals</Link>
+              <Link href="/lodi-rentals" className="text-sm text-primary hover:underline">Lodi Rentals</Link>
+            </div>
+          </div>
+        </Container>
+      </section>
+
       {/* Final CTA */}
       <CtaBand
         headline="Need Electric Equipment for a Compliance-Driven Job?"
         subhead="Tell us about your project. We will help you find the right machine."
-        ctaLabel="Check Availability"
-        ctaHref="/quote"
-        secondaryCtaLabel="Get a Quote"
+        ctaLabel="Ask About DVBE Support"
+        ctaHref="/dvbe-participation"
+        secondaryCtaLabel="Check Availability"
         secondaryCtaHref="/quote"
       />
     </>

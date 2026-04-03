@@ -170,6 +170,33 @@ export default function DVBEParticipationPage() {
         </Container>
       </section>
 
+      {/* A Practical DVBE Partner */}
+      <section className="bg-muted py-12 lg:py-16">
+        <Container>
+          <div className="mx-auto max-w-3xl">
+            <h2 className="font-heading text-2xl font-bold text-foreground lg:text-3xl">
+              A Practical DVBE Partner for California Projects
+            </h2>
+            <p className="mt-4 text-muted-foreground">
+              Frontline is not just a certified business on paper. We work with contractors and project teams to provide real, usable project services that can support DVBE participation requirements when there is a legitimate fit.
+            </p>
+            <ul className="mt-6 space-y-3">
+              {[
+                "Equipment rental tied to project operations",
+                "Drone imaging and documentation support",
+                "Practical field-oriented support services",
+                "Fast response for bid-stage conversations and documentation requests",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <Check className="mt-1 h-5 w-5 shrink-0 text-primary" />
+                  <span className="text-foreground">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Container>
+      </section>
+
       {/* How We Help */}
       <section className="bg-muted py-16 lg:py-24">
         <Container>
@@ -324,8 +351,38 @@ export default function DVBEParticipationPage() {
         </Container>
       </section>
 
-      {/* Contact Section */}
+      {/* How Contractors Typically Use Frontline */}
       <section className="py-16 lg:py-24">
+        <Container>
+          <div className="mx-auto max-w-3xl">
+            <h2 className="font-heading text-2xl font-bold text-foreground lg:text-3xl">
+              How Contractors Typically Use Frontline
+            </h2>
+            <p className="mt-4 text-muted-foreground">
+              Most contractors do not need a generic certification partner. They need a DVBE-certified vendor that can perform real work tied to the project.
+            </p>
+            <ul className="mt-6 space-y-3">
+              {[
+                "Listing Frontline as an equipment rental subcontractor",
+                "Using Frontline for drone imaging or project documentation",
+                "Engaging Frontline for practical support work where appropriate",
+                "Building DVBE participation around legitimate scope, not paperwork alone",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <Check className="mt-1 h-5 w-5 shrink-0 text-primary" />
+                  <span className="text-foreground">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-6 text-muted-foreground">
+              We work with contractors to identify services that make practical sense for the project, then support the bid process with the documentation needed to include Frontline properly.
+            </p>
+          </div>
+        </Container>
+      </section>
+
+      {/* Contact Section */}
+      <section className="bg-muted py-16 lg:py-24">
         <Container>
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground lg:text-4xl">
@@ -337,12 +394,12 @@ export default function DVBEParticipationPage() {
             <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <Button asChild size="lg">
                 <Link href="/contact">
-                  Contact Us
+                  Request Bid Documentation
                   <ArrowRight className="h-5 w-5" />
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline">
-                <Link href="/quote">Check Availability</Link>
+                <Link href="/quote">Ask About DVBE Support</Link>
               </Button>
             </div>
             <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
@@ -360,6 +417,25 @@ export default function DVBEParticipationPage() {
                 <Mail className="h-4 w-4" />
                 {COMPANY.email}
               </a>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Related Contractor Resources */}
+      <section className="py-12">
+        <Container>
+          <div className="mx-auto max-w-3xl">
+            <h3 className="text-center font-heading text-lg font-bold text-foreground">
+              Related Contractor Resources
+            </h3>
+            <div className="mt-6 flex flex-wrap justify-center gap-4">
+              <Link href="/dvbe-equipment-rental" className="text-sm text-primary hover:underline">DVBE Equipment Rental</Link>
+              <Link href="/for-contractors" className="text-sm text-primary hover:underline">Contractor Information</Link>
+              <Link href="/zero-emission-equipment-california" className="text-sm text-primary hover:underline">Zero Emission Equipment CA</Link>
+              <Link href="/utility-public-works" className="text-sm text-primary hover:underline">Utility & Public Works</Link>
+              <Link href="/salinas-rentals" className="text-sm text-primary hover:underline">Salinas Rentals</Link>
+              <Link href="/lodi-rentals" className="text-sm text-primary hover:underline">Lodi Rentals</Link>
             </div>
           </div>
         </Container>

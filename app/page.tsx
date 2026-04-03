@@ -230,6 +230,16 @@ export default function HomePage() {
         </Container>
       </section>
 
+      {/* DVBE Partner Authority Line */}
+      <section className="bg-primary/5 py-4">
+        <Container>
+          <p className="text-center text-sm text-foreground">
+            <ShieldCheck className="mr-2 inline-block h-4 w-4 text-primary" />
+            Frontline works with contractors and project teams as a DVBE-certified partner, providing electric equipment and other real project services for California public work.
+          </p>
+        </Container>
+      </section>
+
       {/* Need a Machine Today? */}
       <section className="bg-primary py-12 lg:py-16">
         <Container>
@@ -656,7 +666,7 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* DVBE Participation Support */}
+      {/* DVBE Support for Contractors and Project Teams */}
       <section className="py-16 lg:py-24">
         <Container>
           <div className="mx-auto max-w-5xl">
@@ -666,76 +676,91 @@ export default function HomePage() {
                 DVBE Certified
               </div>
               <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground lg:text-4xl">
-                DVBE Participation Support
+                DVBE Support for Contractors and Project Teams
               </h2>
-              <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground">
-                Need to satisfy DVBE participation requirements on a California public project? We may be able to help.
-              </p>
             </div>
 
             <div className="mx-auto mt-8 max-w-3xl">
-              <p className="text-center text-muted-foreground">
-                Many California public projects require DVBE participation, often in the range of 3% to 5%. Frontline EV Rentals is a DVBE-certified business that may be able to support those participation goals through real project services, including equipment rentals, drone and site imaging, and practical project support.
+              <p className="text-muted-foreground">
+                Frontline EV Rentals works with general contractors, subcontractors, and project teams that need a DVBE-certified partner for a California public project. Our role is based on real project services, including electric equipment rentals, drone imaging, and practical project support where appropriate.
               </p>
+            </div>
+
+            <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {[
+                "General contractors on state and local public works projects",
+                "Subcontractors looking for a legitimate DVBE participation partner",
+                "Utility and infrastructure teams",
+                "Buyers and project managers who need a practical DVBE-certified vendor",
+              ].map((item) => (
+                <div key={item} className="flex items-start gap-3 rounded-lg border border-border bg-card p-4">
+                  <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                  <span className="text-sm text-foreground">{item}</span>
+                </div>
+              ))}
             </div>
 
             <div className="mt-12">
               <h3 className="mb-8 text-center font-heading text-xl font-bold text-foreground">
-                How We Can Support Your Project
+                Typical Ways Contractors Work With Frontline
               </h3>
-              <div className="grid gap-6 sm:grid-cols-3">
-                <div className="rounded-xl border border-border bg-card p-6">
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
-                    <Truck className="h-6 w-6 text-primary" />
-                  </div>
-                  <h4 className="font-heading text-lg font-bold text-foreground">
-                    Equipment Rentals
-                  </h4>
-                  <p className="mt-2 text-sm text-muted-foreground">
-                    Electric skid steers and related equipment for projects where zero-emission equipment is a fit.
-                  </p>
+              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                <div className="rounded-xl border border-border bg-card p-5">
+                  <Truck className="h-6 w-6 text-primary" />
+                  <p className="mt-3 text-sm font-medium text-foreground">Electric equipment rental for job site use</p>
                 </div>
-                <div className="rounded-xl border border-border bg-card p-6">
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
-                    <Camera className="h-6 w-6 text-primary" />
-                  </div>
-                  <h4 className="font-heading text-lg font-bold text-foreground">
-                    Drone and Site Imaging
-                  </h4>
-                  <p className="mt-2 text-sm text-muted-foreground">
-                    Aerial images and video for documentation, progress tracking, reporting, and project visuals.
-                  </p>
+                <div className="rounded-xl border border-border bg-card p-5">
+                  <Camera className="h-6 w-6 text-primary" />
+                  <p className="mt-3 text-sm font-medium text-foreground">Drone and site imaging for documentation and reporting</p>
                 </div>
-                <div className="rounded-xl border border-border bg-card p-6">
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
-                    <ClipboardList className="h-6 w-6 text-primary" />
-                  </div>
-                  <h4 className="font-heading text-lg font-bold text-foreground">
-                    Project Support
-                  </h4>
-                  <p className="mt-2 text-sm text-muted-foreground">
-                    Practical, field-oriented support services that help keep work organized and moving.
-                  </p>
+                <div className="rounded-xl border border-border bg-card p-5">
+                  <ClipboardList className="h-6 w-6 text-primary" />
+                  <p className="mt-3 text-sm font-medium text-foreground">Practical project support tied to real scope</p>
+                </div>
+                <div className="rounded-xl border border-border bg-card p-5">
+                  <ShieldCheck className="h-6 w-6 text-primary" />
+                  <p className="mt-3 text-sm font-medium text-foreground">DVBE-certified services aligned with actual project needs</p>
                 </div>
               </div>
             </div>
 
-            <div className="mx-auto mt-10 max-w-3xl rounded-xl border border-border bg-muted/50 p-6">
+            <div className="mx-auto mt-10 max-w-3xl">
               <p className="text-center text-muted-foreground">
-                If equipment rental is not the right fit for your project, we may still be able to support DVBE participation through other legitimate project services.
+                We work with contractors to provide DVBE-certified services that align with real project needs, whether through equipment rentals or other practical support services.
               </p>
-              <p className="mt-4 text-center text-sm text-muted-foreground">
-                Services are provided based on actual project needs. We do not offer pass-through participation.
+            </div>
+
+            <div className="mx-auto mt-6 max-w-3xl rounded-xl border border-border bg-muted/50 p-6">
+              <p className="text-center text-sm text-muted-foreground">
+                Frontline does not provide pass-through participation. Services are provided based on actual project needs.
               </p>
             </div>
 
             <div className="mt-10 text-center">
               <Button asChild size="lg">
                 <Link href="/dvbe-participation">
-                  Ask About DVBE Participation Options
+                  Ask About DVBE Support
                   <ArrowRight className="h-5 w-5" />
                 </Link>
               </Button>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Related Contractor Resources */}
+      <section className="py-12">
+        <Container>
+          <div className="mx-auto max-w-4xl">
+            <h3 className="text-center font-heading text-lg font-bold text-foreground">
+              Related Contractor Resources
+            </h3>
+            <div className="mt-6 flex flex-wrap justify-center gap-4">
+              <Link href="/dvbe-equipment-rental" className="text-sm text-primary hover:underline">DVBE Equipment Rental</Link>
+              <Link href="/dvbe-participation" className="text-sm text-primary hover:underline">DVBE Participation Support</Link>
+              <Link href="/for-contractors" className="text-sm text-primary hover:underline">Contractor Information</Link>
+              <Link href="/zero-emission-equipment-california" className="text-sm text-primary hover:underline">Zero Emission Equipment CA</Link>
+              <Link href="/utility-public-works" className="text-sm text-primary hover:underline">Utility & Public Works</Link>
             </div>
           </div>
         </Container>

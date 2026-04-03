@@ -289,22 +289,19 @@ export default function ZeroEmissionEquipmentCaliforniaPage() {
               </h2>
             </div>
             <p className="mt-4 text-muted-foreground">
-              Frontline EV Rentals is a DVBE-certified business that may be able to support participation requirements on California public projects.
+              Frontline EV Rentals is a DVBE-certified business that can support participation requirements on California public projects, depending on project needs. We do this through real project services, including equipment rentals and, where appropriate, other legitimate support services.
             </p>
             <p className="mt-4 text-muted-foreground">
               Many state-funded projects include DVBE participation goals, often in the range of 3% to 5%.
             </p>
             <p className="mt-4 text-muted-foreground">
-              Frontline may be able to support those requirements through equipment rentals and other legitimate project services.
-            </p>
-            <p className="mt-4 text-muted-foreground">
-              If equipment rental is not the right fit, we may still be able to support DVBE participation through services such as drone imaging or practical project support.
+              For contractors looking for a DVBE-certified vendor, Frontline can be a practical partner when zero-emission equipment or related support services fit the job.
             </p>
             <p className="mt-4 text-sm text-muted-foreground">
               Services are provided based on actual project needs. We do not offer pass-through participation.
             </p>
             <Button asChild className="mt-6">
-              <Link href="/dvbe-participation">Ask About DVBE Options</Link>
+              <Link href="/dvbe-participation">Ask About DVBE Support</Link>
             </Button>
           </div>
         </Container>
@@ -393,6 +390,25 @@ export default function ZeroEmissionEquipmentCaliforniaPage() {
         </Container>
       </section>
 
+      {/* Related Contractor Resources */}
+      <section className="py-12">
+        <Container>
+          <div className="mx-auto max-w-3xl">
+            <h3 className="text-center font-heading text-lg font-bold text-foreground">
+              Related Contractor Resources
+            </h3>
+            <div className="mt-6 flex flex-wrap justify-center gap-4">
+              <Link href="/dvbe-equipment-rental" className="text-sm text-primary hover:underline">DVBE Equipment Rental</Link>
+              <Link href="/dvbe-participation" className="text-sm text-primary hover:underline">DVBE Participation Support</Link>
+              <Link href="/for-contractors" className="text-sm text-primary hover:underline">Contractor Information</Link>
+              <Link href="/utility-public-works" className="text-sm text-primary hover:underline">Utility & Public Works</Link>
+              <Link href="/electric-skid-steer-salinas" className="text-sm text-primary hover:underline">Salinas Rentals</Link>
+              <Link href="/electric-skid-steer-lodi" className="text-sm text-primary hover:underline">Lodi Rentals</Link>
+            </div>
+          </div>
+        </Container>
+      </section>
+
       {/* Final CTA */}
       <section className="bg-primary py-12 lg:py-16">
         <Container>
@@ -411,7 +427,7 @@ export default function ZeroEmissionEquipmentCaliforniaPage() {
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10">
-                <Link href="/quote">Get a Quote</Link>
+                <Link href="/contact">Contact for Bid Help</Link>
               </Button>
             </div>
           </div>
