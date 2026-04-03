@@ -402,6 +402,11 @@ export default function ElectricSkidSteerSalinasPage() {
                 Lodi and San Joaquin County
               </Link>
             </p>
+            <p className="mt-2 text-muted-foreground">
+              <Link href="/zero-emission-equipment-california" className="font-medium text-primary hover:underline">
+                Zero Emission Equipment Rental in California
+              </Link>
+            </p>
           </div>
         </Container>
       </section>

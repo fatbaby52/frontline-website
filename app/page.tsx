@@ -647,6 +647,10 @@ export default function HomePage() {
               <Link href="/electric-skid-steer-lodi" className="text-primary hover:underline">
                 Electric Skid Steer Rental Lodi
               </Link>
+              <span className="text-muted-foreground">|</span>
+              <Link href="/zero-emission-equipment-california" className="text-primary hover:underline">
+                Zero Emission Equipment California
+              </Link>
             </div>
           </div>
         </Container>

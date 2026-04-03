@@ -4,60 +4,52 @@ import {
   ArrowRight,
   Check,
   Phone,
-  Truck,
-  Volume2,
+  MapPin,
   Zap,
   ShieldCheck,
-  MapPin,
 } from "lucide-react";
 import { Container } from "@/components/layout/container";
 import { Button } from "@/components/ui/button";
 import { COMPANY } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Electric Skid Steer Rental Lodi CA | Frontline EV Rentals",
+  title: "Zero Emission Equipment Rental California | Electric Skid Steers",
   description:
-    "Electric skid steer rental in Lodi, California. Zero-emission equipment for contractors, public works, and utility jobs. Delivery available.",
+    "Zero emission equipment rental in California. Electric skid steers for contractors, public works, and utility projects. DVBE-certified. Delivery available.",
   keywords: [
-    "electric skid steer rental Lodi",
-    "skid steer rental Lodi CA",
-    "zero emission equipment Lodi",
-    "electric construction equipment San Joaquin County",
-    "skid steer Lodi California",
+    "zero emission equipment rental California",
+    "electric skid steer rental California",
+    "zero emission construction equipment",
+    "electric equipment rental CA",
+    "DVBE equipment rental California",
   ],
   alternates: {
-    canonical: "https://frontline.rentals/electric-skid-steer-lodi",
+    canonical: "https://frontline.rentals/zero-emission-equipment-california",
   },
   openGraph: {
-    title: "Electric Skid Steer Rental Lodi CA | Frontline EV Rentals",
+    title: "Zero Emission Equipment Rental California | Frontline EV Rentals",
     description:
-      "Electric skid steer rental in Lodi, California. Zero-emission equipment for contractors, public works, and utility jobs.",
-    url: "https://frontline.rentals/electric-skid-steer-lodi",
+      "Zero emission equipment rental in California. Electric skid steers for contractors, public works, and utility projects.",
+    url: "https://frontline.rentals/zero-emission-equipment-california",
   },
 };
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Electric Skid Steer Rental in Lodi, California",
+  name: "Zero Emission Equipment Rental in California",
   description:
-    "Zero-emission electric skid steer rentals for contractors, public works, and utility jobs in Lodi and San Joaquin County.",
+    "Electric skid steer rentals for contractors, public works, and utility projects throughout California. DVBE-certified business.",
   provider: {
     "@type": "LocalBusiness",
     name: "Frontline EV Rentals",
     telephone: "(209) 470-6385",
     email: "alex@frontline.rentals",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Lodi",
-      addressRegion: "CA",
-      addressCountry: "US",
-    },
   },
-  areaServed: [
-    { "@type": "City", name: "Lodi" },
-    { "@type": "AdministrativeArea", name: "San Joaquin County" },
-  ],
+  areaServed: {
+    "@type": "State",
+    name: "California",
+  },
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "Electric Skid Steers",
@@ -84,38 +76,39 @@ const jsonLd = {
   },
 };
 
-const commonJobs = [
-  "Construction and site preparation",
-  "Utility and infrastructure work",
-  "Tree care and vegetation management",
-  "Public works projects",
-  "Urban and residential jobs",
-  "Jobs with emissions or noise restrictions",
+const modernJobSites = [
+  "Urban environments",
+  "Public-facing job sites",
+  "Utility and infrastructure projects",
+  "Areas with emissions or noise restrictions",
+  "Projects with environmental or regulatory considerations",
 ];
 
-const whyElectric = [
+const whereUseful = [
+  "Utility and PG&E-related work",
+  "Public works and municipal projects",
+  "School and campus construction",
+  "Hospital and healthcare environments",
+  "Residential and mixed-use developments",
+  "Indoor or enclosed work areas",
+  "Jobs with strict noise or emissions limits",
+];
+
+const whyMovingToElectric = [
   "Zero tailpipe emissions",
   "Lower noise levels",
-  "Access to more restrictive job sites",
-  "A cleaner option for modern projects",
+  "Better fit for restricted job sites",
+  "Reduced impact in public-facing environments",
+  "A practical option for compliance-driven projects",
 ];
 
-const whyNotTraditional = [
-  "Electric-focused fleet, not an afterthought",
-  "Equipment suited for compliance-driven jobs",
-  "Lower noise for urban and sensitive environments",
-  "DVBE-certified business",
-  "Local, flexible service from Salinas and Lodi",
+const serviceAreas = [
+  "Salinas and Monterey County",
+  "Lodi and San Joaquin County",
+  "Surrounding regions based on project needs",
 ];
 
-const builtForLodi = [
-  "Delivery available throughout Lodi and surrounding areas",
-  "Electric equipment suited for emissions-sensitive projects",
-  "Quiet operation for urban and public-facing work",
-  "DVBE-certified business for public contract participation",
-];
-
-export default function ElectricSkidSteerLodiPage() {
+export default function ZeroEmissionEquipmentCaliforniaPage() {
   return (
     <>
       <script
@@ -129,11 +122,11 @@ export default function ElectricSkidSteerLodiPage() {
         <Container className="relative">
           <div className="mx-auto max-w-3xl">
             <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-lime px-4 py-2 text-sm font-bold text-primary">
-              <MapPin className="h-4 w-4" />
-              Lodi, California
+              <Zap className="h-4 w-4" />
+              California Statewide
             </div>
             <h1 className="font-heading text-4xl font-bold tracking-tight text-white lg:text-5xl">
-              Electric Skid Steer Rental in Lodi, California
+              Zero Emission Equipment Rental in California
             </h1>
           </div>
         </Container>
@@ -144,18 +137,18 @@ export default function ElectricSkidSteerLodiPage() {
         <Container>
           <div className="mx-auto max-w-3xl">
             <p className="text-xl font-medium text-foreground">
-              Looking for electric skid steer rental in Lodi?
+              Looking for zero emission equipment rental in California?
             </p>
             <p className="mt-4 text-lg text-muted-foreground">
-              Frontline EV Rentals provides zero-emission skid steers for contractors, construction, and public projects throughout Lodi and San Joaquin County.
+              Frontline EV Rentals provides electric skid steers and related equipment for contractors, public works projects, and utility jobs across California.
             </p>
             <p className="mt-4 text-lg text-muted-foreground">
-              We are one of the few providers in the region focused specifically on electric equipment, with machines that are quiet, practical, and ready for real job site use.
+              We focus specifically on electric equipment that can be used in environments where diesel equipment creates noise, emissions, or compliance challenges.
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <Button asChild size="lg">
                 <Link href="/quote">
-                  Check Availability Today
+                  Check Availability
                   <ArrowRight className="h-5 w-5" />
                 </Link>
               </Button>
@@ -167,15 +160,21 @@ export default function ElectricSkidSteerLodiPage() {
         </Container>
       </section>
 
-      {/* Built for Lodi */}
+      {/* Electric Equipment for Modern Job Sites */}
       <section className="bg-muted py-12 lg:py-16">
         <Container>
           <div className="mx-auto max-w-3xl">
             <h2 className="font-heading text-2xl font-bold text-foreground lg:text-3xl">
-              Built for Lodi and San Joaquin County Job Sites
+              Electric Equipment for Modern Job Sites
             </h2>
+            <p className="mt-4 text-muted-foreground">
+              Across California, more projects are requiring or encouraging the use of low-emission or zero-emission equipment.
+            </p>
+            <p className="mt-4 text-muted-foreground">
+              Electric skid steers provide a practical solution for contractors working in:
+            </p>
             <ul className="mt-6 space-y-3">
-              {builtForLodi.map((item) => (
+              {modernJobSites.map((item) => (
                 <li key={item} className="flex items-start gap-3">
                   <Check className="mt-1 h-5 w-5 shrink-0 text-primary" />
                   <span className="text-foreground">{item}</span>
@@ -186,13 +185,41 @@ export default function ElectricSkidSteerLodiPage() {
         </Container>
       </section>
 
-      {/* Available Equipment */}
+      {/* Where Zero Emission Equipment Is Most Useful */}
       <section className="py-12 lg:py-16">
         <Container>
           <div className="mx-auto max-w-3xl">
             <h2 className="font-heading text-2xl font-bold text-foreground lg:text-3xl">
-              Available Electric Skid Steers
+              Where Zero Emission Equipment Is Most Useful
             </h2>
+            <p className="mt-4 text-muted-foreground">
+              Electric equipment is often a strong fit for:
+            </p>
+            <ul className="mt-6 space-y-3">
+              {whereUseful.map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <Check className="mt-1 h-5 w-5 shrink-0 text-primary" />
+                  <span className="text-foreground">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-6 text-muted-foreground">
+              If diesel equipment is restricted, impractical, or creates unnecessary complications, electric equipment is often the better option.
+            </p>
+          </div>
+        </Container>
+      </section>
+
+      {/* Available Electric Equipment */}
+      <section className="bg-muted py-12 lg:py-16">
+        <Container>
+          <div className="mx-auto max-w-3xl">
+            <h2 className="font-heading text-2xl font-bold text-foreground lg:text-3xl">
+              Available Electric Equipment
+            </h2>
+            <p className="mt-4 text-muted-foreground">
+              Frontline EV Rentals provides electric skid steers that are built for real job site use.
+            </p>
 
             <div className="mt-8 space-y-6">
               {/* Elise 1200 */}
@@ -206,9 +233,6 @@ export default function ElectricSkidSteerLodiPage() {
                 <p className="mt-4 text-lg font-semibold text-primary">
                   Starting at $525 per day
                 </p>
-                <Button asChild className="mt-4">
-                  <Link href="/quote">Check Availability</Link>
-                </Button>
               </div>
 
               {/* CBL 1000 */}
@@ -217,79 +241,33 @@ export default function ElectricSkidSteerLodiPage() {
                   CBL 1000
                 </h3>
                 <p className="mt-2 text-muted-foreground">
-                  Compact, maneuverable, and ideal for tighter access work.
+                  Compact and maneuverable, ideal for tighter access work.
                 </p>
                 <p className="mt-4 text-lg font-semibold text-primary">
                   Starting at $450 per day
                 </p>
-                <Button asChild className="mt-4">
-                  <Link href="/quote">Check Availability</Link>
-                </Button>
               </div>
             </div>
+
+            <Button asChild className="mt-8">
+              <Link href="/quote">Check Availability</Link>
+            </Button>
           </div>
         </Container>
       </section>
 
-      {/* Common Jobs */}
-      <section className="bg-muted py-12 lg:py-16">
-        <Container>
-          <div className="mx-auto max-w-3xl">
-            <h2 className="font-heading text-2xl font-bold text-foreground lg:text-3xl">
-              Common Jobs We Support in Lodi
-            </h2>
-            <p className="mt-4 text-muted-foreground">
-              Our electric skid steers are used across Lodi and San Joaquin County for:
-            </p>
-            <ul className="mt-6 space-y-3">
-              {commonJobs.map((job) => (
-                <li key={job} className="flex items-start gap-3">
-                  <Check className="mt-1 h-5 w-5 shrink-0 text-primary" />
-                  <span className="text-foreground">{job}</span>
-                </li>
-              ))}
-            </ul>
-            <p className="mt-6 text-muted-foreground">
-              If diesel equipment is too loud, restricted, or impractical, electric equipment is often the better option.
-            </p>
-          </div>
-        </Container>
-      </section>
-
-      {/* Why Electric Makes Sense */}
+      {/* Why Contractors Are Moving Toward Electric */}
       <section className="py-12 lg:py-16">
         <Container>
           <div className="mx-auto max-w-3xl">
             <h2 className="font-heading text-2xl font-bold text-foreground lg:text-3xl">
-              Why Electric Equipment Makes Sense Here
+              Why Contractors Are Moving Toward Electric Equipment
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Many jobs in Lodi involve residential and mixed-use areas, public-facing environments, and growing environmental considerations.
-            </p>
-            <p className="mt-4 text-muted-foreground">
-              Electric skid steers help solve these problems by offering:
+              Electric equipment is becoming more common for practical reasons, not just environmental ones.
             </p>
             <ul className="mt-6 space-y-3">
-              {whyElectric.map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <Check className="mt-1 h-5 w-5 shrink-0 text-primary" />
-                  <span className="text-foreground">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </Container>
-      </section>
-
-      {/* Why Not Traditional */}
-      <section className="bg-muted py-12 lg:py-16">
-        <Container>
-          <div className="mx-auto max-w-3xl">
-            <h2 className="font-heading text-2xl font-bold text-foreground lg:text-3xl">
-              Why Not a Traditional Rental Yard
-            </h2>
-            <ul className="mt-6 space-y-3">
-              {whyNotTraditional.map((item) => (
+              {whyMovingToElectric.map((item) => (
                 <li key={item} className="flex items-start gap-3">
                   <Check className="mt-1 h-5 w-5 shrink-0 text-primary" />
                   <span className="text-foreground">{item}</span>
@@ -301,23 +279,26 @@ export default function ElectricSkidSteerLodiPage() {
       </section>
 
       {/* DVBE Section */}
-      <section className="py-12 lg:py-16">
+      <section className="bg-muted py-12 lg:py-16">
         <Container>
           <div className="mx-auto max-w-3xl">
             <div className="flex items-center gap-2">
               <ShieldCheck className="h-6 w-6 text-primary" />
               <h2 className="font-heading text-2xl font-bold text-foreground lg:text-3xl">
-                DVBE Participation Support
+                DVBE-Certified Equipment Rental
               </h2>
             </div>
             <p className="mt-4 text-muted-foreground">
-              Many California public projects require DVBE participation, often in the range of 3% to 5%.
+              Frontline EV Rentals is a DVBE-certified business that may be able to support participation requirements on California public projects.
             </p>
             <p className="mt-4 text-muted-foreground">
-              Frontline EV Rentals is a DVBE-certified business that may be able to support those requirements through equipment rentals and other legitimate project services.
+              Many state-funded projects include DVBE participation goals, often in the range of 3% to 5%.
             </p>
             <p className="mt-4 text-muted-foreground">
-              If equipment rental is not the right fit for your project, we may still be able to support DVBE participation through other services such as drone imaging or practical project support.
+              Frontline may be able to support those requirements through equipment rentals and other legitimate project services.
+            </p>
+            <p className="mt-4 text-muted-foreground">
+              If equipment rental is not the right fit, we may still be able to support DVBE participation through services such as drone imaging or practical project support.
             </p>
             <p className="mt-4 text-sm text-muted-foreground">
               Services are provided based on actual project needs. We do not offer pass-through participation.
@@ -325,6 +306,52 @@ export default function ElectricSkidSteerLodiPage() {
             <Button asChild className="mt-6">
               <Link href="/dvbe-participation">Ask About DVBE Options</Link>
             </Button>
+          </div>
+        </Container>
+      </section>
+
+      {/* Service Areas */}
+      <section className="py-12 lg:py-16">
+        <Container>
+          <div className="mx-auto max-w-3xl">
+            <div className="flex items-center gap-2">
+              <MapPin className="h-6 w-6 text-primary" />
+              <h2 className="font-heading text-2xl font-bold text-foreground lg:text-3xl">
+                Service Areas
+              </h2>
+            </div>
+            <p className="mt-4 text-muted-foreground">
+              Frontline EV Rentals operates from Salinas and Lodi and serves contractors throughout California.
+            </p>
+            <p className="mt-4 text-muted-foreground">
+              Common service areas include:
+            </p>
+            <ul className="mt-6 space-y-3">
+              {serviceAreas.map((area) => (
+                <li key={area} className="flex items-start gap-3">
+                  <Check className="mt-1 h-5 w-5 shrink-0 text-primary" />
+                  <span className="text-foreground">{area}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-6 text-muted-foreground">
+              Contact us to confirm availability and delivery options for your location.
+            </p>
+
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+              <Button asChild variant="outline">
+                <Link href="/electric-skid-steer-salinas">
+                  Salinas Area
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </Button>
+              <Button asChild variant="outline">
+                <Link href="/electric-skid-steer-lodi">
+                  Lodi Area
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
           </div>
         </Container>
       </section>
@@ -339,23 +366,23 @@ export default function ElectricSkidSteerLodiPage() {
             <div className="mt-8 space-y-6">
               <div>
                 <h3 className="font-heading text-lg font-bold text-foreground">
-                  1. Tell us about your job
+                  1. Tell us about your project
                 </h3>
                 <p className="mt-2 text-muted-foreground">
-                  Let us know what you are working on and what you need.
+                  Share your job details and equipment needs.
                 </p>
               </div>
               <div>
                 <h3 className="font-heading text-lg font-bold text-foreground">
-                  2. We match the right machine
+                  2. We recommend the right equipment
                 </h3>
                 <p className="mt-2 text-muted-foreground">
-                  We recommend the best equipment and rental setup.
+                  We help match your job with the right machine and rental setup.
                 </p>
               </div>
               <div>
                 <h3 className="font-heading text-lg font-bold text-foreground">
-                  3. Pick up or schedule delivery
+                  3. Schedule pickup or delivery
                 </h3>
                 <p className="mt-2 text-muted-foreground">
                   Get your equipment where you need it, when you need it.
@@ -371,15 +398,15 @@ export default function ElectricSkidSteerLodiPage() {
         <Container>
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="font-heading text-2xl font-bold text-white lg:text-3xl">
-              Check Availability in Lodi Today
+              Check Availability
             </h2>
             <p className="mt-4 text-white/80">
-              If you need electric skid steer rental in Lodi or San Joaquin County, we can help you get the right machine quickly.
+              If you are looking for zero emission equipment rental in California, we can help you find the right solution for your project.
             </p>
             <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <Button asChild size="lg" className="bg-lime text-primary hover:bg-lime/90">
                 <Link href="/quote">
-                  Check Availability Today
+                  Check Availability
                   <ArrowRight className="h-5 w-5" />
                 </Link>
               </Button>
@@ -387,25 +414,6 @@ export default function ElectricSkidSteerLodiPage() {
                 <Link href="/quote">Get a Quote</Link>
               </Button>
             </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* Cross-link */}
-      <section className="py-8">
-        <Container>
-          <div className="mx-auto max-w-3xl text-center">
-            <p className="text-muted-foreground">
-              Also serving{" "}
-              <Link href="/electric-skid-steer-salinas" className="font-medium text-primary hover:underline">
-                Salinas and Monterey County
-              </Link>
-            </p>
-            <p className="mt-2 text-muted-foreground">
-              <Link href="/zero-emission-equipment-california" className="font-medium text-primary hover:underline">
-                Zero Emission Equipment Rental in California
-              </Link>
-            </p>
           </div>
         </Container>
       </section>

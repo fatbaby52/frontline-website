@@ -22,6 +22,7 @@ const footerLinks = [
       { name: "Lodi Rentals", href: "/lodi-rentals" },
       { name: "Skid Steer Rental Salinas", href: "/electric-skid-steer-salinas" },
       { name: "Skid Steer Rental Lodi", href: "/electric-skid-steer-lodi" },
+      { name: "Zero Emission Equipment CA", href: "/zero-emission-equipment-california" },
       { name: "Statewide Delivery", href: "/delivery" },
     ],
   },
