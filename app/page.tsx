@@ -638,6 +638,16 @@ export default function HomePage() {
                 </Link>
               </Button>
             </div>
+
+            <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm">
+              <Link href="/electric-skid-steer-salinas" className="text-primary hover:underline">
+                Electric Skid Steer Rental Salinas
+              </Link>
+              <span className="text-muted-foreground">|</span>
+              <Link href="/electric-skid-steer-lodi" className="text-primary hover:underline">
+                Electric Skid Steer Rental Lodi
+              </Link>
+            </div>
           </div>
         </Container>
       </section>
