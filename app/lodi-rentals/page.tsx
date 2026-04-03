@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { ArrowRight, MapPin, Check, Phone, Zap, Volume2, ShieldCheck, Truck } from "lucide-react";
+import { ArrowRight, MapPin, Check, Phone, Zap, Volume2, ShieldCheck, Truck, CheckCircle } from "lucide-react";
 import { Container } from "@/components/layout/container";
 import { EquipmentCard } from "@/components/equipment/equipment-card";
 import { CtaBand } from "@/components/sections/cta-band";
@@ -158,6 +158,68 @@ export default function LodiRentalsPage() {
                 <Phone className="h-5 w-5" />
                 {COMPANY.phone}
               </a>
+            </div>
+            <p className="mt-4 text-sm text-white/80">
+              Available now. Call or message us to check current fleet availability.
+            </p>
+          </div>
+        </Container>
+      </section>
+
+      {/* Available Now in Lodi */}
+      <section className="border-b border-lime/30 bg-lime/10 py-8">
+        <Container>
+          <div className="mx-auto max-w-4xl">
+            <div className="flex flex-col items-center gap-6 text-center lg:flex-row lg:text-left">
+              <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-lime">
+                <CheckCircle className="h-8 w-8 text-primary" />
+              </div>
+              <div className="flex-1">
+                <h2 className="font-heading text-2xl font-bold text-foreground">
+                  Available Now in Lodi
+                </h2>
+                <p className="mt-2 text-muted-foreground">
+                  Frontline EV Rentals has electric skid steers in fleet, charged, tested, and ready for work. Contact us now to check current availability for Lodi and San Joaquin County jobs.
+                </p>
+              </div>
+              <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
+                <Button asChild>
+                  <a href={COMPANY.phoneHref}>
+                    <Phone className="h-4 w-4" />
+                    Call Now
+                  </a>
+                </Button>
+                <Button asChild variant="outline">
+                  <Link href="/quote">Check Availability</Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Why Local Renters Choose Frontline */}
+      <section className="py-12 lg:py-16">
+        <Container>
+          <div className="mx-auto max-w-4xl">
+            <h2 className="text-center font-heading text-2xl font-bold text-foreground lg:text-3xl">
+              Why Local Renters Choose Frontline
+            </h2>
+            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {[
+                "Electric equipment on hand",
+                "Practical support",
+                "Lodi-based access",
+                "Better fit for low-noise and emissions-sensitive work",
+              ].map((item) => (
+                <div
+                  key={item}
+                  className="flex items-center gap-3 rounded-lg border border-border bg-card p-4"
+                >
+                  <Check className="h-5 w-5 shrink-0 text-primary" />
+                  <span className="text-sm font-medium text-foreground">{item}</span>
+                </div>
+              ))}
             </div>
           </div>
         </Container>

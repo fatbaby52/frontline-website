@@ -149,6 +149,41 @@ export default function DVBEEquipmentRentalPage() {
                 Request Documentation
               </a>
             </div>
+            <p className="mt-4 text-sm text-white/80">
+              Equipment ready now. Documentation provided quickly for bids and compliance.
+            </p>
+          </div>
+        </Container>
+      </section>
+
+      {/* Equipment Ready Now */}
+      <section className="border-b border-lime/30 bg-lime/10 py-8">
+        <Container>
+          <div className="mx-auto max-w-4xl">
+            <div className="flex flex-col items-center gap-6 text-center lg:flex-row lg:text-left">
+              <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-lime">
+                <CheckCircle className="h-8 w-8 text-primary" />
+              </div>
+              <div className="flex-1">
+                <h2 className="font-heading text-2xl font-bold text-foreground">
+                  Real Equipment, Ready Now
+                </h2>
+                <p className="mt-2 text-muted-foreground">
+                  Frontline EV Rentals owns and operates electric skid steers from our yards in Salinas and Lodi. When you win your bid, the equipment is in fleet, charged, tested, and ready for pickup or delivery.
+                </p>
+              </div>
+              <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
+                <Button asChild>
+                  <a href={COMPANY.phoneHref}>
+                    <Phone className="h-4 w-4" />
+                    Call Now
+                  </a>
+                </Button>
+                <Button asChild variant="outline">
+                  <Link href="/quote">Check Availability</Link>
+                </Button>
+              </div>
+            </div>
           </div>
         </Container>
       </section>

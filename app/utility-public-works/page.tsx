@@ -5,6 +5,7 @@ import {
   Volume2,
   ShieldCheck,
   Check,
+  CheckCircle,
   ArrowRight,
   Phone,
   Building2,
@@ -166,6 +167,41 @@ export default function UtilityPublicWorksPage() {
                 <Phone className="h-5 w-5" />
                 {COMPANY.phone}
               </a>
+            </div>
+            <p className="mt-4 text-sm text-white/80">
+              Available now from Salinas and Lodi. Call or message us to check current fleet availability.
+            </p>
+          </div>
+        </Container>
+      </section>
+
+      {/* Ready for Compliance-Driven Jobs */}
+      <section className="border-b border-lime/30 bg-lime/10 py-8">
+        <Container>
+          <div className="mx-auto max-w-4xl">
+            <div className="flex flex-col items-center gap-6 text-center lg:flex-row lg:text-left">
+              <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-lime">
+                <CheckCircle className="h-8 w-8 text-primary" />
+              </div>
+              <div className="flex-1">
+                <h2 className="font-heading text-2xl font-bold text-foreground">
+                  Ready for Compliance-Driven Jobs
+                </h2>
+                <p className="mt-2 text-muted-foreground">
+                  Our electric skid steers are in fleet, charged, tested, and available now. Zero emission, low noise, and ready for utility, public works, and urban job sites.
+                </p>
+              </div>
+              <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
+                <Button asChild>
+                  <a href={COMPANY.phoneHref}>
+                    <Phone className="h-4 w-4" />
+                    Call Now
+                  </a>
+                </Button>
+                <Button asChild variant="outline">
+                  <Link href="/quote">Check Availability</Link>
+                </Button>
+              </div>
             </div>
           </div>
         </Container>

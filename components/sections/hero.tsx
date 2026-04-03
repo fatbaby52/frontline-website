@@ -14,6 +14,7 @@ interface HeroProps {
   compact?: boolean;
   backgroundImage?: string;
   serviceArea?: string;
+  microcopy?: string;
 }
 
 export function Hero({
@@ -26,6 +27,7 @@ export function Hero({
   compact = false,
   backgroundImage,
   serviceArea,
+  microcopy,
 }: HeroProps) {
   return (
     <section
@@ -114,6 +116,12 @@ export function Hero({
                 </Link>
               )}
             </div>
+          )}
+
+          {microcopy && (
+            <p className="mt-4 text-sm text-white/80">
+              {microcopy}
+            </p>
           )}
 
           {badges && badges.length > 0 && (
