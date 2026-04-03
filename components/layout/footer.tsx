@@ -11,8 +11,8 @@ const footerLinks = [
     title: "Equipment",
     links: [
       { name: "All Equipment", href: "/equipment" },
-      { name: "Elise 1200", href: "/equipment/elise-1200" },
-      { name: "CBL 1200", href: "/equipment/cbl-1200" },
+      { name: "Elise 1200 (Cab)", href: "/equipment/elise-1200" },
+      { name: "Elise 1200 CBL", href: "/equipment/elise-1200-cbl" },
     ],
   },
   {
@@ -24,11 +24,11 @@ const footerLinks = [
     ],
   },
   {
-    title: "Services",
+    title: "For Contractors",
     links: [
-      { name: "Drone & LiDAR", href: "/services/drone-lidar" },
-      { name: "Project Support", href: "/services/project-management" },
-      { name: "For Contractors", href: "/for-contractors" },
+      { name: "DVBE Equipment Rental", href: "/dvbe-equipment-rental" },
+      { name: "Utility & Public Works", href: "/utility-public-works" },
+      { name: "Contractor Info", href: "/for-contractors" },
     ],
   },
   {

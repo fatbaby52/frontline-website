@@ -9,8 +9,8 @@ import { Container } from "./container";
 
 const navigation = [
   { name: "Equipment", href: "/equipment" },
-  { name: "Drone Services", href: "/services/drone-lidar" },
-  { name: "For Contractors", href: "/for-contractors" },
+  { name: "Locations", href: "/salinas-rentals" },
+  { name: "DVBE Info", href: "/dvbe-equipment-rental" },
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
 ];

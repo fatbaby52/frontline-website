@@ -9,10 +9,11 @@ interface HeroProps {
   subhead: string;
   primaryCta?: { label: string; href: string };
   secondaryCta?: { label: string; href: string };
-  showBadges?: boolean;
-  showLogo?: boolean;
+  badges?: string[];
   className?: string;
   compact?: boolean;
+  backgroundImage?: string;
+  serviceArea?: string;
 }
 
 export function Hero({
@@ -20,31 +21,50 @@ export function Hero({
   subhead,
   primaryCta,
   secondaryCta,
-  showBadges = false,
-  showLogo = false,
+  badges,
   className,
   compact = false,
+  backgroundImage,
+  serviceArea,
 }: HeroProps) {
   return (
     <section
       className={cn(
-        "relative overflow-hidden bg-primary",
-        compact ? "py-20 lg:py-28" : "py-28 lg:py-40",
+        "relative overflow-hidden",
+        backgroundImage ? "bg-primary" : "bg-primary",
+        compact ? "py-20 lg:py-28" : "py-24 lg:py-32",
         className
       )}
     >
-      {/* Large background logo */}
-      <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
-        <Image
-          src="/images/logo.png"
-          alt=""
-          width={1200}
-          height={400}
-          className="h-[90%] w-auto max-h-full opacity-[0.08] brightness-0 invert"
-          aria-hidden="true"
-          priority
-        />
-      </div>
+      {/* Background image with overlay */}
+      {backgroundImage && (
+        <>
+          <Image
+            src={backgroundImage}
+            alt="Frontline EV Rentals electric skid steer fleet in Salinas and Lodi California"
+            fill
+            className="object-cover object-center"
+            priority
+            quality={85}
+          />
+          <div className="absolute inset-0 bg-primary/75" aria-hidden="true" />
+        </>
+      )}
+
+      {/* Fallback: Large background logo when no image */}
+      {!backgroundImage && (
+        <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
+          <Image
+            src="/images/logo.png"
+            alt=""
+            width={1200}
+            height={400}
+            className="h-[90%] w-auto max-h-full opacity-[0.08] brightness-0 invert"
+            aria-hidden="true"
+            priority
+          />
+        </div>
+      )}
 
       {/* Lime accent stripe */}
       <div
@@ -52,33 +72,14 @@ export function Hero({
         aria-hidden="true"
       />
 
-      {/* Diagonal lime accent */}
-      <div
-        className="absolute -right-20 top-20 h-40 w-[500px] rotate-[-20deg] bg-lime opacity-20 blur-3xl"
-        aria-hidden="true"
-      />
-
       <Container className="relative">
         <div className="mx-auto max-w-4xl text-center">
-          {showLogo && (
-            <div className="mb-10">
-              <Image
-                src="/images/logo.png"
-                alt="Frontline EV Rentals"
-                width={280}
-                height={96}
-                className="mx-auto h-16 w-auto brightness-0 invert sm:h-20 lg:h-24"
-                priority
-              />
-            </div>
-          )}
-
           <h1
             className={cn(
               "font-heading font-bold tracking-tight text-white",
               compact
                 ? "text-4xl lg:text-5xl"
-                : "text-4xl sm:text-5xl lg:text-6xl xl:text-7xl"
+                : "text-4xl sm:text-5xl lg:text-6xl"
             )}
           >
             {headline}
@@ -86,7 +87,7 @@ export function Hero({
 
           <p
             className={cn(
-              "mx-auto mt-6 max-w-2xl text-white/80",
+              "mx-auto mt-6 max-w-2xl text-white/90",
               compact ? "text-lg" : "text-xl lg:text-2xl"
             )}
           >
@@ -115,17 +116,23 @@ export function Hero({
             </div>
           )}
 
-          {showBadges && (
-            <div className="mt-14 flex flex-wrap items-center justify-center gap-3">
-              {["DVBE Certified", "Small Business", "Veteran Owned"].map((badge) => (
+          {badges && badges.length > 0 && (
+            <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
+              {badges.map((badge) => (
                 <span
                   key={badge}
-                  className="rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm"
+                  className="rounded-full bg-white/15 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm"
                 >
                   {badge}
                 </span>
               ))}
             </div>
+          )}
+
+          {serviceArea && (
+            <p className="mt-8 text-sm text-white/70">
+              {serviceArea}
+            </p>
           )}
         </div>
       </Container>

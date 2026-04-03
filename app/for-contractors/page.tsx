@@ -8,38 +8,36 @@ import {
   Mail,
   Phone,
 } from "lucide-react";
-import { Hero } from "@/components/sections/hero";
-import { CtaBand } from "@/components/sections/cta-band";
 import { Container } from "@/components/layout/container";
+import { CtaBand } from "@/components/sections/cta-band";
 import { Button } from "@/components/ui/button";
 import { certifications } from "@/lib/data/certifications";
+import { COMPANY } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "DVBE Certified Equipment Rentals | For Contractors | Frontline EV Rentals",
+  title: "For Contractors | DVBE Certified Electric Equipment Rental",
   description:
-    "Meet your state DVBE goals with Frontline EV Rentals. California DVBE certified electric equipment rental. ID #2048632.",
+    "DVBE certified electric equipment rental for California contractors. Support your participation goals with Frontline EV Rentals. CA ID #2048632.",
+  alternates: {
+    canonical: "https://frontline.rentals/for-contractors",
+  },
 };
 
 const howItWorks = [
   {
     step: "1",
-    title: "Include Frontline in your bid",
-    description: "List Frontline EV Rentals as equipment rental subcontractor",
+    title: "Include Frontline in Your Bid",
+    description: "List Frontline EV Rentals as your equipment rental subcontractor.",
   },
   {
     step: "2",
-    title: "We provide documentation",
-    description: "Certification letters and compliance paperwork on request",
+    title: "We Provide Documentation",
+    description: "Certification letters and compliance paperwork on request.",
   },
   {
     step: "3",
-    title: "Rent equipment",
-    description: "Apply rental costs toward your DVBE participation goal",
-  },
-  {
-    step: "4",
-    title: "We handle compliance",
-    description: "All paperwork and reporting documentation provided",
+    title: "Rent Equipment",
+    description: "Apply rental costs toward your DVBE participation goal.",
   },
 ];
 
@@ -53,12 +51,39 @@ const documents = [
 export default function ForContractorsPage() {
   return (
     <>
-      <Hero
-        headline="DVBE Certified Equipment Rentals"
-        subhead="Meet your state DVBE goals with Frontline EV Rentals"
-        primaryCta={{ label: "Get a Quote", href: "/quote" }}
-        compact
-      />
+      {/* Hero */}
+      <section className="relative overflow-hidden bg-primary py-20 lg:py-28">
+        <div className="absolute bottom-0 left-0 right-0 h-2 bg-lime" aria-hidden="true" />
+        <Container className="relative">
+          <div className="mx-auto max-w-4xl text-center">
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-lime px-4 py-2 text-sm font-bold text-primary">
+              <ShieldCheck className="h-4 w-4" />
+              DVBE Certified
+            </div>
+            <h1 className="font-heading text-4xl font-bold tracking-tight text-white sm:text-5xl">
+              For Contractors
+            </h1>
+            <p className="mx-auto mt-6 max-w-2xl text-xl text-white/90">
+              DVBE certified electric equipment rental to support your public works bids and procurement requirements.
+            </p>
+            <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
+              <Link
+                href="/quote"
+                className="inline-flex h-14 items-center justify-center gap-2 rounded-xl bg-lime px-10 text-lg font-bold text-primary shadow-lg shadow-lime/30 transition-all duration-200 hover:bg-accent-hover"
+              >
+                Get a Quote
+                <ArrowRight className="h-5 w-5" />
+              </Link>
+              <Link
+                href="/dvbe-equipment-rental"
+                className="inline-flex h-14 items-center justify-center gap-2 rounded-xl border-2 border-white/30 px-8 text-lg font-semibold text-white transition-all duration-200 hover:border-white/60 hover:bg-white/10"
+              >
+                DVBE Information
+              </Link>
+            </div>
+          </div>
+        </Container>
+      </section>
 
       {/* Certification Details */}
       <section className="py-16 lg:py-24">
@@ -126,11 +151,11 @@ export default function ForContractorsPage() {
       </section>
 
       {/* How It Works */}
-      <section className="bg-bg-alt py-16 lg:py-24">
+      <section className="bg-muted py-16 lg:py-24">
         <Container>
           <div className="mx-auto max-w-3xl">
             <h2 className="mb-10 text-center font-heading text-2xl font-bold text-foreground lg:text-3xl">
-              How It Works for Primes
+              How It Works
             </h2>
             <div className="space-y-6">
               {howItWorks.map((item) => (
@@ -138,7 +163,7 @@ export default function ForContractorsPage() {
                   key={item.step}
                   className="flex items-start gap-4 rounded-lg border border-border bg-card p-5"
                 >
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-primary-foreground">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">
                     {item.step}
                   </div>
                   <div>
@@ -172,8 +197,8 @@ export default function ForContractorsPage() {
                   key={doc}
                   className="flex items-center gap-3 rounded-lg border border-border bg-card p-4"
                 >
-                  <ArrowRight className="h-4 w-4 shrink-0 text-primary" />
-                  <span className="text-sm text-foreground">{doc}</span>
+                  <CheckCircle className="h-5 w-5 shrink-0 text-success" />
+                  <span className="text-foreground">{doc}</span>
                 </li>
               ))}
             </ul>
@@ -181,45 +206,52 @@ export default function ForContractorsPage() {
         </Container>
       </section>
 
-      {/* Contact for Primes */}
-      <section className="bg-bg-alt py-16 lg:py-24">
+      {/* Contact */}
+      <section className="bg-muted py-16 lg:py-24">
         <Container>
           <div className="mx-auto max-w-xl text-center">
             <h2 className="font-heading text-2xl font-bold text-foreground lg:text-3xl">
-              Direct Contact for Procurement Teams
+              Contact for Documentation
             </h2>
             <p className="mt-3 text-muted-foreground">
               Quick response for bid support and documentation requests.
             </p>
             <div className="mt-6 space-y-3">
               <a
-                href="mailto:alex@frontline.rentals"
+                href={`mailto:${COMPANY.email}`}
                 className="flex items-center justify-center gap-2 text-primary hover:underline"
               >
                 <Mail className="h-4 w-4" />
-                alex@frontline.rentals
+                {COMPANY.email}
               </a>
               <a
-                href="tel:2094706385"
+                href={COMPANY.phoneHref}
                 className="flex items-center justify-center gap-2 text-primary hover:underline"
               >
                 <Phone className="h-4 w-4" />
-                (209) 470-6385
+                {COMPANY.phone}
               </a>
             </div>
-            <Button asChild className="mt-6">
-              <Link href="/quote">Request a Quote</Link>
-            </Button>
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
+              <Button asChild size="lg">
+                <Link href="/quote">Get a Quote</Link>
+              </Button>
+              <Button asChild size="lg" variant="outline">
+                <Link href="/dvbe-equipment-rental">DVBE Details</Link>
+              </Button>
+            </div>
           </div>
         </Container>
       </section>
 
       <CtaBand
-        headline="Need DVBE Documentation for Your Bid?"
-        subhead="We provide all required paperwork. Fast turnaround."
-        ctaLabel="Contact Us"
-        ctaHref="/contact"
-              />
+        headline="Need Equipment for a Public Works Project?"
+        subhead="We provide documentation and support for your bids."
+        ctaLabel="Get a Quote"
+        ctaHref="/quote"
+        secondaryCtaLabel="Contact Us"
+        secondaryCtaHref="/contact"
+      />
     </>
   );
 }

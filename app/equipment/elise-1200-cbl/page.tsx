@@ -3,11 +3,11 @@ import Link from "next/link";
 import {
   Check,
   ArrowRight,
-  Mountain,
-  TreePine,
-  TrendingUp,
-  Shovel,
-  Gauge,
+  Building2,
+  GraduationCap,
+  Hospital,
+  Home,
+  Warehouse,
   Download,
   ExternalLink,
   FileText,
@@ -21,16 +21,20 @@ import { ImageGallery } from "@/components/equipment/image-gallery";
 import { CtaBand } from "@/components/sections/cta-band";
 import { getEquipmentBySlug } from "@/lib/data/equipment";
 
-const machine = getEquipmentBySlug("cbl-1200")!;
+const machine = getEquipmentBySlug("elise-1200-cbl")!;
 
-const applicationIcons = [Mountain, TreePine, TrendingUp, Shovel, Gauge];
+const applicationIcons = [Building2, Warehouse, GraduationCap, Hospital, Home];
 
 export const metadata: Metadata = {
-  title: `${machine.name} - Electric Skid Steer Rental | Frontline EV Rentals`,
-  description: `Rent the ${machine.name} - ${machine.tagline}. $${machine.dailyRate}/day. DVBE certified. Free pickup Salinas & Lodi.`,
+  title: "FirstGreen Elise 1200 CBL Electric Skid Steer Rental California",
+  description:
+    "Rent the FirstGreen Elise 1200 CBL cabless electric skid steer. $450/day. Zero emissions, low noise. Free pickup Salinas or Lodi. DVBE certified.",
+  alternates: {
+    canonical: "https://frontline.rentals/equipment/elise-1200-cbl",
+  },
 };
 
-export default function CBL1200Page() {
+export default function Elise1200CBLPage() {
   return (
     <>
       {/* Hero */}
@@ -61,7 +65,7 @@ export default function CBL1200Page() {
                   size="lg"
                   className="bg-accent text-accent-foreground hover:bg-accent-hover"
                 >
-                  <Link href="/quote">Get a Quote for This Equipment</Link>
+                  <Link href="/quote">Check Availability</Link>
                 </Button>
                 <Button
                   asChild
@@ -86,7 +90,7 @@ export default function CBL1200Page() {
       <section className="py-16 lg:py-24">
         <Container>
           <h2 className="mb-8 font-heading text-2xl font-bold text-foreground lg:text-3xl">
-            Key Highlights
+            Key Features
           </h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {machine.highlights.map((highlight) => (
@@ -114,11 +118,11 @@ export default function CBL1200Page() {
         </Container>
       </section>
 
-      {/* Downloads & Resources */}
+      {/* Downloads */}
       <section className="py-16 lg:py-24">
         <Container>
           <h2 className="mb-8 font-heading text-2xl font-bold text-foreground lg:text-3xl">
-            Downloads & Resources
+            Downloads
           </h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {machine.brochureUrl && (
@@ -136,7 +140,7 @@ export default function CBL1200Page() {
                     Product Brochure
                   </p>
                   <p className="text-sm text-muted-foreground">
-                    Full specification sheet &amp; features
+                    Full specification sheet
                   </p>
                 </div>
                 <Download className="ml-auto h-5 w-5 shrink-0 text-muted-foreground" />
@@ -154,10 +158,10 @@ export default function CBL1200Page() {
                 </div>
                 <div className="min-w-0">
                   <p className="font-semibold text-foreground">
-                    Manufacturer Page
+                    Manufacturer Info
                   </p>
                   <p className="text-sm text-muted-foreground">
-                    First Green Industries official specs
+                    First Green Industries
                   </p>
                 </div>
                 <ArrowRight className="ml-auto h-5 w-5 shrink-0 text-muted-foreground" />
@@ -173,7 +177,7 @@ export default function CBL1200Page() {
           <div className="grid gap-8 lg:grid-cols-2">
             <div>
               <h2 className="mb-6 font-heading text-2xl font-bold text-foreground lg:text-3xl">
-                What&apos;s Included
+                Included with Rental
               </h2>
               <ul className="space-y-3">
                 {machine.included.map((item) => (
@@ -205,7 +209,7 @@ export default function CBL1200Page() {
       <section className="bg-bg-alt py-16 lg:py-24">
         <Container>
           <h2 className="mb-8 text-center font-heading text-2xl font-bold text-foreground lg:text-3xl">
-            Ideal Applications
+            Ideal For
           </h2>
           <div className="mx-auto grid max-w-4xl gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {machine.idealFor.map((use, index) => {
@@ -231,31 +235,30 @@ export default function CBL1200Page() {
         <Container>
           <div className="mx-auto max-w-2xl">
             <h2 className="mb-6 text-center font-heading text-2xl font-bold text-foreground lg:text-3xl">
-              Rental Information
+              Rental Details
             </h2>
             <div className="space-y-4 rounded-xl border border-border bg-card p-6 sm:p-8">
               <div>
                 <h3 className="font-semibold text-foreground">Pricing</h3>
                 <p className="text-sm text-muted-foreground">
-                  ${machine.dailyRate}/day. Weekly and monthly rates available on
-                  request. All rates include standard bucket or forks.
+                  ${machine.dailyRate}/day. Weekly and monthly rates available.
+                  All rates include standard bucket or forks.
                 </p>
               </div>
               <div>
                 <h3 className="font-semibold text-foreground">Insurance</h3>
                 <p className="text-sm text-muted-foreground">
-                  Proof of general liability and inland marine coverage
-                  required. Certificate of insurance must name Frontline EV
-                  Rentals as additional insured.
+                  Proof of general liability and inland marine coverage required.
+                  Certificate must name Frontline EV Rentals as additional insured.
                 </p>
               </div>
               <div>
                 <h3 className="font-semibold text-foreground">
-                  Pickup & Delivery
+                  Pickup and Delivery
                 </h3>
                 <p className="text-sm text-muted-foreground">
                   Free pickup from our Salinas or Lodi yards. Delivery available
-                  statewide at pass-through cost.
+                  throughout California.
                 </p>
               </div>
             </div>
@@ -264,9 +267,9 @@ export default function CBL1200Page() {
       </section>
 
       <CtaBand
-        headline={`Ready to Rent the ${machine.name}?`}
-        subhead="Get a quote in minutes. Same-week availability."
-        ctaLabel="Request a Quote"
+        headline="Ready to Rent the Elise 1200 CBL?"
+        subhead="Check availability and get a quote."
+        ctaLabel="Check Availability"
         ctaHref="/quote"
       />
     </>
