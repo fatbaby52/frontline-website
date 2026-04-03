@@ -397,6 +397,23 @@ export default function DVBEEquipmentRentalPage() {
         </Container>
       </section>
 
+      {/* Other DVBE Services */}
+      <section className="py-16 lg:py-24">
+        <Container>
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 className="font-heading text-2xl font-bold text-foreground lg:text-3xl">
+              When Equipment Rental Is Not the Right Fit
+            </h2>
+            <p className="mt-4 text-muted-foreground">
+              If your project does not need electric equipment, Frontline may still be able to support DVBE participation through other legitimate project services, including drone imaging and practical project support.
+            </p>
+            <Button asChild className="mt-6">
+              <Link href="/dvbe-participation">Learn About DVBE Participation Options</Link>
+            </Button>
+          </div>
+        </Container>
+      </section>
+
       {/* Contact */}
       <section className="py-16 lg:py-24">
         <Container>

@@ -10,6 +10,7 @@ import { Container } from "./container";
 const navigation = [
   { name: "Equipment", href: "/equipment" },
   { name: "DVBE Info", href: "/dvbe-equipment-rental" },
+  { name: "DVBE Support", href: "/dvbe-participation" },
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
 ];

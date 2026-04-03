@@ -27,6 +27,7 @@ const footerLinks = [
     title: "For Contractors",
     links: [
       { name: "DVBE Equipment Rental", href: "/dvbe-equipment-rental" },
+      { name: "DVBE Participation Support", href: "/dvbe-participation" },
       { name: "Utility & Public Works", href: "/utility-public-works" },
       { name: "Contractor Info", href: "/for-contractors" },
     ],
