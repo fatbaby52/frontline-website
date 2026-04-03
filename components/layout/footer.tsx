@@ -20,7 +20,7 @@ const footerLinks = [
     links: [
       { name: "Salinas Rentals", href: "/salinas-rentals" },
       { name: "Lodi Rentals", href: "/lodi-rentals" },
-      { name: "Statewide Delivery", href: "/contact" },
+      { name: "Statewide Delivery", href: "/delivery" },
     ],
   },
   {
