@@ -4,22 +4,39 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect, useRef, useCallback } from "react";
 import { usePathname } from "next/navigation";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { Container } from "./container";
 
 const navigation = [
   { name: "Equipment", href: "/equipment" },
-  { name: "Locations", href: "/salinas-rentals" },
   { name: "DVBE Info", href: "/dvbe-equipment-rental" },
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
 ];
 
+const locations = [
+  { name: "Central Coast", href: "/salinas-rentals", description: "Salinas, Monterey County" },
+  { name: "Central Valley", href: "/lodi-rentals", description: "Lodi, Sacramento, Stockton" },
+];
+
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [locationsOpen, setLocationsOpen] = useState(false);
   const pathname = usePathname();
   const menuRef = useRef<HTMLDivElement>(null);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const locationsRef = useRef<HTMLDivElement>(null);
+
+  // Close locations dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (locationsRef.current && !locationsRef.current.contains(e.target as Node)) {
+        setLocationsOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   useEffect(() => {
     if (!mobileMenuOpen) return;
@@ -67,6 +84,7 @@ export function Header() {
 
   useEffect(() => {
     setMobileMenuOpen(false);
+    setLocationsOpen(false);
   }, [pathname]);
 
   const isCurrentPage = useCallback(
@@ -76,6 +94,8 @@ export function Header() {
     },
     [pathname]
   );
+
+  const isLocationActive = locations.some((loc) => isCurrentPage(loc.href));
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-white/95 backdrop-blur-md">
@@ -95,7 +115,54 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav aria-label="Main navigation" className="hidden items-center gap-1 lg:flex">
-            {navigation.map((item) => (
+            <Link
+              href="/equipment"
+              aria-current={isCurrentPage("/equipment") ? "page" : undefined}
+              className={`rounded-lg px-4 py-2 text-sm font-medium transition-colors duration-200 ${
+                isCurrentPage("/equipment")
+                  ? "bg-teal-light text-primary"
+                  : "text-foreground hover:bg-muted hover:text-primary"
+              }`}
+            >
+              Equipment
+            </Link>
+
+            {/* Locations Dropdown */}
+            <div ref={locationsRef} className="relative">
+              <button
+                onClick={() => setLocationsOpen(!locationsOpen)}
+                className={`flex items-center gap-1 rounded-lg px-4 py-2 text-sm font-medium transition-colors duration-200 ${
+                  isLocationActive
+                    ? "bg-teal-light text-primary"
+                    : "text-foreground hover:bg-muted hover:text-primary"
+                }`}
+              >
+                Locations
+                <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${locationsOpen ? "rotate-180" : ""}`} />
+              </button>
+
+              {locationsOpen && (
+                <div className="absolute left-0 top-full mt-2 w-64 rounded-xl border border-border bg-white p-2 shadow-lg">
+                  {locations.map((location) => (
+                    <Link
+                      key={location.href}
+                      href={location.href}
+                      className={`block rounded-lg px-4 py-3 transition-colors duration-200 ${
+                        isCurrentPage(location.href)
+                          ? "bg-teal-light text-primary"
+                          : "text-foreground hover:bg-muted"
+                      }`}
+                      onClick={() => setLocationsOpen(false)}
+                    >
+                      <span className="font-medium">{location.name}</span>
+                      <span className="block text-xs text-muted-foreground">{location.description}</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {navigation.slice(1).map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
@@ -160,7 +227,47 @@ export function Header() {
         >
           <div className="overflow-hidden">
             <nav aria-label="Mobile navigation" className="flex flex-col gap-1 py-4">
-              {navigation.map((item) => (
+              <Link
+                href="/equipment"
+                aria-current={isCurrentPage("/equipment") ? "page" : undefined}
+                tabIndex={mobileMenuOpen ? 0 : -1}
+                className={`rounded-xl px-4 py-3 text-base font-medium transition-colors duration-200 ${
+                  isCurrentPage("/equipment")
+                    ? "bg-teal-light text-primary"
+                    : "text-foreground hover:bg-muted"
+                }`}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Equipment
+              </Link>
+
+              {/* Location links in mobile */}
+              <div className="px-4 py-2">
+                <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                  Locations
+                </span>
+              </div>
+              {locations.map((location) => (
+                <Link
+                  key={location.href}
+                  href={location.href}
+                  aria-current={isCurrentPage(location.href) ? "page" : undefined}
+                  tabIndex={mobileMenuOpen ? 0 : -1}
+                  className={`rounded-xl px-4 py-3 text-base font-medium transition-colors duration-200 ${
+                    isCurrentPage(location.href)
+                      ? "bg-teal-light text-primary"
+                      : "text-foreground hover:bg-muted"
+                  }`}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {location.name}
+                  <span className="ml-2 text-sm text-muted-foreground">
+                    ({location.description})
+                  </span>
+                </Link>
+              ))}
+
+              {navigation.slice(1).map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
