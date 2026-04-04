@@ -3,6 +3,7 @@ export const COMPANY = {
   name: "Frontline EV Rentals",
   phone: "(209) 470-6385",
   phoneHref: "tel:2094706385",
+  smsHref: "sms:2094706385",
   email: "alex@frontline.rentals",
   emailHref: "mailto:alex@frontline.rentals",
   certificationId: "#2048632",

@@ -3,6 +3,7 @@ export interface Equipment {
   name: string;
   type: string;
   tagline: string;
+  bestFor: string;
   dailyRate: number;
   weeklyRate?: string;
   monthlyRate?: string;
@@ -24,6 +25,7 @@ export const equipment: Equipment[] = [
     name: "FirstGreen Elise 1200",
     type: "Electric Skid Steer with Cab",
     tagline: "Enclosed cab for operator comfort and all-weather work",
+    bestFor: "Best for operators who need climate control and comfort on all-day jobs",
     dailyRate: 525,
     weeklyRate: "Contact for rates",
     monthlyRate: "Contact for rates",
@@ -75,6 +77,7 @@ export const equipment: Equipment[] = [
     name: "FirstGreen Elise 1200 CBL",
     type: "Electric Skid Steer, Cabless",
     tagline: "Open operator station for maximum visibility",
+    bestFor: "Best for operators who need visibility and maneuverability on tight-access work",
     dailyRate: 450,
     weeklyRate: "Contact for rates",
     monthlyRate: "Contact for rates",

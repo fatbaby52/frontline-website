@@ -25,8 +25,11 @@ import {
   Clock,
   Camera,
   ClipboardList,
+  MessageSquare,
+  HelpCircle,
 } from "lucide-react";
 import { Hero } from "@/components/sections/hero";
+import { SearchBar } from "@/components/sections/search-bar";
 import { CtaBand } from "@/components/sections/cta-band";
 import { Container } from "@/components/layout/container";
 import { Button } from "@/components/ui/button";
@@ -186,6 +189,25 @@ const whoWeHelp = [
   { icon: ShieldCheck, text: "Teams pursuing DVBE participation value" },
 ];
 
+const faqItems = [
+  {
+    question: "How quickly can I get a machine?",
+    answer: "If equipment is available, same-day pickup is possible from Salinas or Lodi. Delivery typically takes 1-2 days depending on location.",
+  },
+  {
+    question: "What is included in the rental?",
+    answer: "Standard bucket or forks, operator orientation, equipment manual, and free yard pickup from Salinas or Lodi. Delivery is available for an additional fee.",
+  },
+  {
+    question: "Do you deliver statewide?",
+    answer: "Yes. We deliver throughout California. Delivery fees are quoted based on distance from our Salinas or Lodi locations.",
+  },
+  {
+    question: "Can I use Frontline for DVBE participation?",
+    answer: "Yes. Frontline is DVBE-certified (CA #2048632). Rental costs can count toward your DVBE participation goal on California public projects.",
+  },
+];
+
 export default function HomePage() {
   return (
     <>
@@ -205,6 +227,32 @@ export default function HomePage() {
         backgroundImage="/images/fleet-hero.png"
         microcopy={`Available now. Call ${COMPANY.phone} or message us to check current fleet availability.`}
       />
+
+      {/* AI Search Assistant */}
+      <SearchBar />
+
+      {/* Direct Contact Strip */}
+      <section className="bg-primary py-4">
+        <Container>
+          <div className="flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
+            <span className="text-sm font-medium text-white/80">Ready to rent?</span>
+            <div className="flex gap-3">
+              <Button asChild size="sm" className="bg-lime text-primary hover:bg-lime/90">
+                <a href={COMPANY.phoneHref}>
+                  <Phone className="h-4 w-4" />
+                  Call {COMPANY.phone}
+                </a>
+              </Button>
+              <Button asChild size="sm" variant="outline" className="border-white/30 text-white hover:bg-white/10">
+                <a href={COMPANY.smsHref}>
+                  <MessageSquare className="h-4 w-4" />
+                  Text Us
+                </a>
+              </Button>
+            </div>
+          </div>
+        </Container>
+      </section>
 
       {/* Ready Now Strip */}
       <section className="border-b border-lime/30 bg-lime/10 py-6">
@@ -240,6 +288,40 @@ export default function HomePage() {
         </Container>
       </section>
 
+      {/* How to Rent Quickly */}
+      <section className="border-b border-border py-10">
+        <Container>
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 className="font-heading text-2xl font-bold text-foreground">
+              How to Rent Quickly
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Tell us your job location, the dates you need the machine, and whether you want cab or cabless.
+            </p>
+            <p className="mt-2 text-muted-foreground">
+              We will confirm availability and get you a quote right away.
+            </p>
+            <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <Button asChild>
+                <a href={COMPANY.phoneHref}>
+                  <Phone className="h-4 w-4" />
+                  Call {COMPANY.phone}
+                </a>
+              </Button>
+              <Button asChild variant="outline">
+                <a href={COMPANY.smsHref}>
+                  <MessageSquare className="h-4 w-4" />
+                  Text Us
+                </a>
+              </Button>
+              <Button asChild variant="outline">
+                <Link href="/quote">Request Quote Online</Link>
+              </Button>
+            </div>
+          </div>
+        </Container>
+      </section>
+
       {/* Need a Machine Today? */}
       <section className="bg-primary py-12 lg:py-16">
         <Container>
@@ -270,11 +352,14 @@ export default function HomePage() {
                 <Button asChild size="lg" className="bg-lime text-primary hover:bg-lime/90">
                   <a href={COMPANY.phoneHref}>
                     <Phone className="h-5 w-5" />
-                    Call Now
+                    Call {COMPANY.phone}
                   </a>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10">
-                  <Link href="/quote">Check Availability</Link>
+                  <a href={COMPANY.smsHref}>
+                    <MessageSquare className="h-5 w-5" />
+                    Text Us
+                  </a>
                 </Button>
               </div>
             </div>
@@ -355,6 +440,9 @@ export default function HomePage() {
                   <p className="mt-2 text-sm text-muted-foreground">
                     {item.tagline}
                   </p>
+                  <p className="mt-2 text-sm font-medium text-foreground">
+                    {item.bestFor}
+                  </p>
                   <div className="mt-4 flex items-baseline gap-2">
                     <span className="text-2xl font-bold text-primary">
                       ${item.dailyRate}
@@ -384,9 +472,25 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-          <p className="mt-8 text-center text-muted-foreground">
-            Call or message for current availability: <a href={COMPANY.phoneHref} className="font-semibold text-primary hover:underline">{COMPANY.phone}</a>
-          </p>
+          <div className="mt-10 flex flex-col items-center gap-4">
+            <p className="text-muted-foreground">
+              Ready to rent? Contact us now.
+            </p>
+            <div className="flex flex-col gap-3 sm:flex-row">
+              <Button asChild>
+                <a href={COMPANY.phoneHref}>
+                  <Phone className="h-4 w-4" />
+                  Call {COMPANY.phone}
+                </a>
+              </Button>
+              <Button asChild variant="outline">
+                <a href={COMPANY.smsHref}>
+                  <MessageSquare className="h-4 w-4" />
+                  Text Us
+                </a>
+              </Button>
+            </div>
+          </div>
         </Container>
       </section>
 
@@ -441,8 +545,47 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* Common Rental Needs */}
+      {/* Fleet Gallery */}
       <section className="bg-muted py-16 lg:py-24">
+        <Container>
+          <div className="mx-auto max-w-6xl">
+            <h2 className="text-center font-heading text-3xl font-bold tracking-tight text-foreground lg:text-4xl">
+              Our Fleet Up Close
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-center text-muted-foreground">
+              Real equipment, real photos. See the FirstGreen Elise 1200 electric skid steers in our fleet.
+            </p>
+            <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {[
+                { src: "/images/PXL_20260403_233921526.MP.jpg", alt: "FirstGreen Elise 1200 CBL electric skid steer side view" },
+                { src: "/images/PXL_20260403_234229515.MP.jpg", alt: "Frontline fleet showing cab and cabless electric skid steers" },
+                { src: "/images/PXL_20260403_233952509.MP.jpg", alt: "FirstGreen Elise 1200 CBL front view with bucket" },
+                { src: "/images/PXL_20260403_234048678.jpg", alt: "FirstGreen Elise 1200 enclosed cab model front view" },
+                { src: "/images/PXL_20260403_233930808.MP.jpg", alt: "Electric skid steer rear view showing battery and controls" },
+                { src: "/images/PXL_20260403_234124719.jpg", alt: "FirstGreen electric skid steer joystick controls close-up" },
+              ].map((photo, index) => (
+                <div
+                  key={index}
+                  className="group relative aspect-[4/3] overflow-hidden rounded-xl bg-white shadow-sm"
+                >
+                  <Image
+                    src={photo.src}
+                    alt={photo.alt}
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+              ))}
+            </div>
+            <p className="mt-6 text-center text-sm text-muted-foreground">
+              Photos taken at our Salinas location. Equipment available for pickup or delivery throughout California.
+            </p>
+          </div>
+        </Container>
+      </section>
+
+      {/* Common Rental Needs */}
+      <section className="py-16 lg:py-24">
         <Container>
           <div className="mx-auto max-w-4xl">
             <h2 className="text-center font-heading text-3xl font-bold tracking-tight text-foreground lg:text-4xl">
@@ -586,70 +729,72 @@ export default function HomePage() {
       {/* Service Area */}
       <section className="bg-muted py-16 lg:py-24">
         <Container>
-          <div className="mx-auto max-w-4xl text-center">
-            <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground lg:text-4xl">
-              Serving Salinas, Monterey County, Lodi, and Surrounding California Markets
+          <div className="mx-auto max-w-4xl">
+            <h2 className="text-center font-heading text-3xl font-bold tracking-tight text-foreground lg:text-4xl">
+              Where We Serve
             </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
-              Frontline EV Rentals provides electric skid steer rentals and zero-emission equipment access from Salinas and Lodi. We work with contractors, utilities, public works vendors, and other California customers who need quiet, electric equipment.
+            <p className="mx-auto mt-4 max-w-2xl text-center text-lg text-muted-foreground">
+              Free pickup from Salinas or Lodi. Delivery available throughout California.
             </p>
 
-            <div className="mt-12 flex flex-col items-center justify-center gap-8 sm:flex-row sm:gap-16">
-              {[
-                { city: "Salinas", region: "Central Coast / Monterey County" },
-                { city: "Lodi", region: "Central Valley / San Joaquin County" },
-              ].map((location) => (
-                <div key={location.city} className="flex items-center gap-4">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary text-white">
-                    <MapPin className="h-6 w-6" strokeWidth={1.5} />
-                  </div>
-                  <div className="text-left">
-                    <p className="font-heading text-xl font-bold text-foreground">
-                      {location.city}
-                    </p>
-                    <p className="text-muted-foreground">{location.region}</p>
-                  </div>
-                </div>
-              ))}
+            {/* Primary Service Points */}
+            <div className="mt-12">
+              <h3 className="mb-6 text-center font-heading text-lg font-bold text-foreground">
+                Primary Service Points
+              </h3>
+              <div className="flex flex-col items-center justify-center gap-6 sm:flex-row sm:gap-12">
+                {[
+                  { city: "Salinas", region: "Central Coast / Monterey County", href: "/salinas-rentals" },
+                  { city: "Lodi", region: "Central Valley / San Joaquin County", href: "/lodi-rentals" },
+                ].map((location) => (
+                  <Link
+                    key={location.city}
+                    href={location.href}
+                    className="flex items-center gap-4 rounded-xl border border-border bg-white p-4 shadow-sm transition-shadow hover:shadow-md"
+                  >
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary text-white">
+                      <MapPin className="h-5 w-5" strokeWidth={1.5} />
+                    </div>
+                    <div className="text-left">
+                      <p className="font-heading text-lg font-bold text-foreground">
+                        {location.city}
+                      </p>
+                      <p className="text-sm text-muted-foreground">{location.region}</p>
+                    </div>
+                    <ArrowRight className="h-4 w-4 text-muted-foreground" />
+                  </Link>
+                ))}
+              </div>
             </div>
 
-            <div className="mt-10 flex flex-wrap justify-center gap-3">
-              {[
-                "Monterey County",
-                "San Joaquin County",
-                "Santa Cruz",
-                "San Jose",
-                "Bay Area",
-                "Sacramento",
-                "Stockton",
-                "Fresno",
-                "Northern California",
-              ].map((area) => (
-                <span
-                  key={area}
-                  className="rounded-full bg-white px-5 py-2 text-sm font-medium text-foreground shadow-sm"
-                >
-                  {area}
-                </span>
-              ))}
+            {/* Common Delivery Regions */}
+            <div className="mt-12">
+              <h3 className="mb-6 text-center font-heading text-lg font-bold text-foreground">
+                Common Delivery Regions
+              </h3>
+              <div className="flex flex-wrap justify-center gap-3">
+                {[
+                  "Monterey County",
+                  "San Joaquin County",
+                  "Santa Cruz",
+                  "San Jose",
+                  "Bay Area",
+                  "Sacramento",
+                  "Stockton",
+                  "Fresno",
+                  "Northern California",
+                ].map((area) => (
+                  <span
+                    key={area}
+                    className="rounded-full bg-white px-4 py-2 text-sm font-medium text-foreground shadow-sm"
+                  >
+                    {area}
+                  </span>
+                ))}
+              </div>
             </div>
 
-            <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-              <Button asChild size="lg">
-                <Link href="/salinas-rentals">
-                  Salinas Rentals
-                  <ArrowRight className="h-5 w-5" />
-                </Link>
-              </Button>
-              <Button asChild size="lg" variant="outline">
-                <Link href="/lodi-rentals">
-                  Lodi Rentals
-                  <ArrowRight className="h-5 w-5" />
-                </Link>
-              </Button>
-            </div>
-
-            <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm">
+            <div className="mt-10 flex flex-wrap justify-center gap-4 text-sm">
               <Link href="/electric-skid-steer-salinas" className="text-primary hover:underline">
                 Electric Skid Steer Rental Salinas
               </Link>
@@ -666,32 +811,30 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* DVBE Support for Contractors and Project Teams */}
+      {/* DVBE Certified */}
       <section className="py-16 lg:py-24">
         <Container>
-          <div className="mx-auto max-w-5xl">
+          <div className="mx-auto max-w-4xl">
             <div className="text-center">
               <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
                 <ShieldCheck className="h-4 w-4" />
-                DVBE Certified
+                CA Certification #2048632
               </div>
               <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground lg:text-4xl">
-                DVBE Support for Contractors and Project Teams
+                DVBE Certified Equipment Rental
               </h2>
             </div>
 
-            <div className="mx-auto mt-8 max-w-3xl">
-              <p className="text-muted-foreground">
-                Frontline EV Rentals works with general contractors, subcontractors, and project teams that need a DVBE-certified partner for a California public project. Our role is based on real project services, including electric equipment rentals, drone imaging, and practical project support where appropriate.
-              </p>
-            </div>
+            <p className="mx-auto mt-6 max-w-2xl text-center text-muted-foreground">
+              Frontline EV Rentals is a DVBE-certified business. Equipment rental costs can count toward your DVBE participation goal on California public projects.
+            </p>
 
-            <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-10 grid gap-4 sm:grid-cols-2">
               {[
-                "General contractors on state and local public works projects",
-                "Subcontractors looking for a legitimate DVBE participation partner",
-                "Utility and infrastructure teams",
-                "Buyers and project managers who need a practical DVBE-certified vendor",
+                "Equipment rental for public works and utility projects",
+                "Documentation and certification letters on request",
+                "Legitimate participation tied to real project scope",
+                "Fast response for bid support",
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3 rounded-lg border border-border bg-card p-4">
                   <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
@@ -700,49 +843,45 @@ export default function HomePage() {
               ))}
             </div>
 
-            <div className="mt-12">
-              <h3 className="mb-8 text-center font-heading text-xl font-bold text-foreground">
-                Typical Ways Contractors Work With Frontline
-              </h3>
-              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-                <div className="rounded-xl border border-border bg-card p-5">
-                  <Truck className="h-6 w-6 text-primary" />
-                  <p className="mt-3 text-sm font-medium text-foreground">Electric equipment rental for job site use</p>
-                </div>
-                <div className="rounded-xl border border-border bg-card p-5">
-                  <Camera className="h-6 w-6 text-primary" />
-                  <p className="mt-3 text-sm font-medium text-foreground">Drone and site imaging for documentation and reporting</p>
-                </div>
-                <div className="rounded-xl border border-border bg-card p-5">
-                  <ClipboardList className="h-6 w-6 text-primary" />
-                  <p className="mt-3 text-sm font-medium text-foreground">Practical project support tied to real scope</p>
-                </div>
-                <div className="rounded-xl border border-border bg-card p-5">
-                  <ShieldCheck className="h-6 w-6 text-primary" />
-                  <p className="mt-3 text-sm font-medium text-foreground">DVBE-certified services aligned with actual project needs</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="mx-auto mt-10 max-w-3xl">
-              <p className="text-center text-muted-foreground">
-                We work with contractors to provide DVBE-certified services that align with real project needs, whether through equipment rentals or other practical support services.
-              </p>
-            </div>
-
-            <div className="mx-auto mt-6 max-w-3xl rounded-xl border border-border bg-muted/50 p-6">
+            <div className="mx-auto mt-8 max-w-2xl rounded-xl border border-border bg-muted/50 p-4">
               <p className="text-center text-sm text-muted-foreground">
-                Frontline does not provide pass-through participation. Services are provided based on actual project needs.
+                Frontline does not provide pass-through participation. Services are based on actual project needs.
               </p>
             </div>
 
-            <div className="mt-10 text-center">
-              <Button asChild size="lg">
+            <div className="mt-8 text-center">
+              <Button asChild>
                 <Link href="/dvbe-participation">
-                  Ask About DVBE Support
-                  <ArrowRight className="h-5 w-5" />
+                  DVBE Information
+                  <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* FAQ */}
+      <section className="bg-muted py-16 lg:py-24">
+        <Container>
+          <div className="mx-auto max-w-3xl">
+            <div className="mb-10 flex items-center justify-center gap-2">
+              <HelpCircle className="h-6 w-6 text-primary" />
+              <h2 className="font-heading text-2xl font-bold text-foreground lg:text-3xl">
+                Common Questions
+              </h2>
+            </div>
+            <div className="space-y-4">
+              {faqItems.map((item) => (
+                <div key={item.question} className="rounded-xl border border-border bg-card p-5">
+                  <h3 className="font-heading text-lg font-bold text-foreground">
+                    {item.question}
+                  </h3>
+                  <p className="mt-2 text-muted-foreground">
+                    {item.answer}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </Container>
@@ -771,27 +910,32 @@ export default function HomePage() {
         <Container>
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="font-heading text-3xl font-bold tracking-tight text-white lg:text-4xl">
-              Need Electric Equipment for Your Next Job?
+              Ready to Rent?
             </h2>
             <p className="mt-4 text-lg text-white/80">
-              Tell us what job you are working on and we will help you find the right machine and rental setup.
+              Tell us your job location and dates. We will confirm availability and get you a quote.
             </p>
-            <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
+            <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-4">
               <Button asChild size="lg" className="bg-lime text-primary hover:bg-lime/90">
-                <Link href="/quote">
-                  Check Availability
-                  <ArrowRight className="h-5 w-5" />
-                </Link>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10">
                 <a href={COMPANY.phoneHref}>
                   <Phone className="h-5 w-5" />
                   Call {COMPANY.phone}
                 </a>
               </Button>
+              <Button asChild size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10">
+                <a href={COMPANY.smsHref}>
+                  <MessageSquare className="h-5 w-5" />
+                  Text Us
+                </a>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10">
+                <Link href="/quote">
+                  Request Quote
+                </Link>
+              </Button>
             </div>
             <p className="mt-6 text-sm text-white/70">
-              Our fleet is in service and ready now from Salinas and Lodi. Fast response on availability questions.
+              Equipment ready now from Salinas and Lodi. Fast response on availability.
             </p>
           </div>
         </Container>
