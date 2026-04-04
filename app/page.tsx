@@ -559,10 +559,13 @@ export default function HomePage() {
               {[
                 { src: "/images/PXL_20260403_233921526.MP.jpg", alt: "FirstGreen Elise 1200 CBL electric skid steer side view" },
                 { src: "/images/PXL_20260403_234229515.MP.jpg", alt: "Frontline fleet showing cab and cabless electric skid steers" },
-                { src: "/images/PXL_20260403_233952509.MP.jpg", alt: "FirstGreen Elise 1200 CBL front view with bucket" },
+                { src: "/images/PXL_20260404_200616878.MP.jpg", alt: "Operator inside FirstGreen Elise 1200 enclosed cab" },
+                { src: "/images/PXL_20260404_195141829.jpg", alt: "Digital display showing battery level and operating status" },
+                { src: "/images/PXL_20260404_195951934.jpg", alt: "Climate control panel with A/C in enclosed cab" },
+                { src: "/images/PXL_20260404_195147749.jpg", alt: "Ergonomic joystick controls with function buttons" },
                 { src: "/images/PXL_20260403_234048678.jpg", alt: "FirstGreen Elise 1200 enclosed cab model front view" },
                 { src: "/images/PXL_20260403_233930808.MP.jpg", alt: "Electric skid steer rear view showing battery and controls" },
-                { src: "/images/PXL_20260403_234124719.jpg", alt: "FirstGreen electric skid steer joystick controls close-up" },
+                { src: "/images/PXL_20260403_233952509.MP.jpg", alt: "FirstGreen Elise 1200 CBL front view with bucket" },
               ].map((photo, index) => (
                 <div
                   key={index}
