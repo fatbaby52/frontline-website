@@ -27,6 +27,7 @@ import {
   ClipboardList,
   MessageSquare,
   HelpCircle,
+  Fuel,
 } from "lucide-react";
 import { Hero } from "@/components/sections/hero";
 import { SearchBar } from "@/components/sections/search-bar";
@@ -196,7 +197,15 @@ const faqItems = [
   },
   {
     question: "What is included in the rental?",
-    answer: "Standard bucket or forks, operator orientation, equipment manual, and free yard pickup from Salinas or Lodi. Delivery is available for an additional fee.",
+    answer: "The machine arrives fully charged with a full day of runtime. We also include one heavy-duty extension cord, a laminated charging instruction card, standard bucket or forks, operator orientation, and equipment manual. Free yard pickup from Salinas or Lodi. Delivery is available for an additional fee.",
+  },
+  {
+    question: "Do I need to charge the machine at my job site?",
+    answer: "For single-day rentals, no. We deliver the machine fully charged with a full day of runtime. Use it and return it at 10% battery or above. For multi-day rentals, we include one extension cord and a charging instruction card. Plug into a standard 120V outlet and charge between shifts whenever the machine is not in use. If you have a 240V outlet available, charging is significantly faster. Contact us before your rental and we can walk you through the best charging setup for your site.",
+  },
+  {
+    question: "How long does it take to charge?",
+    answer: "Charge time depends on your power source and how much of the battery you used. A standard 120V outlet provides a steady charge, and the machine should be plugged in whenever it's not working. A 240V outlet charges significantly faster. We'll go over charging details with you at pickup or delivery so you know what to expect for your specific job.",
   },
   {
     question: "Do you deliver statewide?",
@@ -219,10 +228,10 @@ export default function HomePage() {
       {/* Hero */}
       <Hero
         headline="Electric Skid Steer Rentals in Salinas and Lodi"
-        subhead="Zero-emission equipment for PG&E, public works, and urban jobsites. Quiet, powerful, and ready to go."
+        subhead="Zero-emission equipment that arrives fully charged. No diesel costs, no fumes, no noise. Ready to go."
         primaryCta={{ label: "Check Availability", href: "/quote" }}
         secondaryCta={{ label: "Get a Quote", href: "/quote" }}
-        badges={["Ready Now", "DVBE Certified", "Zero-Emission Equipment"]}
+        badges={["Ready Now", "DVBE Certified", "Fuel Included"]}
         serviceArea="Serving Salinas, Monterey County, Lodi, and surrounding California markets."
         backgroundImage="/images/fleet-hero.png"
         microcopy={`Available now. Call ${COMPANY.phone} or message us to check current fleet availability.`}
@@ -396,8 +405,86 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* Available Equipment */}
+      {/* Cost Comparison */}
       <section className="bg-muted py-16 lg:py-24">
+        <Container>
+          <div className="mx-auto max-w-4xl">
+            <h2 className="text-center font-heading text-3xl font-bold tracking-tight text-foreground lg:text-4xl">
+              Your Real Rental Cost Is Lower Than You Think
+            </h2>
+            <p className="mx-auto mt-6 max-w-3xl text-center text-muted-foreground">
+              When you rent a diesel skid steer, the daily rate is just the start. You still have to buy the diesel. A typical skid steer burns about 2 gallons per hour. Over an 8-hour day at California diesel prices, that&apos;s roughly $90–$100 in fuel on top of your rental rate.
+            </p>
+            <p className="mx-auto mt-4 max-w-3xl text-center text-muted-foreground">
+              When you rent from Frontline, the machine arrives fully charged. For a single-day rental, you use it and return it. No fuel costs at all.
+            </p>
+
+            <div className="mt-10 grid gap-6 sm:grid-cols-2">
+              {/* Diesel Side */}
+              <div className="rounded-xl border border-border bg-white p-6">
+                <div className="mb-4 flex items-center gap-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-muted">
+                    <Fuel className="h-5 w-5 text-muted-foreground" />
+                  </div>
+                  <h3 className="font-heading text-lg font-bold text-foreground">Diesel Rental</h3>
+                </div>
+                <div className="space-y-2 text-sm">
+                  <div className="flex justify-between">
+                    <span className="text-muted-foreground">Daily rental rate</span>
+                    <span className="font-medium text-foreground">$450–$550</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-muted-foreground">Fuel cost (~8 hrs)</span>
+                    <span className="font-medium text-foreground">+$90–$100</span>
+                  </div>
+                  <div className="border-t border-border pt-2">
+                    <div className="flex justify-between">
+                      <span className="font-medium text-foreground">Your real day-one cost</span>
+                      <span className="font-bold text-foreground">$545–$650</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Frontline Side */}
+              <div className="rounded-xl border-2 border-lime bg-lime/10 p-6">
+                <div className="mb-4 flex items-center gap-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-lime">
+                    <Zap className="h-5 w-5 text-primary" />
+                  </div>
+                  <h3 className="font-heading text-lg font-bold text-foreground">Frontline Electric</h3>
+                </div>
+                <div className="space-y-2 text-sm">
+                  <div className="flex justify-between">
+                    <span className="text-muted-foreground">Daily rental rate</span>
+                    <span className="font-medium text-foreground">$450–$525</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-muted-foreground">Delivered charged</span>
+                    <span className="font-bold text-lime-700">Yes</span>
+                  </div>
+                  <div className="border-t border-lime/30 pt-2">
+                    <div className="flex justify-between">
+                      <span className="font-medium text-foreground">Day-one fuel cost</span>
+                      <span className="font-bold text-primary">$0</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <p className="mx-auto mt-8 max-w-2xl text-center text-muted-foreground">
+              For multi-day rentals, you charge between shifts from a standard outlet. Your electricity cost is a fraction of what you&apos;d spend on diesel.
+            </p>
+            <p className="mt-4 text-center font-medium text-foreground">
+              Over a 5-day job, the fuel savings alone can run $400–$500.
+            </p>
+          </div>
+        </Container>
+      </section>
+
+      {/* Available Equipment */}
+      <section className="py-16 lg:py-24">
         <Container>
           <div className="mb-12 text-center">
             <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground lg:text-4xl">
@@ -443,11 +530,16 @@ export default function HomePage() {
                   <p className="mt-2 text-sm font-medium text-foreground">
                     {item.bestFor}
                   </p>
-                  <div className="mt-4 flex items-baseline gap-2">
-                    <span className="text-2xl font-bold text-primary">
-                      ${item.dailyRate}
+                  <div className="mt-4 flex items-center gap-3">
+                    <div className="flex items-baseline gap-1">
+                      <span className="text-2xl font-bold text-primary">
+                        ${item.dailyRate}
+                      </span>
+                      <span className="text-muted-foreground">/day</span>
+                    </div>
+                    <span className="rounded-full bg-lime px-2.5 py-0.5 text-xs font-bold text-primary">
+                      Fuel Included
                     </span>
-                    <span className="text-muted-foreground">/day</span>
                   </div>
                   <ul className="mt-4 space-y-2">
                     {item.highlights.slice(0, 3).map((highlight) => (

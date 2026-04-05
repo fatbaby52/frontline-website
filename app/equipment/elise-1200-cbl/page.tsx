@@ -50,12 +50,17 @@ export default function Elise1200CBLPage() {
               </h1>
               <p className="mt-3 text-lg text-white/70">{machine.tagline}</p>
               <div className="mt-6">
-                <PricingDisplay
-                  dailyRate={machine.dailyRate}
-                  size="lg"
-                  className="[&_span]:text-white [&_span.text-muted-foreground]:text-white/60 [&_span.text-primary]:text-accent"
-                />
-                <p className="mt-1 text-sm text-white/50">
+                <div className="flex items-center gap-3">
+                  <PricingDisplay
+                    dailyRate={machine.dailyRate}
+                    size="lg"
+                    className="[&_span]:text-white [&_span.text-muted-foreground]:text-white/60 [&_span.text-primary]:text-accent"
+                  />
+                  <span className="rounded-full bg-lime px-3 py-1 text-sm font-bold text-primary">
+                    Fuel Included
+                  </span>
+                </div>
+                <p className="mt-2 text-sm text-white/50">
                   Weekly and monthly rates available
                 </p>
               </div>
