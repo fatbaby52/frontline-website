@@ -37,7 +37,7 @@ const jsonLd = {
   description:
     "Electric skid steer rentals serving Salinas, Monterey County, and the Central Coast. Zero emission equipment, DVBE certified, free yard pickup.",
   url: "https://frontline.rentals/salinas-rentals",
-  telephone: "(209) 470-6385",
+  telephone: "(831) 262-2847",
   email: "alex@frontline.rentals",
   address: {
     "@type": "PostalAddress",

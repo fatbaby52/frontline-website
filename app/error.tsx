@@ -30,7 +30,7 @@ export default function Error({
           <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
             <Button onClick={reset}>Try again</Button>
             <Button variant="outline" asChild>
-              <a href="tel:2094706385">Call (209) 470-6385</a>
+              <a href="tel:8312622847">Call (831) 262-2847</a>
             </Button>
           </div>
           {error.digest && (

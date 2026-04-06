@@ -371,7 +371,7 @@ export default function DeliveryPage() {
         ctaLabel="Get Delivery Quote"
         ctaHref="/quote"
         secondaryCtaLabel="Call Us"
-        secondaryCtaHref="tel:2094706385"
+        secondaryCtaHref="tel:8312622847"
       />
     </>
   );

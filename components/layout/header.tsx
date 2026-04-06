@@ -182,11 +182,11 @@ export function Header() {
           {/* Desktop CTA */}
           <div className="hidden items-center gap-4 lg:flex">
             <a
-              href="tel:2094706385"
+              href="tel:8312622847"
               className="flex items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
             >
               <Phone className="h-4 w-4" />
-              (209) 470-6385
+              (831) 262-2847
             </a>
             <Link
               href="/quote"
@@ -287,12 +287,12 @@ export function Header() {
             </nav>
             <div className="flex flex-col gap-3 pb-4">
               <a
-                href="tel:2094706385"
+                href="tel:8312622847"
                 tabIndex={mobileMenuOpen ? 0 : -1}
                 className="flex items-center justify-center gap-2 rounded-xl border-2 border-border py-3 text-base font-medium text-foreground"
               >
                 <Phone className="h-5 w-5" />
-                (209) 470-6385
+                (831) 262-2847
               </a>
               <Link
                 href="/quote"

@@ -1,9 +1,9 @@
 // Company contact information - single source of truth
 export const COMPANY = {
   name: "Frontline EV Rentals",
-  phone: "(209) 470-6385",
-  phoneHref: "tel:2094706385",
-  smsHref: "sms:2094706385",
+  phone: "(831) 262-2847",
+  phoneHref: "tel:8312622847",
+  smsHref: "sms:8312622847",
   email: "alex@frontline.rentals",
   emailHref: "mailto:alex@frontline.rentals",
   certificationId: "#2048632",

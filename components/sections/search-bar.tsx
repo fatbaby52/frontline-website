@@ -43,7 +43,7 @@ export function SearchBar({ onResponse }: SearchBarProps) {
       onResponse?.(userQuery, data.message);
     } catch {
       setAnswer(
-        "I'm having trouble connecting right now. Please call us at (209) 470-6385 or email alex@frontline.rentals for assistance."
+        "I'm having trouble connecting right now. Please call us at (831) 262-2847 or email alex@frontline.rentals for assistance."
       );
       setShowForm(true);
     } finally {

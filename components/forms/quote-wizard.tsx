@@ -187,7 +187,7 @@ export function QuoteWizard() {
         </p>
         <div className="mt-6 rounded-lg border border-border bg-muted/50 p-4">
           <p className="font-mono text-sm text-muted-foreground">
-            (209) 470-6385
+            (831) 262-2847
           </p>
           <p className="font-mono text-sm text-muted-foreground">
             alex@frontline.rentals

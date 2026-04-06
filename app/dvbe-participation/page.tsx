@@ -50,7 +50,7 @@ const jsonLd = {
   provider: {
     "@type": "LocalBusiness",
     name: "Frontline EV Rentals",
-    telephone: "(209) 470-6385",
+    telephone: "(831) 262-2847",
     email: "alex@frontline.rentals",
     hasCredential: {
       "@type": "EducationalOccupationalCredential",

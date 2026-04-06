@@ -65,7 +65,7 @@ const jsonLd = {
       description:
         "Electric skid steer rentals for California contractors. Zero emissions, low noise equipment for compliance-driven jobs. DVBE certified. Equipment ready now from Salinas and Lodi.",
       url: "https://frontline.rentals",
-      telephone: "(209) 470-6385",
+      telephone: "(831) 262-2847",
       email: "alex@frontline.rentals",
       priceRange: "$450-$525/day",
       address: [

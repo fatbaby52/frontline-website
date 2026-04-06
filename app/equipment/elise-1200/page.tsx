@@ -74,7 +74,7 @@ export default function Elise1200Page() {
                   size="lg"
                   className="border-white/20 bg-transparent text-white hover:bg-white/10 hover:text-white"
                 >
-                  <a href="tel:2094706385">Call (209) 470-6385</a>
+                  <a href="tel:8312622847">Call (831) 262-2847</a>
                 </Button>
               </div>
             </div>

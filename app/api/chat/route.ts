@@ -4,7 +4,7 @@ const SYSTEM_PROMPT = `You are a helpful assistant for Frontline EV Rentals, a C
 
 Key Business Information:
 - Company: Frontline EV Rentals
-- Phone: (209) 470-6385
+- Phone: (831) 262-2847
 - Email: alex@frontline.rentals
 - Website: frontline.rentals
 - Locations: Salinas and Lodi, California (delivery available statewide)
@@ -43,7 +43,7 @@ Benefits of Electric Equipment:
 Guidelines:
 - Be helpful, professional, and concise
 - If asked about pricing, provide the daily rates and mention weekly/monthly discounts are available
-- For quotes or bookings, direct them to call (209) 470-6385 or email alex@frontline.rentals
+- For quotes or bookings, direct them to call (831) 262-2847 or email alex@frontline.rentals
 - If you don't know something specific, suggest they contact the team directly
 - Keep responses focused on Frontline's services and equipment`;
 

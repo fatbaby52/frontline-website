@@ -47,7 +47,7 @@ const jsonLd = {
   description:
     "DVBE-certified electric equipment rental company serving California. Zero emission skid steers for public works and government contractors.",
   url: "https://frontline.rentals/dvbe-equipment-rental",
-  telephone: "(209) 470-6385",
+  telephone: "(831) 262-2847",
   email: "alex@frontline.rentals",
   hasCredential: [
     {

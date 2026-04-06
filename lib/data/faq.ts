@@ -130,7 +130,7 @@ export const faqData: FAQCategory[] = [
       {
         question: "How do I get a quote?",
         answer:
-          "Use our online quote form, email alex@frontline.rentals, or call (209) 470-6385. We respond within one business day.",
+          "Use our online quote form, email alex@frontline.rentals, or call (831) 262-2847. We respond within one business day.",
       },
     ],
   },

@@ -69,7 +69,7 @@ export function ChatWidget() {
         {
           role: "assistant",
           content:
-            "I'm sorry, I'm having trouble connecting right now. Please call us at (209) 470-6385 or email alex@frontline.rentals for assistance.",
+            "I'm sorry, I'm having trouble connecting right now. Please call us at (831) 262-2847 or email alex@frontline.rentals for assistance.",
         },
       ]);
     } finally {
@@ -291,8 +291,8 @@ export function ChatWidget() {
           </div>
           <p className="mt-2 text-center text-xs text-muted-foreground">
             AI-powered • Call{" "}
-            <a href="tel:2094706385" className="text-primary hover:underline">
-              (209) 470-6385
+            <a href="tel:8312622847" className="text-primary hover:underline">
+              (831) 262-2847
             </a>{" "}
             for immediate help
           </p>
