@@ -55,7 +55,7 @@ export function SearchBar({ onResponse }: SearchBarProps) {
     e.preventDefault();
 
     try {
-      const formDataToSend = new FormData();
+      const formDataToSend = new URLSearchParams();
       formDataToSend.append("form-name", "search-lead");
       formDataToSend.append("name", formData.name);
       formDataToSend.append("email", formData.email);
@@ -63,12 +63,13 @@ export function SearchBar({ onResponse }: SearchBarProps) {
       formDataToSend.append("question", query);
       formDataToSend.append("answer", answer);
 
-      await fetch("/", {
+      const response = await fetch("/netlify-forms.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formDataToSend as unknown as Record<string, string>).toString(),
+        body: formDataToSend.toString(),
       });
 
+      if (!response.ok) throw new Error("Failed to submit");
       setFormSubmitted(true);
     } catch {
       // Still show success to user - form data captured

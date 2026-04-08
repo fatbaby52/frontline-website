@@ -137,8 +137,7 @@ export function QuoteWizard() {
     setSubmitError("");
 
     try {
-      // Submit to Netlify Forms
-      const formDataToSend = new FormData();
+      const formDataToSend = new URLSearchParams();
       formDataToSend.append("form-name", "quote-request");
       formDataToSend.append("equipment", data.equipment.join(", "));
       formDataToSend.append("projectType", data.projectType);
@@ -155,10 +154,10 @@ export function QuoteWizard() {
       formDataToSend.append("notes", data.notes || "");
       formDataToSend.append("needDvbeDocs", data.needDvbeDocs ? "Yes" : "No");
 
-      const response = await fetch("/", {
+      const response = await fetch("/netlify-forms.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formDataToSend as unknown as Record<string, string>).toString(),
+        body: formDataToSend.toString(),
       });
 
       if (!response.ok) throw new Error("Failed to submit");

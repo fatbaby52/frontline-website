@@ -85,7 +85,7 @@ export function ChatWidget() {
       const firstQuestion = messages.find(m => m.role === "user")?.content || "";
       const firstAnswer = messages.find(m => m.role === "assistant")?.content || "";
 
-      const formDataToSend = new FormData();
+      const formDataToSend = new URLSearchParams();
       formDataToSend.append("form-name", "chat-lead");
       formDataToSend.append("name", formData.name);
       formDataToSend.append("email", formData.email);
@@ -93,12 +93,13 @@ export function ChatWidget() {
       formDataToSend.append("question", firstQuestion);
       formDataToSend.append("answer", firstAnswer);
 
-      await fetch("/", {
+      const response = await fetch("/netlify-forms.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formDataToSend as unknown as Record<string, string>).toString(),
+        body: formDataToSend.toString(),
       });
 
+      if (!response.ok) throw new Error("Failed to submit");
       setFormSubmitted(true);
       setShowForm(false);
     } catch {
