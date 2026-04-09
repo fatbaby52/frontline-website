@@ -41,13 +41,13 @@ export const equipment: Equipment[] = [
     manufacturerUrl: "https://first.green/en/elise",
     highlights: [
       "Enclosed cab with climate control",
-      "1,200 lb rated operating capacity",
+      "1,200 kg rated operating capacity",
       "Full-day battery runtime",
       "Zero emissions, low noise",
       "Compact footprint for tight spaces",
     ],
     specifications: {
-      "Rated Capacity": "1,200 lbs",
+      "Rated Capacity": "1,200 kg",
       "Power Source": "Electric / Battery",
       "Cab": "Enclosed with HVAC",
       "Runtime": "Full work day typical",
@@ -95,13 +95,13 @@ export const equipment: Equipment[] = [
     manufacturerUrl: "https://first.green/en/cbl",
     highlights: [
       "Open operator station, excellent visibility",
-      "1,200 lb rated operating capacity",
+      "1,200 kg rated operating capacity",
       "Full-day battery runtime",
       "Zero emissions, low noise",
       "Lower rental cost option",
     ],
     specifications: {
-      "Rated Capacity": "1,200 lbs",
+      "Rated Capacity": "1,200 kg",
       "Power Source": "Electric / Battery",
       "Cab": "Open (cabless)",
       "Runtime": "Full work day typical",

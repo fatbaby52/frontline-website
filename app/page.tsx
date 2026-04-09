@@ -99,7 +99,7 @@ const jsonLd = {
       "@type": "Product",
       name: "FirstGreen Elise 1200 Electric Skid Steer",
       description:
-        "Electric skid steer with enclosed cab. 1,200 lb capacity. Zero emissions, full-day battery life. Ready now.",
+        "Electric skid steer with enclosed cab. 1,200 kg capacity. Zero emissions, full-day battery life. Ready now.",
       brand: { "@type": "Brand", name: "FirstGreen" },
       offers: {
         "@type": "Offer",
@@ -113,7 +113,7 @@ const jsonLd = {
       "@type": "Product",
       name: "FirstGreen Elise 1200 CBL Electric Skid Steer",
       description:
-        "Cabless electric skid steer with open operator station. 1,200 lb capacity. Zero emissions, full-day battery life. Ready now.",
+        "Cabless electric skid steer with open operator station. 1,200 kg capacity. Zero emissions, full-day battery life. Ready now.",
       brand: { "@type": "Brand", name: "FirstGreen" },
       offers: {
         "@type": "Offer",

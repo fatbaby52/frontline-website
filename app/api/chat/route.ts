@@ -13,7 +13,7 @@ Key Business Information:
 Equipment Available:
 1. FirstGreen Elise 1200 - Wheeled Electric Skid Steer
    - Daily Rate: $525
-   - Rated Capacity: 1,200 lbs
+   - Rated Capacity: 1,200 kg
    - Full work day runtime on single charge
    - Compact dimensions, fits through standard gates
    - Includes bucket OR forks, operator orientation, free yard pickup
@@ -21,7 +21,7 @@ Equipment Available:
 
 2. FirstGreen CBL 1200 - Wheeled Electric Skid Steer
    - Daily Rate: $450
-   - Rated Capacity: 1,200 lbs
+   - Rated Capacity: 1,200 kg
    - Lower center of gravity for stability
    - Excellent maneuverability in tight spaces
    - Includes bucket OR forks, operator orientation, free yard pickup
