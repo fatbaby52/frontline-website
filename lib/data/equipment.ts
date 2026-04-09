@@ -130,6 +130,57 @@ export const equipment: Equipment[] = [
       "Residential neighborhoods",
     ],
   },
+  {
+    slug: "jcb-19c-1e",
+    name: "JCB 19C-1E",
+    type: "Electric Mini Excavator",
+    tagline: "Zero emission excavator for compact jobsites",
+    bestFor: "Best for digging, trenching, and utility work where emissions and noise matter",
+    dailyRate: 550,
+    weeklyRate: "Contact for rates",
+    monthlyRate: "Contact for rates",
+    unitsAvailable: 1,
+    image: "/images/jcb-19c-1e.jpg",
+    galleryImages: [
+      { src: "/images/jcb-19c-1e.jpg", alt: "JCB 19C-1E electric mini excavator available for rent in California" },
+    ],
+    manufacturerUrl: "https://www.jcb.com/en-us/products/mini-excavators/19c-1e",
+    highlights: [
+      "Zero tailpipe emissions",
+      "2-ton class mini excavator",
+      "Full-day battery runtime",
+      "67% quieter than diesel equivalent",
+      "No diesel, no fumes",
+    ],
+    specifications: {
+      "Operating Weight": "1,902 kg",
+      "Max Dig Depth": "2.1 m",
+      "Power Source": "Electric / Lithium-ion Battery",
+      "Runtime": "Up to 5 hours continuous use",
+      "Charging": "110V, 230V, or 415V options",
+    },
+    included: [
+      "Delivered fully charged",
+      "Charging cable",
+      "Return at 10% battery or above",
+      "Standard bucket",
+      "Operator orientation",
+      "Equipment manual and safety docs",
+      "Free yard pickup (Salinas or Lodi)",
+    ],
+    optional: [
+      "Delivery (quoted based on distance)",
+      "Additional buckets and attachments",
+      "Extended rental discounts",
+    ],
+    idealFor: [
+      "Utility and underground work",
+      "Urban construction sites",
+      "Indoor demolition with ventilation",
+      "Landscaping and hardscaping",
+      "Noise-restricted areas",
+    ],
+  },
 ];
 
 export function getEquipmentBySlug(slug: string): Equipment | undefined {

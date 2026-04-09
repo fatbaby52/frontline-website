@@ -123,6 +123,20 @@ const jsonLd = {
         availability: "https://schema.org/InStock",
       },
     },
+    {
+      "@type": "Product",
+      name: "JCB 19C-1E Electric Mini Excavator",
+      description:
+        "Zero emission mini excavator. 2-ton class, full-day battery life. 67% quieter than diesel. Ready now.",
+      brand: { "@type": "Brand", name: "JCB" },
+      offers: {
+        "@type": "Offer",
+        price: "550",
+        priceCurrency: "USD",
+        unitText: "DAY",
+        availability: "https://schema.org/InStock",
+      },
+    },
   ],
 };
 
@@ -227,8 +241,8 @@ export default function HomePage() {
 
       {/* Hero */}
       <Hero
-        headline="Electric Skid Steer Rentals in Salinas and Lodi"
-        subhead="Zero-emission equipment that arrives fully charged. No diesel costs, no fumes, no noise. Ready to go."
+        headline="Zero Emission Construction Equipment Rentals"
+        subhead="Electric skid steers and excavators that arrive fully charged. No diesel costs, no fumes, no noise. Ready to go."
         primaryCta={{ label: "Check Availability", href: "/quote" }}
         secondaryCta={{ label: "Get a Quote", href: "/quote" }}
         badges={["Ready Now", "DVBE Certified", "Fuel Included"]}
