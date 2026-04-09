@@ -543,7 +543,7 @@ export default function HomePage() {
                     </div>
                     <div className="mt-2 rounded-lg bg-red-500/10 border border-red-500/30 px-3 py-2">
                       <span className="text-sm font-bold text-red-600">For a limited time:</span>
-                      <span className="ml-2 text-2xl font-bold text-primary">$1,000</span>
+                      <span className="ml-2 text-2xl font-bold text-primary">{item.slug === "elise-1200-cbl" ? "$1,000" : "$1,200"}</span>
                       <span className="text-muted-foreground">/week</span>
                     </div>
                   </div>
