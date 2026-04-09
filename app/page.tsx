@@ -530,16 +530,22 @@ export default function HomePage() {
                   <p className="mt-2 text-sm font-medium text-foreground">
                     {item.bestFor}
                   </p>
-                  <div className="mt-4 flex items-center gap-3">
-                    <div className="flex items-baseline gap-1">
-                      <span className="text-2xl font-bold text-primary">
-                        ${item.dailyRate}
+                  <div className="mt-4">
+                    <div className="flex items-center gap-3">
+                      <div className="flex items-baseline gap-1">
+                        <span className="text-lg text-muted-foreground line-through">
+                          ${item.dailyRate}/day
+                        </span>
+                      </div>
+                      <span className="rounded-full bg-lime px-2.5 py-0.5 text-xs font-bold text-primary">
+                        Fuel Included
                       </span>
-                      <span className="text-muted-foreground">/day</span>
                     </div>
-                    <span className="rounded-full bg-lime px-2.5 py-0.5 text-xs font-bold text-primary">
-                      Fuel Included
-                    </span>
+                    <div className="mt-2 rounded-lg bg-red-500/10 border border-red-500/30 px-3 py-2">
+                      <span className="text-sm font-bold text-red-600">For a limited time:</span>
+                      <span className="ml-2 text-2xl font-bold text-primary">$1,000</span>
+                      <span className="text-muted-foreground">/week</span>
+                    </div>
                   </div>
                   <ul className="mt-4 space-y-2">
                     {item.highlights.slice(0, 3).map((highlight) => (
