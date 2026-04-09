@@ -13,7 +13,7 @@ import { faqData } from "@/lib/data/faq";
 export const metadata: Metadata = {
   title: "FAQ | Frontline EV Rentals",
   description:
-    "Frequently asked questions about electric skid steer rentals, DVBE certification, pricing, delivery, and more.",
+    "Frequently asked questions about zero emission construction equipment rentals, DVBE certification, pricing, delivery, and more.",
 };
 
 const faqJsonLd = {

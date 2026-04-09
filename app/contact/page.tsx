@@ -7,7 +7,7 @@ import { ContactForm } from "@/components/forms/contact-form";
 export const metadata: Metadata = {
   title: "Contact Us | Frontline EV Rentals",
   description:
-    "Contact Frontline EV Rentals for electric skid steer rentals, DVBE documentation, or project support. (831) 262-2847.",
+    "Contact Frontline EV Rentals for zero emission construction equipment rentals, DVBE documentation, or project support. (831) 262-2847.",
 };
 
 export default function ContactPage() {

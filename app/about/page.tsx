@@ -13,9 +13,9 @@ import { Button } from "@/components/ui/button";
 import { certifications } from "@/lib/data/certifications";
 
 export const metadata: Metadata = {
-  title: "About Frontline EV Rentals | Electric Equipment Rental California",
+  title: "About Frontline EV Rentals | Zero Emission Equipment Rental California",
   description:
-    "Frontline EV Rentals provides zero emission electric skid steer rentals for California contractors. DVBE certified. Serving Salinas, Lodi, and statewide.",
+    "Frontline EV Rentals provides zero emission construction equipment rentals for California contractors. DVBE certified. Serving Salinas, Lodi, and statewide.",
   alternates: {
     canonical: "https://frontline.rentals/about",
   },
@@ -50,10 +50,10 @@ export default function AboutPage() {
               Electric Equipment for Compliance-Driven Jobs
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Frontline EV Rentals provides zero emission electric skid steers for California contractors. We serve jobs where diesel is a problem: utility work, public projects, urban sites, and locations with noise or emissions restrictions.
+              Frontline EV Rentals provides zero emission construction equipment for California contractors. We serve jobs where diesel is a problem: utility work, public projects, urban sites, and locations with noise or emissions restrictions.
             </p>
             <p className="mt-4 text-lg text-muted-foreground">
-              Our equipment delivers full power and all-day runtime. Electric skid steers are not a compromise. They open up work in places where diesel cannot go.
+              Our equipment delivers full power and all-day runtime. Electric construction equipment is not a compromise. It opens up work in places where diesel cannot go.
             </p>
           </div>
         </Container>

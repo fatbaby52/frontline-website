@@ -38,17 +38,17 @@ import { equipment } from "@/lib/data/equipment";
 import { COMPANY } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Electric Skid Steer Rental Salinas and Lodi California | Ready Now | Frontline EV Rentals",
+  title: "Zero Emission Construction Equipment Rentals California | Frontline EV Rentals",
   description:
-    "Electric skid steer rental in Salinas and Lodi, California. Zero emission equipment ready now. DVBE certified for public works and utility contractors. Charged, tested, available today.",
+    "Zero emission construction equipment rentals in California. Electric skid steers and excavators ready now. DVBE certified for public works and utility contractors.",
   keywords: [
-    "electric skid steer rental Salinas",
-    "electric skid steer rental Lodi",
-    "zero emission equipment rental California",
+    "zero emission construction equipment rental California",
+    "electric skid steer rental California",
+    "electric excavator rental California",
     "DVBE equipment rental California",
     "electric equipment for public works",
     "electric equipment for utility jobs",
-    "Monterey County electric equipment rental",
+    "zero emission equipment rental",
   ],
   alternates: {
     canonical: "https://frontline.rentals",
@@ -63,7 +63,7 @@ const jsonLd = {
       "@id": "https://frontline.rentals/#business",
       name: "Frontline EV Rentals",
       description:
-        "Electric skid steer rentals for California contractors. Zero emissions, low noise equipment for compliance-driven jobs. DVBE certified. Equipment ready now from Salinas and Lodi.",
+        "Zero emission construction equipment rentals for California contractors. Electric skid steers and excavators for compliance-driven jobs. DVBE certified. Equipment ready now from Salinas and Lodi.",
       url: "https://frontline.rentals",
       telephone: "(831) 262-2847",
       email: "alex@frontline.rentals",

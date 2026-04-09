@@ -6,9 +6,9 @@ import { Container } from "@/components/layout/container";
 import { equipment } from "@/lib/data/equipment";
 
 export const metadata: Metadata = {
-  title: "Electric Skid Steer Rentals | Frontline EV Rentals",
+  title: "Zero Emission Construction Equipment Rentals | Frontline EV Rentals",
   description:
-    "Rent electric skid steers in California. Zero emissions, full-day battery life. DVBE certified. Free pickup from Salinas or Lodi.",
+    "Rent zero emission construction equipment in California. Electric skid steers and excavators. DVBE certified. Free pickup from Salinas or Lodi.",
 };
 
 export default function EquipmentPage() {
@@ -16,7 +16,7 @@ export default function EquipmentPage() {
     <>
       <Hero
         headline="Our Equipment"
-        subhead="Electric skid steers built for California job sites. Zero emissions, full power."
+        subhead="Zero emission construction equipment for California job sites. Full power, all-day runtime."
         compact
       />
 

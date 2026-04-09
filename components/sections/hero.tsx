@@ -43,7 +43,7 @@ export function Hero({
         <>
           <Image
             src={backgroundImage}
-            alt="Frontline EV Rentals electric skid steer fleet in Salinas and Lodi California"
+            alt="Frontline EV Rentals zero emission construction equipment fleet in California"
             fill
             className="object-cover object-center"
             priority
