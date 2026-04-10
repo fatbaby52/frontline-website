@@ -136,10 +136,10 @@ export const equipment: Equipment[] = [
     type: "Electric Mini Excavator",
     tagline: "Zero emission excavator for compact jobsites",
     bestFor: "Best for digging, trenching, and utility work where emissions and noise matter",
-    dailyRate: 550,
+    dailyRate: 1000,
     weeklyRate: "Contact for rates",
     monthlyRate: "Contact for rates",
-    unitsAvailable: 1,
+    unitsAvailable: 3,
     image: "/images/jcb-19c-1e.jpg",
     galleryImages: [
       { src: "/images/jcb-19c-1e.jpg", alt: "JCB 19C-1E electric mini excavator available for rent in California" },

@@ -131,7 +131,7 @@ const jsonLd = {
       brand: { "@type": "Brand", name: "JCB" },
       offers: {
         "@type": "Offer",
-        price: "550",
+        price: "1000",
         priceCurrency: "USD",
         unitText: "DAY",
         availability: "https://schema.org/InStock",
