@@ -115,6 +115,20 @@ export function Footer() {
               <span className="text-sm text-white/50">
                 CA #{COMPANY.certificationId} • CAGE {COMPANY.cageCode}
               </span>
+              <a
+                href="https://www.veteranownedbusiness.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-opacity hover:opacity-80"
+              >
+                <Image
+                  src="/images/veteran-owned-badge.png"
+                  alt="Veteran Owned Business"
+                  width={80}
+                  height={72}
+                  className="h-12 w-auto"
+                />
+              </a>
             </div>
             <p className="text-sm text-white/50">
               © {CURRENT_YEAR} {COMPANY.name}
