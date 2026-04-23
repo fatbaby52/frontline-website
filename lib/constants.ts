@@ -6,7 +6,7 @@ export const COMPANY = {
   smsHref: "sms:8312622847",
   email: "alex@frontline.rentals",
   emailHref: "mailto:alex@frontline.rentals",
-  certificationId: "#2048632",
+  certificationId: "#2048623",
   cageCode: "17WA3",
   locations: {
     salinas: {

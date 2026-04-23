@@ -118,7 +118,7 @@ export default function AboutPage() {
                 <div className="mt-4 rounded-lg bg-muted p-3">
                   <p className="font-mono text-sm text-muted-foreground">
                     Certification ID:{" "}
-                    <span className="font-semibold text-foreground">#2048632</span>
+                    <span className="font-semibold text-foreground">#2048623</span>
                   </p>
                 </div>
               </div>

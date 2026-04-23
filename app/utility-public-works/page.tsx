@@ -352,7 +352,7 @@ export default function UtilityPublicWorksPage() {
                 </p>
                 <p className="mt-4 font-mono text-sm text-muted-foreground">
                   CA Certification ID:{" "}
-                  <span className="font-semibold text-foreground">#2048632</span>
+                  <span className="font-semibold text-foreground">#2048623</span>
                 </p>
                 <Button asChild variant="outline" className="mt-4">
                   <Link href="/dvbe-equipment-rental">DVBE Information</Link>

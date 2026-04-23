@@ -91,7 +91,7 @@ const jsonLd = {
           "@type": "EducationalOccupationalCredential",
           credentialCategory: "certification",
           name: "DVBE Certified",
-          description: "Disabled Veteran Business Enterprise - California #2048632",
+          description: "Disabled Veteran Business Enterprise - California #2048623",
         },
       ],
     },
@@ -227,7 +227,7 @@ const faqItems = [
   },
   {
     question: "Can I use Frontline for DVBE participation?",
-    answer: "Yes. Frontline is DVBE-certified (CA #2048632). Rental costs can count toward your DVBE participation goal on California public projects.",
+    answer: "Yes. Frontline is DVBE-certified (CA #2048623). Rental costs can count toward your DVBE participation goal on California public projects.",
   },
 ];
 
@@ -933,7 +933,7 @@ export default function HomePage() {
             <div className="text-center">
               <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
                 <ShieldCheck className="h-4 w-4" />
-                CA Certification #2048632
+                CA Certification #2048623
               </div>
               <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground lg:text-4xl">
                 DVBE Certified Equipment Rental

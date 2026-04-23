@@ -21,7 +21,7 @@ import { COMPANY } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "DVBE Equipment Rental California | Certified Electric Equipment",
   description:
-    "DVBE-certified electric equipment rental in California. Support your DVBE participation goals with zero emission skid steer rentals. CA Certification ID #2048632.",
+    "DVBE-certified electric equipment rental in California. Support your DVBE participation goals with zero emission skid steer rentals. CA Certification ID #2048623.",
   keywords: [
     "DVBE equipment rental California",
     "DVBE certified rental company",
@@ -125,7 +125,7 @@ export default function DVBEEquipmentRentalPage() {
           <div className="mx-auto max-w-4xl text-center">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-lime px-4 py-2 text-sm font-bold text-primary">
               <ShieldCheck className="h-4 w-4" />
-              CA Certification ID #2048632
+              CA Certification ID #2048623
             </div>
             <h1 className="font-heading text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
               DVBE-Certified Electric Equipment Rental in California
@@ -267,7 +267,7 @@ export default function DVBEEquipmentRentalPage() {
                 <div className="mt-4 rounded-lg bg-muted p-3">
                   <p className="font-mono text-sm text-muted-foreground">
                     CA Certification ID:{" "}
-                    <span className="font-semibold text-foreground">#2048632</span>
+                    <span className="font-semibold text-foreground">#2048623</span>
                   </p>
                 </div>
               </div>

@@ -100,7 +100,7 @@ export const faqData: FAQCategory[] = [
       {
         question: "Are you DVBE certified?",
         answer:
-          "Yes. Frontline EV Rentals is a certified Disabled Veteran Business Enterprise (DVBE) in California, as well as certified Small Business and Small Business - Public Works. Our CA Certification ID is #2048632.",
+          "Yes. Frontline EV Rentals is a certified Disabled Veteran Business Enterprise (DVBE) in California, as well as certified Small Business and Small Business - Public Works. Our CA Certification ID is #2048623.",
       },
       {
         question: "Can I use your rental toward DVBE goals?",

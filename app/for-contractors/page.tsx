@@ -17,7 +17,7 @@ import { COMPANY } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "For Contractors | DVBE Certified Electric Equipment Rental",
   description:
-    "DVBE certified electric equipment rental for California contractors. Support your participation goals with Frontline EV Rentals. CA ID #2048632.",
+    "DVBE certified electric equipment rental for California contractors. Support your participation goals with Frontline EV Rentals. CA ID #2048623.",
   alternates: {
     canonical: "https://frontline.rentals/for-contractors",
   },
@@ -112,7 +112,7 @@ export default function ForContractorsPage() {
                   <p className="font-mono text-sm text-muted-foreground">
                     CA Certification ID:{" "}
                     <span className="font-semibold text-foreground">
-                      #2048632
+                      #2048623
                     </span>
                   </p>
                 </div>

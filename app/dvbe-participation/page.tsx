@@ -128,7 +128,7 @@ export default function DVBEParticipationPage() {
           <div className="mx-auto max-w-4xl text-center">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-lime px-4 py-2 text-sm font-bold text-primary">
               <ShieldCheck className="h-4 w-4" />
-              CA Certification ID #2048632
+              CA Certification ID #2048623
             </div>
             <h1 className="font-heading text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
               DVBE-Certified Support for California Projects
@@ -331,7 +331,7 @@ export default function DVBEParticipationPage() {
                   </li>
                   <li className="flex items-start gap-2 text-sm text-muted-foreground">
                     <Check className="mt-0.5 h-4 w-4 shrink-0 text-success" />
-                    <span>CA Certification ID: #2048632</span>
+                    <span>CA Certification ID: #2048623</span>
                   </li>
                   <li className="flex items-start gap-2 text-sm text-muted-foreground">
                     <Check className="mt-0.5 h-4 w-4 shrink-0 text-success" />
