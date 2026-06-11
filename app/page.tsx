@@ -93,6 +93,18 @@ const jsonLd = {
           name: "DVBE Certified",
           description: "Disabled Veteran Business Enterprise - California #2048623",
         },
+        {
+          "@type": "EducationalOccupationalCredential",
+          credentialCategory: "certification",
+          name: "California Certified Small Business",
+          description: "California Department of General Services Small Business (SB) certification",
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          credentialCategory: "certification",
+          name: "SDVOSB (Self-Certified)",
+          description: "Service-Disabled Veteran-Owned Small Business, self-certified on SAM.gov",
+        },
       ],
     },
     {
@@ -231,12 +243,26 @@ const faqItems = [
   },
 ];
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+
 export default function HomePage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
       {/* Hero */}

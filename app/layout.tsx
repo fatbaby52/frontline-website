@@ -27,13 +27,15 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://frontline.rentals"),
   title: {
-    default: "Electric Skid Steer Rental California | Frontline",
+    default: "Electric Construction Equipment Rental California | Frontline",
     template: "%s | Frontline EV Rentals",
   },
   description:
-    "Rent electric skid steers in California. Zero emissions, whisper quiet. DVBE certified for government contractors. Free pickup Salinas & Lodi.",
+    "Rent electric skid steers and mini excavators in California. Zero emissions, whisper quiet. DVBE certified for government contractors. Free pickup Salinas & Lodi.",
   keywords: [
     "electric skid steer rental",
+    "electric mini excavator rental",
+    "JCB 19C-1E rental",
     "DVBE equipment rental",
     "California skid steer",
     "zero emission construction equipment",
@@ -45,9 +47,9 @@ export const metadata: Metadata = {
   creator: "Frontline EV Rentals",
   publisher: "Frontline EV Rentals",
   openGraph: {
-    title: "Electric Skid Steer Rental | Frontline EV Rentals",
+    title: "Electric Construction Equipment Rental | Frontline EV Rentals",
     description:
-      "Rent electric skid steers in California. Zero emissions, full power. DVBE certified for government contractors.",
+      "Rent electric skid steers and mini excavators in California. Zero emissions, full power. DVBE certified for government contractors.",
     url: "https://frontline.rentals",
     siteName: "Frontline EV Rentals",
     locale: "en_US",
@@ -63,9 +65,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Electric Skid Steer Rental | Frontline EV Rentals",
+    title: "Electric Construction Equipment Rental | Frontline EV Rentals",
     description:
-      "Rent electric skid steers in California. Zero emissions, full power. DVBE certified.",
+      "Rent electric skid steers and mini excavators in California. Zero emissions, full power. DVBE certified.",
     images: ["/images/og-image.jpg"],
   },
   robots: {
