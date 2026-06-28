@@ -83,5 +83,13 @@ Built a complete Next.js 14 website for Frontline EV Rentals, a DVBE-certified e
 10. Added "Downloads & Resources" section with brochure download links (Google Drive) and manufacturer page links
 11. Updated brochure URLs to match the actual Google Drive links from frontline.rentals
 
+## IndexNow (added 2026-06-28)
+- Key: `4b0e57ecdbe634882e0c16a490b445e6`
+- Verification file: `public/4b0e57ecdbe634882e0c16a490b445e6.txt` (served at site root after deploy)
+- Submission script: `scripts/indexnow-submit.mjs`, run with `npm run indexnow`
+  - No args: submits every URL from the live sitemap.xml
+  - With args: submits the specific URLs passed
+- Submission only works after the key file is live at the root (deploy first). Re-run after content updates to prompt faster recrawls.
+
 ## Dev Server
 Running on `http://localhost:3001`
