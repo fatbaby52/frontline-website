@@ -92,7 +92,7 @@ export function SearchBar({ onResponse }: SearchBarProps) {
       <Container>
         <div className="mx-auto max-w-3xl">
           {/* Search Input */}
-          <div className="animate-glow-pulse rounded-2xl border border-lime bg-white p-2 shadow-2xl shadow-primary/10">
+          <div className="animate-glow-pulse border-[3px] border-ink bg-paper p-2 shadow-[8px_8px_0_var(--primary)]">
             <form onSubmit={handleSubmit} className="flex gap-2">
               <div className="relative flex-1">
                 <input
@@ -101,7 +101,7 @@ export function SearchBar({ onResponse }: SearchBarProps) {
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
                   placeholder="Ask about equipment, pricing, delivery..."
-                  className="w-full rounded-xl border-0 bg-muted/50 px-5 py-4 text-lg outline-none transition-colors placeholder:text-muted-foreground/60 focus:bg-muted"
+                  className="w-full border-0 bg-muted/60 px-5 py-4 text-lg outline-none transition-colors placeholder:text-muted-foreground/60 focus:bg-muted"
                   disabled={isLoading || hasAsked}
                 />
               </div>
@@ -109,7 +109,7 @@ export function SearchBar({ onResponse }: SearchBarProps) {
                 <button
                   type="submit"
                   disabled={!query.trim() || isLoading}
-                  className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary text-white transition-all hover:bg-primary/90 disabled:opacity-50"
+                  className="flex h-14 w-14 items-center justify-center border-2 border-ink bg-primary text-white transition-all hover:bg-primary-light disabled:opacity-50"
                 >
                   {isLoading ? (
                     <Loader2 className="h-5 w-5 animate-spin" />
@@ -130,7 +130,7 @@ export function SearchBar({ onResponse }: SearchBarProps) {
 
             {/* Answer Display */}
             {hasAsked && (
-              <div className="mt-4 rounded-xl bg-teal-light/50 p-5">
+              <div className="mt-4 border-2 border-border bg-teal-light/50 p-5">
                 {isLoading ? (
                   <div className="flex items-center gap-3 text-muted-foreground">
                     <Loader2 className="h-5 w-5 animate-spin" />
@@ -153,7 +153,7 @@ export function SearchBar({ onResponse }: SearchBarProps) {
                               placeholder="Your name"
                               value={formData.name}
                               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                              className="rounded-lg border border-border bg-white px-4 py-2.5 text-sm outline-none focus:border-primary"
+                              className="border-2 border-border bg-paper px-4 py-2.5 text-sm outline-none focus:border-primary"
                               required
                             />
                             <input
@@ -161,7 +161,7 @@ export function SearchBar({ onResponse }: SearchBarProps) {
                               placeholder="Email address"
                               value={formData.email}
                               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                              className="rounded-lg border border-border bg-white px-4 py-2.5 text-sm outline-none focus:border-primary"
+                              className="border-2 border-border bg-paper px-4 py-2.5 text-sm outline-none focus:border-primary"
                               required
                             />
                             <input
@@ -169,20 +169,20 @@ export function SearchBar({ onResponse }: SearchBarProps) {
                               placeholder="Phone (optional)"
                               value={formData.phone}
                               onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                              className="rounded-lg border border-border bg-white px-4 py-2.5 text-sm outline-none focus:border-primary"
+                              className="border-2 border-border bg-paper px-4 py-2.5 text-sm outline-none focus:border-primary"
                             />
                           </div>
                           <div className="flex gap-3">
                             <button
                               type="submit"
-                              className="rounded-lg bg-primary px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-primary/90"
+                              className="border-2 border-ink bg-primary px-6 py-2.5 text-sm font-bold uppercase tracking-wide text-white transition-colors hover:bg-primary-light"
                             >
                               Send My Info
                             </button>
                             <button
                               type="button"
                               onClick={handleNewQuestion}
-                              className="rounded-lg border border-border px-6 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-muted"
+                              className="border-2 border-ink px-6 py-2.5 text-sm font-bold uppercase tracking-wide text-foreground transition-colors hover:bg-muted"
                             >
                               Ask Another Question
                             </button>
@@ -195,7 +195,7 @@ export function SearchBar({ onResponse }: SearchBarProps) {
                     {formSubmitted && (
                       <div className="mt-6 border-t border-primary/10 pt-6">
                         <div className="flex items-center gap-3 text-primary">
-                          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-lime">
+                          <div className="flex h-8 w-8 items-center justify-center border-2 border-ink bg-lime">
                             <Sparkles className="h-4 w-4 text-primary" />
                           </div>
                           <div>

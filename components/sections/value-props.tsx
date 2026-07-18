@@ -32,7 +32,7 @@ export function ValueProps() {
               <div
                 key={prop.title}
                 className="group relative overflow-hidden rounded-2xl p-8 transition-transform duration-300 hover:-translate-y-1"
-                style={{ backgroundColor: prop.color.includes("lime") ? "#BFDE00" : prop.color.includes("teal-light") ? "#E0F4F4" : "#0A5555" }}
+                style={{ backgroundColor: prop.color.includes("lime") ? "#C5E81F" : prop.color.includes("teal-light") ? "#DCE9E7" : "#0F4B53" }}
               >
                 <div className={`mb-5 inline-flex h-14 w-14 items-center justify-center rounded-xl ${prop.color.includes("lime") ? "bg-primary/10" : prop.color.includes("primary") ? "bg-white/20" : "bg-primary/10"}`}>
                   <prop.icon

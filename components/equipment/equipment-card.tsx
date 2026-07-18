@@ -12,14 +12,14 @@ export function EquipmentCard({ equipment, priority = false }: EquipmentCardProp
   return (
     <Link
       href={`/equipment/${equipment.slug}`}
-      className="group relative block overflow-hidden rounded-2xl border-2 border-border bg-white transition-all duration-300 hover:border-primary hover:shadow-2xl hover:shadow-primary/10"
+      className="group relative block overflow-hidden border-[3px] border-ink bg-paper transition-all duration-300 hover:-translate-y-1.5 hover:[box-shadow:10px_10px_0_var(--primary)]"
     >
       {/* Type badge */}
-      <div className="absolute left-4 top-4 z-10 rounded-lg bg-primary px-3 py-1.5 text-xs font-bold text-white">
+      <div className="absolute left-0 top-0 z-10 border-b-[3px] border-r-[3px] border-ink bg-ink px-3 py-1.5 font-mono text-[0.64rem] font-bold uppercase tracking-[0.14em] text-lime">
         Electric
       </div>
 
-      <div className="relative aspect-[4/3] bg-gradient-to-br from-teal-light to-white">
+      <div className="relative aspect-[4/3] border-b-[3px] border-ink bg-gradient-to-br from-teal-light to-paper">
         {equipment.image ? (
           <Image
             src={equipment.image}
@@ -39,23 +39,23 @@ export function EquipmentCard({ equipment, priority = false }: EquipmentCardProp
       </div>
 
       <div className="p-6">
-        <h3 className="font-heading text-2xl font-bold text-foreground transition-colors duration-200 group-hover:text-primary">
+        <p className="font-mono text-[0.64rem] font-bold uppercase tracking-[0.14em] text-primary">{equipment.type}</p>
+        <h3 className="mt-1.5 font-heading text-2xl font-semibold uppercase tracking-wide text-foreground transition-colors duration-200 group-hover:text-primary">
           {equipment.name}
         </h3>
-        <p className="mt-1 text-sm font-medium text-muted-foreground">{equipment.type}</p>
 
         <p className="mt-4 line-clamp-2 text-muted-foreground">
           {equipment.tagline}
         </p>
 
-        <div className="mt-6 flex items-end justify-between">
+        <div className="mt-6 flex items-end justify-between border-t-2 border-border pt-5">
           <div>
-            <span className="text-3xl font-bold text-primary">
+            <span className="font-heading text-3xl font-semibold text-primary">
               ${equipment.dailyRate}
             </span>
             <span className="text-muted-foreground">/day</span>
           </div>
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-lime text-primary transition-transform duration-200 group-hover:scale-110">
+          <div className="flex h-12 w-12 items-center justify-center border-2 border-ink bg-lime text-ink transition-transform duration-200 group-hover:translate-x-1">
             <ArrowRight className="h-5 w-5" />
           </div>
         </div>

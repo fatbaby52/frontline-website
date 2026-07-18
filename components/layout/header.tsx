@@ -99,7 +99,29 @@ export function Header() {
   const isLocationActive = locations.some((loc) => isCurrentPage(loc.href));
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-white/95 backdrop-blur-md">
+    <header className="sticky top-0 z-50">
+      {/* Utility data bar */}
+      <div className="border-b-2 border-lime bg-ink text-on-dark/70">
+        <Container>
+          <div className="flex h-9 items-center justify-between gap-6">
+            <span className="eyebrow-mono truncate text-[0.68rem] text-lime">
+              DVBE CERTIFIED · CA #2048623
+            </span>
+            <span className="eyebrow-mono hidden truncate text-[0.68rem] md:inline">
+              ZERO-EMISSION CONSTRUCTION EQUIPMENT · SALINAS + LODI, CA
+            </span>
+            <a
+              href="tel:8312622847"
+              className="eyebrow-mono whitespace-nowrap text-[0.68rem] transition-colors hover:text-lime"
+            >
+              CALL (831) 262-2847
+            </a>
+          </div>
+        </Container>
+      </div>
+
+      {/* Nav */}
+      <div className="border-b-[3px] border-ink bg-concrete">
       <Container>
         <div className="flex h-16 items-center justify-between lg:h-20">
           {/* Logo */}
@@ -115,14 +137,14 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav aria-label="Main navigation" className="hidden items-center gap-1 lg:flex">
+          <nav aria-label="Main navigation" className="hidden items-center gap-7 lg:flex">
             <Link
               href="/equipment"
               aria-current={isCurrentPage("/equipment") ? "page" : undefined}
-              className={`rounded-lg px-4 py-2 text-sm font-medium transition-colors duration-200 ${
+              className={`eyebrow-mono relative py-1.5 text-[0.74rem] tracking-[0.12em] transition-colors duration-200 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-right after:scale-x-0 after:bg-lime after:transition-transform after:duration-200 hover:after:origin-left hover:after:scale-x-100 ${
                 isCurrentPage("/equipment")
-                  ? "bg-teal-light text-primary"
-                  : "text-foreground hover:bg-muted hover:text-primary"
+                  ? "text-ink after:origin-left after:scale-x-100"
+                  : "text-muted-foreground hover:text-ink"
               }`}
             >
               Equipment
@@ -132,10 +154,10 @@ export function Header() {
             <div ref={locationsRef} className="relative">
               <button
                 onClick={() => setLocationsOpen(!locationsOpen)}
-                className={`flex items-center gap-1 rounded-lg px-4 py-2 text-sm font-medium transition-colors duration-200 ${
+                className={`eyebrow-mono flex items-center gap-1 py-1.5 text-[0.74rem] tracking-[0.12em] transition-colors duration-200 ${
                   isLocationActive
-                    ? "bg-teal-light text-primary"
-                    : "text-foreground hover:bg-muted hover:text-primary"
+                    ? "text-ink"
+                    : "text-muted-foreground hover:text-ink"
                 }`}
               >
                 Locations
@@ -143,19 +165,19 @@ export function Header() {
               </button>
 
               {locationsOpen && (
-                <div className="absolute left-0 top-full mt-2 w-64 rounded-xl border border-border bg-white p-2 shadow-lg">
+                <div className="absolute left-0 top-full mt-2 w-64 border-2 border-ink bg-paper p-2 shadow-[6px_6px_0_rgba(13,20,18,0.16)]">
                   {locations.map((location) => (
                     <Link
                       key={location.href}
                       href={location.href}
-                      className={`block rounded-lg px-4 py-3 transition-colors duration-200 ${
+                      className={`block px-4 py-3 transition-colors duration-200 ${
                         isCurrentPage(location.href)
                           ? "bg-teal-light text-primary"
                           : "text-foreground hover:bg-muted"
                       }`}
                       onClick={() => setLocationsOpen(false)}
                     >
-                      <span className="font-medium">{location.name}</span>
+                      <span className="font-heading font-semibold uppercase tracking-wide">{location.name}</span>
                       <span className="block text-xs text-muted-foreground">{location.description}</span>
                     </Link>
                   ))}
@@ -168,10 +190,10 @@ export function Header() {
                 key={item.name}
                 href={item.href}
                 aria-current={isCurrentPage(item.href) ? "page" : undefined}
-                className={`rounded-lg px-4 py-2 text-sm font-medium transition-colors duration-200 ${
+                className={`eyebrow-mono relative py-1.5 text-[0.74rem] tracking-[0.12em] transition-colors duration-200 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-right after:scale-x-0 after:bg-lime after:transition-transform after:duration-200 hover:after:origin-left hover:after:scale-x-100 ${
                   isCurrentPage(item.href)
-                    ? "bg-teal-light text-primary"
-                    : "text-foreground hover:bg-muted hover:text-primary"
+                    ? "text-ink after:origin-left after:scale-x-100"
+                    : "text-muted-foreground hover:text-ink"
                 }`}
               >
                 {item.name}
@@ -180,17 +202,17 @@ export function Header() {
           </nav>
 
           {/* Desktop CTA */}
-          <div className="hidden items-center gap-4 lg:flex">
+          <div className="hidden items-center gap-3 lg:flex">
             <a
               href="tel:8312622847"
-              className="flex items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+              className="eyebrow-mono flex items-center gap-2 text-[0.72rem] text-muted-foreground transition-colors hover:text-primary"
             >
               <Phone className="h-4 w-4" />
               (831) 262-2847
             </a>
             <Link
               href="/quote"
-              className="inline-flex h-11 items-center justify-center rounded-xl bg-primary px-6 text-sm font-semibold text-white shadow-md shadow-primary/20 transition-all duration-200 hover:bg-primary-light hover:shadow-lg"
+              className="inline-flex h-11 items-center justify-center border-2 border-ink bg-lime px-6 text-xs font-bold uppercase tracking-wide text-ink transition-all duration-200 hover:-translate-y-0.5 hover:[box-shadow:6px_6px_0_var(--primary)]"
             >
               Get a Quote
             </Link>
@@ -200,7 +222,7 @@ export function Header() {
           <button
             ref={menuButtonRef}
             type="button"
-            className="flex h-11 w-11 items-center justify-center rounded-xl bg-muted text-foreground lg:hidden"
+            className="flex h-11 w-11 items-center justify-center border-2 border-ink bg-concrete text-ink lg:hidden"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-expanded={mobileMenuOpen}
             aria-controls="mobile-menu"
@@ -222,7 +244,7 @@ export function Header() {
           aria-modal={mobileMenuOpen}
           aria-label="Mobile navigation"
           aria-hidden={!mobileMenuOpen}
-          className={`grid border-t border-border lg:hidden transition-[grid-template-rows] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+          className={`grid border-t-2 border-ink lg:hidden transition-[grid-template-rows] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${
             mobileMenuOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
           }`}
         >
@@ -232,7 +254,7 @@ export function Header() {
                 href="/equipment"
                 aria-current={isCurrentPage("/equipment") ? "page" : undefined}
                 tabIndex={mobileMenuOpen ? 0 : -1}
-                className={`rounded-xl px-4 py-3 text-base font-medium transition-colors duration-200 ${
+                className={`px-4 py-3 font-heading text-base font-semibold uppercase tracking-wide transition-colors duration-200 ${
                   isCurrentPage("/equipment")
                     ? "bg-teal-light text-primary"
                     : "text-foreground hover:bg-muted"
@@ -254,7 +276,7 @@ export function Header() {
                   href={location.href}
                   aria-current={isCurrentPage(location.href) ? "page" : undefined}
                   tabIndex={mobileMenuOpen ? 0 : -1}
-                  className={`rounded-xl px-4 py-3 text-base font-medium transition-colors duration-200 ${
+                  className={`px-4 py-3 font-heading text-base font-semibold uppercase tracking-wide transition-colors duration-200 ${
                     isCurrentPage(location.href)
                       ? "bg-teal-light text-primary"
                       : "text-foreground hover:bg-muted"
@@ -274,7 +296,7 @@ export function Header() {
                   href={item.href}
                   aria-current={isCurrentPage(item.href) ? "page" : undefined}
                   tabIndex={mobileMenuOpen ? 0 : -1}
-                  className={`rounded-xl px-4 py-3 text-base font-medium transition-colors duration-200 ${
+                  className={`px-4 py-3 font-heading text-base font-semibold uppercase tracking-wide transition-colors duration-200 ${
                     isCurrentPage(item.href)
                       ? "bg-teal-light text-primary"
                       : "text-foreground hover:bg-muted"
@@ -289,7 +311,7 @@ export function Header() {
               <a
                 href="tel:8312622847"
                 tabIndex={mobileMenuOpen ? 0 : -1}
-                className="flex items-center justify-center gap-2 rounded-xl border-2 border-border py-3 text-base font-medium text-foreground"
+                className="flex items-center justify-center gap-2 border-2 border-ink py-3 text-base font-bold uppercase tracking-wide text-ink"
               >
                 <Phone className="h-5 w-5" />
                 (831) 262-2847
@@ -297,7 +319,7 @@ export function Header() {
               <Link
                 href="/quote"
                 tabIndex={mobileMenuOpen ? 0 : -1}
-                className="flex items-center justify-center rounded-xl bg-primary py-4 text-base font-semibold text-white"
+                className="flex items-center justify-center border-2 border-ink bg-lime py-4 text-base font-bold uppercase tracking-wide text-ink"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Get a Quote
@@ -306,6 +328,7 @@ export function Header() {
           </div>
         </div>
       </Container>
+      </div>
     </header>
   );
 }
