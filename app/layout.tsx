@@ -1,26 +1,28 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Inter, Source_Sans_3, JetBrains_Mono } from "next/font/google";
+import { Oswald, Inter, Space_Mono } from "next/font/google";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ChatWidget } from "@/components/chat/chat-widget";
 import "./globals.css";
 
-const inter = Inter({
+const oswald = Oswald({
   variable: "--font-heading",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
-const sourceSans = Source_Sans_3({
+const inter = Inter({
   variable: "--font-body",
   subsets: ["latin"],
   display: "swap",
 });
 
-const jetbrainsMono = JetBrains_Mono({
+const spaceMono = Space_Mono({
   variable: "--font-mono",
   subsets: ["latin"],
+  weight: ["400", "700"],
   display: "swap",
 });
 
@@ -106,7 +108,7 @@ export default function RootLayout({
         `}
       </Script>
       <body
-        className={`${inter.variable} ${sourceSans.variable} ${jetbrainsMono.variable} antialiased`}
+        className={`${oswald.variable} ${inter.variable} ${spaceMono.variable} antialiased`}
       >
         <a
           href="#main-content"
