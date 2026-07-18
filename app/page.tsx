@@ -289,7 +289,7 @@ export default function HomePage() {
                 Direct Line
               </span>
               <h3 className="font-heading text-2xl font-semibold uppercase tracking-wide text-ink">
-                Ready to Rent?
+                Ready to rent?
               </h3>
             </div>
             <div className="flex flex-wrap gap-3">
@@ -348,10 +348,6 @@ export default function HomePage() {
       <section className="border-b-2 border-border py-14">
         <Container>
           <div className="mx-auto max-w-3xl text-center">
-            <p className="mb-3 flex items-center justify-center gap-3 font-mono text-xs font-bold uppercase tracking-[0.2em] text-primary">
-              <span className="inline-block h-0.5 w-6 bg-lime" aria-hidden="true" />
-              Fast + Simple
-            </p>
             <h2 className="font-heading text-3xl font-semibold uppercase tracking-[0.01em] text-foreground lg:text-4xl">
               How to Rent Quickly
             </h2>
@@ -388,10 +384,6 @@ export default function HomePage() {
           <div className="mx-auto max-w-4xl">
             <div className="flex flex-col items-center gap-8 lg:flex-row lg:gap-12">
               <div className="flex-1 text-center lg:text-left">
-                <p className="mb-3 flex items-center justify-center gap-3 font-mono text-xs font-bold uppercase tracking-[0.2em] text-lime lg:justify-start">
-                  <span className="inline-block h-0.5 w-6 bg-lime" aria-hidden="true" />
-                  Same-Day Possible
-                </p>
                 <h2 className="font-heading text-3xl font-semibold uppercase tracking-[0.01em] text-white lg:text-4xl">
                   Need a Machine Today?
                 </h2>

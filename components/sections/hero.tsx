@@ -169,10 +169,10 @@ export function Hero({
       />
       <Container className="relative">
         <div className="mx-auto max-w-4xl text-center">
-          <p className="mb-5 flex items-center justify-center gap-3 font-mono text-[0.7rem] font-bold uppercase tracking-[0.2em] text-primary">
-            <span className="inline-block h-0.5 w-7 bg-lime" aria-hidden="true" />
-            Zero-Emission Equipment
-          </p>
+          <span
+            className="mx-auto mb-6 block h-0.5 w-14 bg-lime"
+            aria-hidden="true"
+          />
           <h1 className="font-heading text-4xl font-semibold uppercase leading-[0.96] tracking-[0.008em] text-ink sm:text-5xl lg:text-6xl">
             {headline}
           </h1>
