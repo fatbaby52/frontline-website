@@ -143,7 +143,7 @@ export default function DroneLidarPage() {
         <Container>
           <div className="mx-auto max-w-5xl">
             <div className="mb-12 text-center">
-              <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground lg:text-4xl">
+              <h2 className="font-heading text-3xl font-bold uppercase tracking-[0.01em] text-foreground lg:text-4xl">
                 Services
               </h2>
               <p className="mt-3 text-lg text-muted-foreground">
@@ -155,9 +155,9 @@ export default function DroneLidarPage() {
               {services.map((service) => (
                 <div
                   key={service.title}
-                  className="flex items-start gap-4 rounded-xl border border-border bg-card p-5 sm:p-6"
+                  className="flex items-start gap-4 border border-border bg-card p-5 sm:p-6"
                 >
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/5">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center bg-primary/5">
                     <service.icon className="h-5 w-5 text-primary" />
                   </div>
                   <div>
@@ -173,9 +173,9 @@ export default function DroneLidarPage() {
             </div>
 
             {/* Coming Soon */}
-            <div className="mt-6 rounded-xl border-2 border-dashed border-accent/40 bg-accent/5 p-5 sm:p-6">
+            <div className="mt-6 border-2 border-dashed border-accent/40 bg-accent/5 p-5 sm:p-6">
               <div className="flex items-start gap-4">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-accent/20">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center bg-accent/20">
                   <Plane className="h-5 w-5 text-primary" />
                 </div>
                 <div>
@@ -213,9 +213,9 @@ export default function DroneLidarPage() {
               {whyAerial.map((item) => (
                 <div
                   key={item.title}
-                  className="rounded-xl border border-border bg-card p-6"
+                  className="border border-border bg-card p-6"
                 >
-                  <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/5">
+                  <div className="mb-3 flex h-10 w-10 items-center justify-center bg-primary/5">
                     <item.icon className="h-5 w-5 text-primary" />
                   </div>
                   <h3 className="font-heading text-lg font-semibold text-foreground">
@@ -245,7 +245,7 @@ export default function DroneLidarPage() {
               {certifications.map((cert) => (
                 <div
                   key={cert}
-                  className="flex items-center gap-3 rounded-lg border border-border bg-card p-4"
+                  className="flex items-center gap-3 border border-border bg-card p-4"
                 >
                   <Check className="h-4 w-4 shrink-0 text-success" />
                   <span className="text-sm text-foreground">{cert}</span>
@@ -267,7 +267,7 @@ export default function DroneLidarPage() {
               {industries.map((industry) => (
                 <div
                   key={industry.name}
-                  className="rounded-xl border border-border bg-card p-4 text-center"
+                  className="border border-border bg-card p-4 text-center"
                 >
                   <industry.icon className="mx-auto mb-2 h-6 w-6 text-primary" />
                   <h3 className="font-heading text-sm font-semibold text-foreground">

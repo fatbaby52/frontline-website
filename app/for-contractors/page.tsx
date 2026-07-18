@@ -56,11 +56,11 @@ export default function ForContractorsPage() {
         <div className="absolute bottom-0 left-0 right-0 h-2 bg-lime" aria-hidden="true" />
         <Container className="relative">
           <div className="mx-auto max-w-4xl text-center">
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-lime px-4 py-2 text-sm font-bold text-primary">
+            <div className="mb-6 inline-flex items-center gap-2 bg-lime px-4 py-2 text-sm font-bold text-primary">
               <ShieldCheck className="h-4 w-4" />
               DVBE Certified
             </div>
-            <h1 className="font-heading text-4xl font-bold tracking-tight text-white sm:text-5xl">
+            <h1 className="font-heading text-4xl font-bold uppercase tracking-[0.01em] text-white sm:text-5xl">
               For Contractors
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-xl text-white/90">
@@ -69,14 +69,14 @@ export default function ForContractorsPage() {
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
               <Link
                 href="/quote"
-                className="inline-flex h-14 items-center justify-center gap-2 rounded-xl bg-lime px-10 text-lg font-bold text-primary shadow-lg shadow-lime/30 transition-all duration-200 hover:bg-accent-hover"
+                className="inline-flex h-14 items-center justify-center gap-2 bg-lime px-10 text-lg font-bold text-primary shadow-lg shadow-lime/30 transition-all duration-200 hover:bg-accent-hover"
               >
                 Get a Quote
                 <ArrowRight className="h-5 w-5" />
               </Link>
               <Link
                 href="/dvbe-equipment-rental"
-                className="inline-flex h-14 items-center justify-center gap-2 rounded-xl border-2 border-white/30 px-8 text-lg font-semibold text-white transition-all duration-200 hover:border-white/60 hover:bg-white/10"
+                className="inline-flex h-14 items-center justify-center gap-2 border-2 border-white/30 px-8 text-lg font-semibold text-white transition-all duration-200 hover:border-white/60 hover:bg-white/10"
               >
                 DVBE Information
               </Link>
@@ -91,7 +91,7 @@ export default function ForContractorsPage() {
           <div className="mx-auto max-w-4xl">
             <div className="grid gap-6 sm:grid-cols-2">
               {/* California Certs */}
-              <div className="rounded-xl border border-border bg-card p-6 sm:p-8">
+              <div className="border border-border bg-card p-6 sm:p-8">
                 <div className="mb-4 flex items-center gap-2">
                   <ShieldCheck className="h-6 w-6 text-primary" />
                   <h2 className="font-heading text-xl font-bold text-foreground">
@@ -108,7 +108,7 @@ export default function ForContractorsPage() {
                     </li>
                   ))}
                 </ul>
-                <div className="mt-4 rounded-lg bg-muted p-3">
+                <div className="mt-4 bg-muted p-3">
                   <p className="font-mono text-sm text-muted-foreground">
                     CA Certification ID:{" "}
                     <span className="font-semibold text-foreground">
@@ -119,7 +119,7 @@ export default function ForContractorsPage() {
               </div>
 
               {/* Federal Certs */}
-              <div className="rounded-xl border border-border bg-card p-6 sm:p-8">
+              <div className="border border-border bg-card p-6 sm:p-8">
                 <div className="mb-4 flex items-center gap-2">
                   <ShieldCheck className="h-6 w-6 text-primary" />
                   <h2 className="font-heading text-xl font-bold text-foreground">
@@ -136,7 +136,7 @@ export default function ForContractorsPage() {
                     </li>
                   ))}
                 </ul>
-                <div className="mt-4 rounded-lg bg-muted p-3">
+                <div className="mt-4 bg-muted p-3">
                   <p className="font-mono text-sm text-muted-foreground">
                     CAGE Code:{" "}
                     <span className="font-semibold text-foreground">
@@ -161,9 +161,9 @@ export default function ForContractorsPage() {
               {howItWorks.map((item) => (
                 <div
                   key={item.step}
-                  className="flex items-start gap-4 rounded-lg border border-border bg-card p-5"
+                  className="flex items-start gap-4 border border-border bg-card p-5"
                 >
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center bg-primary text-sm font-bold text-white">
                     {item.step}
                   </div>
                   <div>
@@ -228,7 +228,7 @@ export default function ForContractorsPage() {
               {documents.map((doc) => (
                 <li
                   key={doc}
-                  className="flex items-center gap-3 rounded-lg border border-border bg-card p-4"
+                  className="flex items-center gap-3 border border-border bg-card p-4"
                 >
                   <CheckCircle className="h-5 w-5 shrink-0 text-success" />
                   <span className="text-foreground">{doc}</span>

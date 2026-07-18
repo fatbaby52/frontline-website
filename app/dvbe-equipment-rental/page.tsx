@@ -123,11 +123,11 @@ export default function DVBEEquipmentRentalPage() {
 
         <Container className="relative">
           <div className="mx-auto max-w-4xl text-center">
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-lime px-4 py-2 text-sm font-bold text-primary">
+            <div className="mb-6 inline-flex items-center gap-2 bg-lime px-4 py-2 text-sm font-bold text-primary">
               <ShieldCheck className="h-4 w-4" />
               CA Certification ID #2048623
             </div>
-            <h1 className="font-heading text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            <h1 className="font-heading text-4xl font-bold uppercase tracking-[0.01em] text-white sm:text-5xl lg:text-6xl">
               DVBE-Certified Electric Equipment Rental in California
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-xl text-white/90">
@@ -136,14 +136,14 @@ export default function DVBEEquipmentRentalPage() {
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
               <Link
                 href="/quote"
-                className="inline-flex h-14 items-center justify-center gap-2 rounded-xl bg-lime px-10 text-lg font-bold text-primary shadow-lg shadow-lime/30 transition-all duration-200 hover:bg-accent-hover"
+                className="inline-flex h-14 items-center justify-center gap-2 bg-lime px-10 text-lg font-bold text-primary shadow-lg shadow-lime/30 transition-all duration-200 hover:bg-accent-hover"
               >
                 Get a Quote
                 <ArrowRight className="h-5 w-5" />
               </Link>
               <a
                 href={`mailto:${COMPANY.email}`}
-                className="inline-flex h-14 items-center justify-center gap-2 rounded-xl border-2 border-white/30 px-8 text-lg font-semibold text-white transition-all duration-200 hover:border-white/60 hover:bg-white/10"
+                className="inline-flex h-14 items-center justify-center gap-2 border-2 border-white/30 px-8 text-lg font-semibold text-white transition-all duration-200 hover:border-white/60 hover:bg-white/10"
               >
                 <Mail className="h-5 w-5" />
                 Request Documentation
@@ -161,7 +161,7 @@ export default function DVBEEquipmentRentalPage() {
         <Container>
           <div className="mx-auto max-w-4xl">
             <div className="flex flex-col items-center gap-6 text-center lg:flex-row lg:text-left">
-              <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-lime">
+              <div className="flex h-16 w-16 shrink-0 items-center justify-center bg-lime">
                 <CheckCircle className="h-8 w-8 text-primary" />
               </div>
               <div className="flex-1">
@@ -192,7 +192,7 @@ export default function DVBEEquipmentRentalPage() {
       <section className="py-16 lg:py-24">
         <Container>
           <div className="mx-auto max-w-3xl">
-            <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground lg:text-4xl">
+            <h2 className="font-heading text-3xl font-bold uppercase tracking-[0.01em] text-foreground lg:text-4xl">
               More Than a Certification Box
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
@@ -221,7 +221,7 @@ export default function DVBEEquipmentRentalPage() {
       <section className="bg-muted py-16 lg:py-24">
         <Container>
           <div className="mx-auto max-w-3xl">
-            <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground lg:text-4xl">
+            <h2 className="font-heading text-3xl font-bold uppercase tracking-[0.01em] text-foreground lg:text-4xl">
               What is DVBE Certification?
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
@@ -230,7 +230,7 @@ export default function DVBEEquipmentRentalPage() {
             <p className="mt-4 text-lg text-muted-foreground">
               Frontline EV Rentals is a certified DVBE. When you rent equipment from us, your rental costs can count toward DVBE participation requirements on qualifying projects.
             </p>
-            <div className="mt-8 rounded-xl border border-border bg-card p-6">
+            <div className="mt-8 border border-border bg-card p-6">
               <p className="text-sm text-muted-foreground">
                 <span className="font-semibold text-foreground">Important:</span> DVBE requirements vary by project and agency. We provide documentation to support your compliance efforts, but contractors should verify specific requirements with the contracting agency.
               </p>
@@ -243,13 +243,13 @@ export default function DVBEEquipmentRentalPage() {
       <section className="bg-muted py-16 lg:py-24">
         <Container>
           <div className="mx-auto max-w-4xl">
-            <h2 className="mb-10 text-center font-heading text-3xl font-bold tracking-tight text-foreground lg:text-4xl">
+            <h2 className="mb-10 text-center font-heading text-3xl font-bold uppercase tracking-[0.01em] text-foreground lg:text-4xl">
               Our Certifications
             </h2>
 
             <div className="grid gap-6 sm:grid-cols-2">
               {/* California Certs */}
-              <div className="rounded-xl border border-border bg-card p-6 sm:p-8">
+              <div className="border border-border bg-card p-6 sm:p-8">
                 <div className="mb-4 flex items-center gap-2">
                   <ShieldCheck className="h-6 w-6 text-primary" />
                   <h3 className="font-heading text-xl font-bold text-foreground">
@@ -264,7 +264,7 @@ export default function DVBEEquipmentRentalPage() {
                     </li>
                   ))}
                 </ul>
-                <div className="mt-4 rounded-lg bg-muted p-3">
+                <div className="mt-4 bg-muted p-3">
                   <p className="font-mono text-sm text-muted-foreground">
                     CA Certification ID:{" "}
                     <span className="font-semibold text-foreground">#2048623</span>
@@ -273,7 +273,7 @@ export default function DVBEEquipmentRentalPage() {
               </div>
 
               {/* Federal Certs */}
-              <div className="rounded-xl border border-border bg-card p-6 sm:p-8">
+              <div className="border border-border bg-card p-6 sm:p-8">
                 <div className="mb-4 flex items-center gap-2">
                   <ShieldCheck className="h-6 w-6 text-primary" />
                   <h3 className="font-heading text-xl font-bold text-foreground">
@@ -288,7 +288,7 @@ export default function DVBEEquipmentRentalPage() {
                     </li>
                   ))}
                 </ul>
-                <div className="mt-4 rounded-lg bg-muted p-3">
+                <div className="mt-4 bg-muted p-3">
                   <p className="font-mono text-sm text-muted-foreground">
                     CAGE Code:{" "}
                     <span className="font-semibold text-foreground">17WA3</span>
@@ -304,16 +304,16 @@ export default function DVBEEquipmentRentalPage() {
       <section className="py-16 lg:py-24">
         <Container>
           <div className="mx-auto max-w-3xl">
-            <h2 className="mb-10 text-center font-heading text-3xl font-bold tracking-tight text-foreground lg:text-4xl">
+            <h2 className="mb-10 text-center font-heading text-3xl font-bold uppercase tracking-[0.01em] text-foreground lg:text-4xl">
               How DVBE Participation Works
             </h2>
             <div className="space-y-6">
               {howItWorks.map((item) => (
                 <div
                   key={item.step}
-                  className="flex items-start gap-4 rounded-xl border border-border bg-card p-6"
+                  className="flex items-start gap-4 border border-border bg-card p-6"
                 >
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary text-lg font-bold text-white">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center bg-primary text-lg font-bold text-white">
                     {item.step}
                   </div>
                   <div>
@@ -333,13 +333,13 @@ export default function DVBEEquipmentRentalPage() {
       <section className="bg-teal-light py-16 lg:py-24">
         <Container>
           <div className="mx-auto max-w-4xl">
-            <h2 className="mb-10 text-center font-heading text-3xl font-bold tracking-tight text-foreground lg:text-4xl">
+            <h2 className="mb-10 text-center font-heading text-3xl font-bold uppercase tracking-[0.01em] text-foreground lg:text-4xl">
               Who Uses Our DVBE Equipment Rentals
             </h2>
             <div className="grid gap-6 sm:grid-cols-3">
               {whoWeHelp.map((item) => (
-                <div key={item.title} className="rounded-xl bg-white p-6 shadow-sm">
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
+                <div key={item.title} className="bg-paper p-6 shadow-sm">
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center bg-primary/10">
                     <item.icon className="h-6 w-6 text-primary" />
                   </div>
                   <h3 className="font-heading text-lg font-bold text-foreground">
@@ -357,7 +357,7 @@ export default function DVBEEquipmentRentalPage() {
       <section className="py-16 lg:py-24">
         <Container>
           <div className="mx-auto max-w-4xl">
-            <h2 className="mb-4 text-center font-heading text-3xl font-bold tracking-tight text-foreground lg:text-4xl">
+            <h2 className="mb-4 text-center font-heading text-3xl font-bold uppercase tracking-[0.01em] text-foreground lg:text-4xl">
               Equipment Available
             </h2>
             <p className="mx-auto mb-10 max-w-2xl text-center text-muted-foreground">
@@ -367,7 +367,7 @@ export default function DVBEEquipmentRentalPage() {
               {equipment.map((item) => (
                 <div
                   key={item.slug}
-                  className="rounded-xl border border-border bg-card p-6"
+                  className="border border-border bg-card p-6"
                 >
                   <h3 className="font-heading text-lg font-bold text-foreground">
                     {item.name}
@@ -412,7 +412,7 @@ export default function DVBEEquipmentRentalPage() {
               ].map((doc) => (
                 <li
                   key={doc}
-                  className="flex items-center gap-3 rounded-lg border border-border bg-card p-4"
+                  className="flex items-center gap-3 border border-border bg-card p-4"
                 >
                   <CheckCircle className="h-5 w-5 shrink-0 text-success" />
                   <span className="text-foreground">{doc}</span>

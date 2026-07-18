@@ -267,8 +267,8 @@ export default function HomePage() {
 
       {/* Hero */}
       <Hero
-        headline="Zero Emission Construction Equipment Rentals"
-        subhead="Electric skid steers and excavators that arrive fully charged. No diesel costs, no fumes, no noise. Ready to go."
+        headline="Zero-emission equipment. Ready now."
+        subhead="Electric skid steers and excavators for construction equipment rentals across California. They arrive fully charged. No diesel costs, no fumes, no noise. Ready to go."
         primaryCta={{ label: "Check Availability", href: "/quote" }}
         secondaryCta={{ label: "Get a Quote", href: "/quote" }}
         badges={["Ready Now", "DVBE Certified", "Fuel Included"]}
@@ -281,18 +281,25 @@ export default function HomePage() {
       <SearchBar />
 
       {/* Direct Contact Strip */}
-      <section className="bg-primary py-4">
+      <section className="border-b-[3px] border-ink bg-lime">
         <Container>
-          <div className="flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
-            <span className="text-sm font-medium text-white/80">Ready to rent?</span>
-            <div className="flex gap-3">
-              <Button asChild size="sm" className="bg-lime text-primary hover:bg-lime/90">
+          <div className="flex flex-wrap items-center justify-between gap-5 py-5">
+            <div className="flex items-center gap-4">
+              <span className="border-2 border-ink px-2.5 py-1.5 font-mono text-[0.68rem] font-bold uppercase tracking-[0.18em] text-primary">
+                Direct Line
+              </span>
+              <h3 className="font-heading text-2xl font-semibold uppercase tracking-wide text-ink">
+                Ready to rent?
+              </h3>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <Button asChild size="sm">
                 <a href={COMPANY.phoneHref}>
                   <Phone className="h-4 w-4" />
                   Call {COMPANY.phone}
                 </a>
               </Button>
-              <Button asChild size="sm" variant="outline" className="border-white/30 text-white hover:bg-white/10">
+              <Button asChild size="sm" variant="outline">
                 <a href={COMPANY.smsHref}>
                   <MessageSquare className="h-4 w-4" />
                   Text Us
@@ -304,15 +311,15 @@ export default function HomePage() {
       </section>
 
       {/* Ready Now Strip */}
-      <section className="border-b border-lime/30 bg-lime/10 py-6">
+      <section className="border-b-2 border-border bg-concrete-2 py-6">
         <Container>
           <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
             <div className="flex items-center gap-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-lime">
-                <CheckCircle className="h-6 w-6 text-primary" />
+              <div className="flex h-12 w-12 items-center justify-center border-2 border-ink bg-lime">
+                <CheckCircle className="h-6 w-6 text-ink" />
               </div>
               <div>
-                <p className="font-heading text-lg font-bold text-foreground">
+                <p className="font-heading text-lg font-semibold uppercase tracking-wide text-foreground">
                   Charged, Tested, and Ready to Work
                 </p>
                 <p className="text-sm text-muted-foreground">
@@ -328,9 +335,9 @@ export default function HomePage() {
       </section>
 
       {/* DVBE Partner Authority Line */}
-      <section className="bg-primary/5 py-4">
+      <section className="border-b-2 border-border bg-primary/[0.04] py-4">
         <Container>
-          <p className="text-center text-sm text-foreground">
+          <p className="text-center font-mono text-[0.72rem] uppercase tracking-[0.06em] leading-relaxed text-muted-foreground">
             <ShieldCheck className="mr-2 inline-block h-4 w-4 text-primary" />
             Frontline works with contractors and project teams as a DVBE-certified partner, providing electric equipment and other real project services for California public work.
           </p>
@@ -338,10 +345,10 @@ export default function HomePage() {
       </section>
 
       {/* How to Rent Quickly */}
-      <section className="border-b border-border py-10">
+      <section className="border-b-2 border-border py-14">
         <Container>
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="font-heading text-2xl font-bold text-foreground">
+            <h2 className="font-heading text-3xl font-semibold uppercase tracking-[0.01em] text-foreground lg:text-4xl">
               How to Rent Quickly
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
@@ -350,7 +357,7 @@ export default function HomePage() {
             <p className="mt-2 text-muted-foreground">
               We will confirm availability and get you a quote right away.
             </p>
-            <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Button asChild>
                 <a href={COMPANY.phoneHref}>
                   <Phone className="h-4 w-4" />
@@ -372,15 +379,15 @@ export default function HomePage() {
       </section>
 
       {/* Need a Machine Today? */}
-      <section className="bg-primary py-12 lg:py-16">
+      <section className="border-y-[3px] border-ink bg-primary py-12 text-on-dark lg:py-16">
         <Container>
           <div className="mx-auto max-w-4xl">
             <div className="flex flex-col items-center gap-8 lg:flex-row lg:gap-12">
               <div className="flex-1 text-center lg:text-left">
-                <h2 className="font-heading text-2xl font-bold text-white lg:text-3xl">
+                <h2 className="font-heading text-3xl font-semibold uppercase tracking-[0.01em] text-white lg:text-4xl">
                   Need a Machine Today?
                 </h2>
-                <p className="mt-3 text-white/80">
+                <p className="mt-3 text-on-dark/80">
                   If you need an electric skid steer quickly, contact us now to check availability. Our fleet is charged, tested, and ready for work.
                 </p>
                 <ul className="mt-6 grid gap-3 sm:grid-cols-2">
@@ -390,21 +397,23 @@ export default function HomePage() {
                     "Fast response on availability",
                     "Salinas and Lodi service points",
                   ].map((item) => (
-                    <li key={item} className="flex items-center gap-2 text-white/90">
-                      <Check className="h-4 w-4 text-lime" />
+                    <li key={item} className="flex items-center gap-3 text-left font-mono text-xs font-bold uppercase tracking-[0.08em] text-on-dark">
+                      <span className="flex h-4 w-4 shrink-0 items-center justify-center bg-lime" aria-hidden="true">
+                        <Check className="h-3 w-3 text-ink" strokeWidth={3.5} />
+                      </span>
                       {item}
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
-                <Button asChild size="lg" className="bg-lime text-primary hover:bg-lime/90">
+                <Button asChild size="lg" variant="lime">
                   <a href={COMPANY.phoneHref}>
                     <Phone className="h-5 w-5" />
                     Call {COMPANY.phone}
                   </a>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10">
+                <Button asChild size="lg" variant="outline" className="border-on-dark/30 text-on-dark hover:bg-white/10 hover:text-on-dark">
                   <a href={COMPANY.smsHref}>
                     <MessageSquare className="h-5 w-5" />
                     Text Us
@@ -417,26 +426,32 @@ export default function HomePage() {
       </section>
 
       {/* Why Contractors Choose Frontline */}
-      <section className="py-16 lg:py-24">
+      <section className="py-20 lg:py-24">
         <Container>
-          <div className="mb-12 text-center">
-            <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground lg:text-4xl">
+          <div className="mb-12 max-w-3xl">
+            <p className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground/70">
+              // 01 — THE ADVANTAGE
+            </p>
+            <h2 className="mt-4 font-heading text-4xl font-semibold uppercase tracking-[0.01em] leading-[0.96] text-foreground lg:text-5xl">
               Why Contractors Choose Frontline
             </h2>
           </div>
-          <div className="mx-auto grid max-w-5xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {valueProps.map((prop) => (
+          <div className="grid border-l-[3px] border-t-[3px] border-ink sm:grid-cols-2 lg:grid-cols-4">
+            {valueProps.map((prop, index) => (
               <div
                 key={prop.title}
-                className="rounded-xl border border-border bg-card p-6"
+                className="group min-h-[280px] border-b-[3px] border-r-[3px] border-ink bg-paper p-7 pb-10 transition-colors duration-250 hover:bg-lime"
               >
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
-                  <prop.icon className="h-6 w-6 text-primary" />
+                <div className="font-heading text-4xl font-semibold leading-none text-ink/15 transition-colors duration-250 group-hover:text-ink">
+                  {String(index + 1).padStart(2, "0")}
                 </div>
-                <h3 className="font-heading text-lg font-bold text-foreground">
+                <div className="mt-5 flex h-12 w-12 items-center justify-center border-2 border-ink text-primary transition-colors duration-250 group-hover:bg-paper group-hover:text-ink">
+                  <prop.icon className="h-6 w-6" strokeWidth={2.2} />
+                </div>
+                <h3 className="mt-6 font-heading text-xl font-semibold uppercase tracking-wide leading-tight text-ink">
                   {prop.title}
                 </h3>
-                <p className="mt-2 text-sm text-muted-foreground">
+                <p className="mt-3 text-sm text-muted-foreground transition-colors duration-250 group-hover:text-ink">
                   {prop.description}
                 </p>
               </div>
@@ -446,160 +461,172 @@ export default function HomePage() {
       </section>
 
       {/* Cost Comparison */}
-      <section className="bg-muted py-16 lg:py-24">
+      <section className="border-y-[3px] border-lime bg-ink py-16 text-on-dark lg:py-24">
         <Container>
-          <div className="mx-auto max-w-4xl">
-            <h2 className="text-center font-heading text-3xl font-bold tracking-tight text-foreground lg:text-4xl">
-              Your Real Rental Cost Is Lower Than You Think
-            </h2>
-            <p className="mx-auto mt-6 max-w-3xl text-center text-muted-foreground">
-              When you rent a diesel skid steer, the daily rate is just the start. You still have to buy the diesel. A typical skid steer burns about 2 gallons per hour. Over an 8-hour day at California diesel prices, that&apos;s roughly $90–$100 in fuel on top of your rental rate.
-            </p>
-            <p className="mx-auto mt-4 max-w-3xl text-center text-muted-foreground">
-              When you rent from Frontline, the machine arrives fully charged. For a single-day rental, you use it and return it. No fuel costs at all.
-            </p>
+          <div className="mx-auto max-w-5xl">
+            <div className="mx-auto max-w-3xl text-center">
+              <p className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-lime">
+                // 02 — TRUE COST OF OWNERSHIP
+              </p>
+              <h2 className="mt-4 font-heading text-4xl font-semibold uppercase tracking-[0.01em] leading-[0.96] text-white lg:text-5xl">
+                Your Real Rental Cost Is Lower Than You Think
+              </h2>
+            </div>
 
-            <div className="mt-10 grid gap-6 sm:grid-cols-2">
+            <div className="mx-auto mt-8 max-w-3xl text-center">
+              <p className="text-on-dark/70 leading-relaxed">
+                A diesel skid steer burns about two gallons an hour. Over an eight-hour day at California prices, that is roughly $90 to $100 in fuel, every working day, on top of the rate. Most yards also expect it back full.
+              </p>
+              <p className="mt-4 text-on-dark/70 leading-relaxed">
+                Your Frontline machine shows up fully charged, so day one runs on us. After that, recharge overnight from a standard outlet for about $25 to $35 a day, and return it at any charge. No refueling, no top-off.
+              </p>
+            </div>
+
+            <div className="mx-auto mt-14 grid max-w-4xl items-stretch gap-6 sm:grid-cols-[1fr_auto_1fr] sm:gap-0">
               {/* Diesel Side */}
-              <div className="rounded-xl border border-border bg-white p-6">
-                <div className="mb-4 flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-muted">
-                    <Fuel className="h-5 w-5 text-muted-foreground" />
+              <div className="border-2 border-on-dark/15 bg-ink-2 p-8">
+                <div className="mb-6 flex items-center gap-4 border-b border-on-dark/15 pb-5">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center border-2 border-on-dark/15 text-on-dark/70">
+                    <Fuel className="h-5 w-5" />
                   </div>
-                  <h3 className="font-heading text-lg font-bold text-foreground">Diesel Rental</h3>
+                  <div>
+                    <h3 className="font-heading text-2xl font-semibold uppercase tracking-wide text-white">Diesel Rental</h3>
+                    <p className="mt-1 font-mono text-[0.62rem] uppercase tracking-[0.16em] text-on-dark/60">Conventional</p>
+                  </div>
                 </div>
-                <div className="space-y-2 text-sm">
-                  <div className="flex justify-between">
-                    <span className="text-muted-foreground">Daily rental rate</span>
-                    <span className="font-medium text-foreground">$450–$550</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-muted-foreground">Fuel cost (~8 hrs)</span>
-                    <span className="font-medium text-foreground">+$90–$100</span>
-                  </div>
-                  <div className="border-t border-border pt-2">
-                    <div className="flex justify-between">
-                      <span className="font-medium text-foreground">Your real day-one cost</span>
-                      <span className="font-bold text-foreground">$545–$650</span>
-                    </div>
-                  </div>
+                <div className="flex items-baseline justify-between py-3">
+                  <span className="font-mono text-[0.7rem] uppercase tracking-[0.08em] text-on-dark/70">Fuel per working day</span>
+                  <span className="font-heading text-2xl font-medium text-white">$90–$100</span>
+                </div>
+                <div className="flex items-baseline justify-between py-3">
+                  <span className="font-mono text-[0.7rem] uppercase tracking-[0.08em] text-on-dark/70">Return full?</span>
+                  <span className="font-heading text-xl font-medium text-white">Usually required</span>
+                </div>
+                <div className="mt-3 flex items-baseline justify-between border-t-2 border-on-dark/15 pt-5">
+                  <span className="font-mono text-[0.7rem] font-bold uppercase tracking-[0.08em] text-on-dark">Over a 5-day week</span>
+                  <span className="font-heading text-3xl font-semibold text-white">$450–$500</span>
                 </div>
               </div>
 
+              {/* VS */}
+              <div className="flex items-center justify-center py-2 sm:px-7 sm:py-0">
+                <span className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-lime font-heading text-lg font-bold text-lime">
+                  VS
+                </span>
+              </div>
+
               {/* Frontline Side */}
-              <div className="rounded-xl border-2 border-lime bg-lime/10 p-6">
-                <div className="mb-4 flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-lime">
-                    <Zap className="h-5 w-5 text-primary" />
+              <div className="border-2 border-lime bg-lime/[0.06] p-8">
+                <div className="mb-6 flex items-center gap-4 border-b border-lime/30 pb-5">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center border-2 border-lime text-lime">
+                    <Zap className="h-5 w-5" strokeWidth={2.2} />
                   </div>
-                  <h3 className="font-heading text-lg font-bold text-foreground">Frontline Electric</h3>
+                  <div>
+                    <h3 className="font-heading text-2xl font-semibold uppercase tracking-wide text-white">Frontline Electric</h3>
+                    <p className="mt-1 font-mono text-[0.62rem] uppercase tracking-[0.16em] text-on-dark/60">Zero-Emission</p>
+                  </div>
                 </div>
-                <div className="space-y-2 text-sm">
-                  <div className="flex justify-between">
-                    <span className="text-muted-foreground">Daily rental rate</span>
-                    <span className="font-medium text-foreground">$450–$525</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-muted-foreground">Delivered charged</span>
-                    <span className="font-bold text-lime-700">Yes</span>
-                  </div>
-                  <div className="border-t border-lime/30 pt-2">
-                    <div className="flex justify-between">
-                      <span className="font-medium text-foreground">Day-one fuel cost</span>
-                      <span className="font-bold text-primary">$0</span>
-                    </div>
-                  </div>
+                <div className="flex items-baseline justify-between py-3">
+                  <span className="font-mono text-[0.7rem] uppercase tracking-[0.08em] text-on-dark/70">Day one, delivered full</span>
+                  <span className="font-heading text-2xl font-medium text-lime">$0</span>
+                </div>
+                <div className="flex items-baseline justify-between py-3">
+                  <span className="font-mono text-[0.7rem] uppercase tracking-[0.08em] text-on-dark/70">Recharge per added day</span>
+                  <span className="font-heading text-2xl font-medium text-white">$25–$35</span>
+                </div>
+                <div className="mt-3 flex items-baseline justify-between border-t-2 border-lime pt-5">
+                  <span className="font-mono text-[0.7rem] font-bold uppercase tracking-[0.08em] text-on-dark">Over a 5-day week</span>
+                  <span className="font-heading text-3xl font-semibold text-lime">$100–$140</span>
                 </div>
               </div>
             </div>
 
-            <p className="mx-auto mt-8 max-w-2xl text-center text-muted-foreground">
-              For multi-day rentals, you charge between shifts from a standard outlet. Your electricity cost is a fraction of what you&apos;d spend on diesel.
-            </p>
-            <p className="mt-4 text-center font-medium text-foreground">
-              Over a 5-day job, the fuel savings alone can run $400–$500.
-            </p>
+            <div className="mx-auto mt-12 max-w-2xl text-center">
+              <p className="text-on-dark/70 leading-relaxed">
+                Delivered full and returned however you like. Over a 5-day week your machine runs on about $100 to $140 of electricity, against $450 to $500 of diesel.
+              </p>
+              <p className="mt-5 font-heading text-2xl font-semibold uppercase tracking-[0.01em] leading-tight text-lime lg:text-3xl">
+                That&apos;s roughly $310 to $400 back in your pocket, every week.
+              </p>
+            </div>
           </div>
         </Container>
       </section>
 
       {/* Available Equipment */}
-      <section className="py-16 lg:py-24">
+      <section className="border-t-2 border-border bg-concrete py-20 lg:py-24">
         <Container>
-          <div className="mb-12 text-center">
-            <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground lg:text-4xl">
+          <div className="mb-14 text-center">
+            <p className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground/70">
+              // 03 — IN FLEET
+            </p>
+            <h2 className="mt-4 font-heading text-4xl font-semibold uppercase tracking-[0.01em] leading-[0.96] text-foreground lg:text-5xl">
               Available Equipment
             </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
+            <p className="mx-auto mt-4 max-w-xl text-lg text-muted-foreground">
               Electric skid steers in fleet and ready for pickup or delivery
             </p>
           </div>
           <div className="mx-auto grid max-w-5xl gap-8 lg:grid-cols-2">
             {equipment.map((item) => (
-              <div
+              <article
                 key={item.slug}
-                className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm"
+                className="group flex flex-col border-[3px] border-ink bg-paper transition-all duration-300 hover:-translate-y-1.5 hover:[box-shadow:10px_10px_0_var(--primary)]"
               >
-                <div className="aspect-[16/10] bg-muted relative">
+                <div className="relative aspect-[16/11] overflow-hidden border-b-[3px] border-ink bg-concrete-2">
                   {item.image && (
                     <img
                       src={item.image}
                       alt={`${item.name} electric skid steer available for rent in Salinas and Lodi California`}
-                      className="h-full w-full object-cover"
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   )}
-                  <div className="absolute top-4 left-4">
-                    <span className="rounded-full bg-green-500 px-3 py-1 text-sm font-bold text-white">
+                  <div className="absolute inset-x-0 top-0 flex justify-between">
+                    <span className="border-b-[3px] border-r-[3px] border-ink bg-lime px-3 py-2 font-mono text-[0.64rem] font-bold uppercase tracking-[0.14em] text-ink">
                       Ready Now
                     </span>
-                  </div>
-                  <div className="absolute top-4 right-4">
-                    <span className="rounded-full bg-lime px-3 py-1 text-sm font-bold text-primary">
+                    <span className="border-b-[3px] border-l-[3px] border-ink bg-ink px-3 py-2 font-mono text-[0.64rem] font-bold uppercase tracking-[0.14em] text-lime">
                       {item.unitsAvailable} Available
                     </span>
                   </div>
                 </div>
-                <div className="p-6">
-                  <p className="text-sm font-medium text-primary">{item.type}</p>
-                  <h3 className="mt-1 font-heading text-xl font-bold text-foreground">
+                <div className="flex flex-1 flex-col p-7">
+                  <p className="font-mono text-[0.64rem] font-bold uppercase tracking-[0.14em] text-primary">{item.type}</p>
+                  <h3 className="mt-2 font-heading text-2xl font-semibold uppercase tracking-wide leading-none text-foreground">
                     {item.name}
                   </h3>
-                  <p className="mt-2 text-sm text-muted-foreground">
+                  <p className="mt-3 text-sm text-muted-foreground">
                     {item.tagline}
                   </p>
-                  <p className="mt-2 text-sm font-medium text-foreground">
+                  <p className="mt-2.5 text-sm font-semibold text-foreground">
                     {item.bestFor}
                   </p>
-                  <div className="mt-4">
-                    <div className="flex items-center gap-3">
-                      <div className="flex items-baseline gap-1">
-                        <span className="text-lg text-muted-foreground line-through">
-                          ${item.dailyRate}/day
-                        </span>
-                      </div>
-                      <span className="rounded-full bg-lime px-2.5 py-0.5 text-xs font-bold text-primary">
-                        Fuel Included
-                      </span>
-                    </div>
-                    <div className="mt-2 rounded-lg bg-red-500/10 border border-red-500/30 px-3 py-2">
-                      <span className="text-sm font-bold text-red-600">For a limited time:</span>
-                      <span className="ml-2 text-2xl font-bold text-primary">{item.slug === "elise-1200" ? "$1,200" : "$1,000"}</span>
-                      <span className="text-muted-foreground">/week</span>
-                    </div>
+                  <div className="mt-5 flex items-center gap-3 border-t-2 border-border pt-5">
+                    <span className="font-heading text-xl font-medium text-muted-foreground/70 line-through">
+                      ${item.dailyRate}/day
+                    </span>
+                    <span className="bg-lime px-2.5 py-1.5 font-mono text-[0.6rem] font-bold uppercase tracking-[0.1em] text-ink">
+                      Fuel Included
+                    </span>
                   </div>
-                  <ul className="mt-4 space-y-2">
+                  <div className="mt-3.5 flex flex-wrap items-baseline gap-2 border-2 border-ink bg-ink px-4 py-3.5">
+                    <span className="font-mono text-[0.62rem] font-bold uppercase tracking-[0.1em] text-lime">For a limited time:</span>
+                    <span className="font-heading text-3xl font-semibold leading-none text-white">{item.slug === "elise-1200" ? "$1,200" : "$1,000"}</span>
+                    <span className="font-mono text-xs text-on-dark/70">/week</span>
+                  </div>
+                  <ul className="mt-5 space-y-2.5">
                     {item.highlights.slice(0, 3).map((highlight) => (
-                      <li key={highlight} className="flex items-center gap-2 text-sm text-foreground">
-                        <Check className="h-4 w-4 text-success" />
+                      <li key={highlight} className="flex items-start gap-2.5 text-sm text-foreground">
+                        <Check className="mt-0.5 h-4 w-4 shrink-0 text-primary" strokeWidth={3} />
                         {highlight}
                       </li>
                     ))}
                   </ul>
-                  <p className="mt-4 text-xs text-muted-foreground">
+                  <p className="mt-5 font-mono text-[0.6rem] uppercase leading-relaxed tracking-[0.04em] text-muted-foreground">
                     Free pickup from Salinas or Lodi. Delivery available statewide.
                   </p>
-                  <div className="mt-4 flex gap-3">
-                    <Button asChild className="flex-1">
+                  <div className="mt-5 flex gap-3 pt-1">
+                    <Button asChild variant="lime" className="flex-1">
                       <Link href="/quote">Check Availability</Link>
                     </Button>
                     <Button asChild variant="outline">
@@ -607,11 +634,11 @@ export default function HomePage() {
                     </Button>
                   </div>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
-          <div className="mt-10 flex flex-col items-center gap-4">
-            <p className="text-muted-foreground">
+          <div className="mt-12 flex flex-col items-center gap-4">
+            <p className="font-mono text-xs font-bold uppercase tracking-[0.16em] text-muted-foreground">
               Ready to rent? Contact us now.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
@@ -633,61 +660,68 @@ export default function HomePage() {
       </section>
 
       {/* Real Fleet, Ready Now */}
-      <section className="py-16 lg:py-24">
-        <Container>
-          <div className="mx-auto max-w-5xl">
-            <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
-              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
-                <Image
-                  src="/images/fleet-hero.png"
-                  alt="Frontline EV Rentals electric skid steer fleet available in Salinas and Lodi, California"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div>
-                <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground lg:text-4xl">
-                  Real Fleet. Ready Now.
-                </h2>
-                <p className="mt-4 text-lg text-muted-foreground">
-                  Frontline EV Rentals is not brokering equipment or taking inquiries for future inventory. Our electric skid steers are in fleet, on hand, and ready for real jobs.
-                </p>
-                <ul className="mt-6 space-y-3">
-                  {[
-                    "Charged and tested",
-                    "Available now",
-                    "Based in Salinas and Lodi",
-                  ].map((item) => (
-                    <li key={item} className="flex items-center gap-3">
-                      <div className="flex h-6 w-6 items-center justify-center rounded-full bg-lime">
-                        <Check className="h-4 w-4 text-primary" />
-                      </div>
-                      <span className="font-medium text-foreground">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                  <Button asChild size="lg">
-                    <Link href="/quote">Check Availability</Link>
-                  </Button>
-                  <Button asChild size="lg" variant="outline">
-                    <a href={COMPANY.phoneHref}>
-                      <Phone className="h-5 w-5" />
-                      {COMPANY.phone}
-                    </a>
-                  </Button>
-                </div>
-              </div>
+      <section className="border-y-[3px] border-ink bg-teal-dark text-on-dark">
+        <div className="grid min-h-[520px] items-stretch lg:grid-cols-[1.05fr_1fr]">
+          <div className="relative min-h-[340px] border-b-[3px] border-lime lg:border-b-0 lg:border-r-[3px]">
+            <Image
+              src="/images/fleet-hero.png"
+              alt="Frontline EV Rentals electric skid steer fleet available in Salinas and Lodi, California"
+              fill
+              className="object-cover [filter:contrast(1.03)]"
+            />
+            <div
+              aria-hidden="true"
+              className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-teal-dark/40"
+            />
+          </div>
+          <div className="flex flex-col justify-center px-6 py-16 sm:px-10 lg:px-14">
+            <p className="flex items-center gap-3 font-mono text-xs font-bold uppercase tracking-[0.2em] text-lime">
+              <span className="inline-block h-0.5 w-6 bg-lime" aria-hidden="true" />
+              On Hand · Not Brokered
+            </p>
+            <h2 className="mt-5 font-heading text-4xl font-semibold uppercase tracking-[0.01em] leading-[0.94] text-white lg:text-5xl">
+              Real Fleet. Ready Now.
+            </h2>
+            <p className="mt-5 max-w-md text-on-dark/75 leading-relaxed">
+              Frontline EV Rentals is not brokering equipment or taking inquiries for future inventory. Our electric skid steers are in fleet, on hand, and ready for real jobs.
+            </p>
+            <ul className="mt-7 space-y-3.5">
+              {[
+                "Charged and tested",
+                "Available now",
+                "Based in Salinas and Lodi",
+              ].map((item) => (
+                <li key={item} className="flex items-center gap-3.5">
+                  <span className="flex h-[18px] w-[18px] shrink-0 items-center justify-center bg-lime" aria-hidden="true">
+                    <Check className="h-3 w-3 text-ink" strokeWidth={3.5} />
+                  </span>
+                  <span className="font-mono text-[0.82rem] font-bold uppercase tracking-[0.1em] text-on-dark">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-9 flex flex-col gap-3.5 sm:flex-row">
+              <Button asChild size="lg" variant="lime">
+                <Link href="/quote">Check Availability</Link>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="border-on-dark/30 text-on-dark hover:bg-white/10 hover:text-on-dark">
+                <a href={COMPANY.phoneHref}>
+                  <Phone className="h-5 w-5" />
+                  {COMPANY.phone}
+                </a>
+              </Button>
             </div>
           </div>
-        </Container>
+        </div>
       </section>
 
       {/* Fleet Gallery */}
       <section className="bg-muted py-16 lg:py-24">
         <Container>
           <div className="mx-auto max-w-6xl">
-            <h2 className="text-center font-heading text-3xl font-bold tracking-tight text-foreground lg:text-4xl">
+            <p className="text-center font-mono text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground/70">
+              // 04 — THE YARD
+            </p>
+            <h2 className="mt-4 text-center font-heading text-4xl font-semibold uppercase tracking-[0.01em] leading-[0.96] text-foreground lg:text-5xl">
               Our Fleet Up Close
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-center text-muted-foreground">
@@ -707,7 +741,7 @@ export default function HomePage() {
               ].map((photo, index) => (
                 <div
                   key={index}
-                  className="group relative aspect-[4/3] overflow-hidden rounded-xl bg-white shadow-sm"
+                  className="group relative aspect-[4/3] overflow-hidden border-2 border-ink bg-paper"
                 >
                   <Image
                     src={photo.src}
@@ -718,7 +752,7 @@ export default function HomePage() {
                 </div>
               ))}
             </div>
-            <p className="mt-6 text-center text-sm text-muted-foreground">
+            <p className="mt-7 text-center font-mono text-[0.68rem] uppercase tracking-[0.06em] text-muted-foreground">
               Photos taken at our Salinas location. Equipment available for pickup or delivery throughout California.
             </p>
           </div>
@@ -726,23 +760,26 @@ export default function HomePage() {
       </section>
 
       {/* Common Rental Needs */}
-      <section className="py-16 lg:py-24">
+      <section className="border-t-2 border-border py-20 lg:py-24">
         <Container>
           <div className="mx-auto max-w-4xl">
-            <h2 className="text-center font-heading text-3xl font-bold tracking-tight text-foreground lg:text-4xl">
+            <p className="text-center font-mono text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground/70">
+              // 05 — FIT
+            </p>
+            <h2 className="mt-4 text-center font-heading text-4xl font-semibold uppercase tracking-[0.01em] leading-[0.96] text-foreground lg:text-5xl">
               Common Rental Needs
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-center text-muted-foreground">
               Electric skid steers are a practical fit for these job types
             </p>
-            <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-12 grid border-l-2 border-t-2 border-ink sm:grid-cols-2 lg:grid-cols-3">
               {commonRentalNeeds.map((need) => (
                 <div
                   key={need}
-                  className="flex items-center gap-3 rounded-lg border border-border bg-card p-4"
+                  className="flex items-center gap-3.5 border-b-2 border-r-2 border-ink bg-paper p-5 transition-colors duration-200 hover:bg-lime"
                 >
-                  <Check className="h-5 w-5 shrink-0 text-primary" />
-                  <span className="text-sm font-medium text-foreground">{need}</span>
+                  <Check className="h-5 w-5 shrink-0 text-primary" strokeWidth={3} />
+                  <span className="font-mono text-xs font-bold uppercase tracking-[0.08em] text-foreground">{need}</span>
                 </div>
               ))}
             </div>
@@ -751,23 +788,26 @@ export default function HomePage() {
       </section>
 
       {/* Built for Real Jobs */}
-      <section className="py-16 lg:py-24">
+      <section className="py-20 lg:py-24">
         <Container>
           <div className="mx-auto max-w-4xl">
-            <h2 className="text-center font-heading text-3xl font-bold tracking-tight text-foreground lg:text-4xl">
+            <p className="text-center font-mono text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground/70">
+              // 06 — IN THE FIELD
+            </p>
+            <h2 className="mt-4 text-center font-heading text-4xl font-semibold uppercase tracking-[0.01em] leading-[0.96] text-foreground lg:text-5xl">
               Built for Real Jobs
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-center text-muted-foreground">
               Our fleet is ready for practical field use, including:
             </p>
-            <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {builtForRealJobs.map((job) => (
                 <div
                   key={job}
-                  className="flex items-center gap-3 rounded-lg bg-teal-light p-4"
+                  className="flex items-center gap-3.5 border-2 border-border bg-teal-light p-5"
                 >
                   <CheckCircle className="h-5 w-5 shrink-0 text-primary" />
-                  <span className="text-sm font-medium text-foreground">{job}</span>
+                  <span className="text-sm font-semibold text-foreground">{job}</span>
                 </div>
               ))}
             </div>
@@ -776,22 +816,25 @@ export default function HomePage() {
       </section>
 
       {/* Who We Work With */}
-      <section className="bg-teal-light py-16 lg:py-24">
+      <section className="border-y-2 border-border bg-concrete-2 py-20 lg:py-24">
         <Container>
           <div className="mx-auto max-w-4xl">
-            <h2 className="text-center font-heading text-3xl font-bold tracking-tight text-foreground lg:text-4xl">
+            <p className="text-center font-mono text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground/70">
+              // 07 — CUSTOMERS
+            </p>
+            <h2 className="mt-4 text-center font-heading text-4xl font-semibold uppercase tracking-[0.01em] leading-[0.96] text-foreground lg:text-5xl">
               Who We Work With
             </h2>
             <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {whoWeHelp.map((item) => (
                 <div
                   key={item.text}
-                  className="flex items-center gap-3 rounded-lg bg-white p-4 shadow-sm"
+                  className="flex items-center gap-3.5 border-2 border-ink bg-paper p-5"
                 >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
-                    <item.icon className="h-5 w-5 text-primary" />
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center border-2 border-ink text-primary">
+                    <item.icon className="h-5 w-5" strokeWidth={2.2} />
                   </div>
-                  <span className="font-medium text-foreground">{item.text}</span>
+                  <span className="text-sm font-semibold text-foreground">{item.text}</span>
                 </div>
               ))}
             </div>
@@ -800,20 +843,29 @@ export default function HomePage() {
       </section>
 
       {/* Why Frontline Instead of a Generic Rental Yard? */}
-      <section className="bg-primary py-16 lg:py-24">
+      <section className="border-y-[3px] border-ink bg-ink py-20 text-on-dark lg:py-24">
         <Container>
-          <div className="mx-auto max-w-4xl text-center">
-            <h2 className="font-heading text-3xl font-bold tracking-tight text-white lg:text-4xl">
-              Why Frontline Instead of a Generic Rental Yard?
-            </h2>
-            <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {whyFrontline.map((item) => (
+          <div className="mx-auto max-w-5xl">
+            <div className="mx-auto max-w-3xl text-center">
+              <p className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-lime">
+                // 08 — THE DIFFERENCE
+              </p>
+              <h2 className="mt-4 font-heading text-4xl font-semibold uppercase tracking-[0.01em] leading-[0.96] text-white lg:text-5xl">
+                Why Frontline Instead of a Generic Rental Yard?
+              </h2>
+            </div>
+            <div className="mt-14 grid border-l-2 border-t-2 border-on-dark/15 sm:grid-cols-2 lg:grid-cols-3">
+              {whyFrontline.map((item, index) => (
                 <div
                   key={item}
-                  className="flex items-center gap-3 rounded-lg bg-white/10 p-4 text-left"
+                  className="flex min-h-[170px] items-start gap-4 border-b-2 border-r-2 border-on-dark/15 p-8 transition-colors duration-250 hover:bg-ink-2"
                 >
-                  <Check className="h-5 w-5 shrink-0 text-lime" />
-                  <span className="text-white">{item}</span>
+                  <span className="pt-1 font-mono text-xs font-bold tracking-[0.14em] text-lime">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <p className="font-heading text-lg font-medium uppercase leading-[1.12] tracking-[0.01em] text-white">
+                    {item}
+                  </p>
                 </div>
               ))}
             </div>
@@ -822,46 +874,45 @@ export default function HomePage() {
       </section>
 
       {/* How It Works */}
-      <section className="py-16 lg:py-24">
+      <section className="py-20 lg:py-24">
         <Container>
-          <div className="mx-auto max-w-3xl">
-            <h2 className="text-center font-heading text-3xl font-bold tracking-tight text-foreground lg:text-4xl">
+          <div className="mx-auto max-w-4xl">
+            <p className="text-center font-mono text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground/70">
+              // 09 — PROCESS
+            </p>
+            <h2 className="mt-4 text-center font-heading text-4xl font-semibold uppercase tracking-[0.01em] leading-[0.96] text-foreground lg:text-5xl">
               How It Works
             </h2>
-            <div className="mt-12 grid gap-8 sm:grid-cols-3">
-              <div className="text-center">
-                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-primary text-xl font-bold text-white">
-                  1
+            <div className="mt-14 grid gap-8 sm:grid-cols-3">
+              {[
+                {
+                  step: "1",
+                  title: "Tell Us About Your Job",
+                  body: "Tell us what job you are working on and when you need equipment.",
+                },
+                {
+                  step: "2",
+                  title: "Get Matched",
+                  body: "We help match the right machine and rental term for your project.",
+                },
+                {
+                  step: "3",
+                  title: "Pick Up or Schedule Delivery",
+                  body: "Pick up from Salinas or Lodi, or we can arrange delivery to your site.",
+                },
+              ].map((item) => (
+                <div key={item.step} className="border-t-[3px] border-ink pt-6">
+                  <div className="flex h-14 w-14 items-center justify-center border-2 border-ink bg-ink font-heading text-2xl font-semibold text-lime">
+                    {item.step}
+                  </div>
+                  <h3 className="mt-5 font-heading text-xl font-semibold uppercase tracking-wide leading-tight text-foreground">
+                    {item.title}
+                  </h3>
+                  <p className="mt-3 text-sm text-muted-foreground">
+                    {item.body}
+                  </p>
                 </div>
-                <h3 className="mt-4 font-heading text-lg font-bold text-foreground">
-                  Tell Us About Your Job
-                </h3>
-                <p className="mt-2 text-sm text-muted-foreground">
-                  Tell us what job you are working on and when you need equipment.
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-primary text-xl font-bold text-white">
-                  2
-                </div>
-                <h3 className="mt-4 font-heading text-lg font-bold text-foreground">
-                  Get Matched
-                </h3>
-                <p className="mt-2 text-sm text-muted-foreground">
-                  We help match the right machine and rental term for your project.
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-primary text-xl font-bold text-white">
-                  3
-                </div>
-                <h3 className="mt-4 font-heading text-lg font-bold text-foreground">
-                  Pick Up or Schedule Delivery
-                </h3>
-                <p className="mt-2 text-sm text-muted-foreground">
-                  Pick up from Salinas or Lodi, or we can arrange delivery to your site.
-                </p>
-              </div>
+              ))}
             </div>
           </div>
         </Container>
@@ -871,7 +922,10 @@ export default function HomePage() {
       <section className="bg-muted py-16 lg:py-24">
         <Container>
           <div className="mx-auto max-w-4xl">
-            <h2 className="text-center font-heading text-3xl font-bold tracking-tight text-foreground lg:text-4xl">
+            <p className="text-center font-mono text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground/70">
+              // 10 — COVERAGE
+            </p>
+            <h2 className="mt-4 text-center font-heading text-4xl font-semibold uppercase tracking-[0.01em] leading-[0.96] text-foreground lg:text-5xl">
               Where We Serve
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-center text-lg text-muted-foreground">
@@ -880,7 +934,7 @@ export default function HomePage() {
 
             {/* Primary Service Points */}
             <div className="mt-12">
-              <h3 className="mb-6 text-center font-heading text-lg font-bold text-foreground">
+              <h3 className="mb-6 text-center font-mono text-[0.68rem] font-bold uppercase tracking-[0.18em] text-primary">
                 Primary Service Points
               </h3>
               <div className="flex flex-col items-center justify-center gap-6 sm:flex-row sm:gap-12">
@@ -891,18 +945,18 @@ export default function HomePage() {
                   <Link
                     key={location.city}
                     href={location.href}
-                    className="flex items-center gap-4 rounded-xl border border-border bg-white p-4 shadow-sm transition-shadow hover:shadow-md"
+                    className="group flex items-center gap-4 border-2 border-ink bg-paper p-5 transition-all duration-200 hover:-translate-y-1 hover:[box-shadow:6px_6px_0_var(--primary)]"
                   >
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary text-white">
-                      <MapPin className="h-5 w-5" strokeWidth={1.5} />
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center border-2 border-ink bg-primary text-white">
+                      <MapPin className="h-5 w-5" strokeWidth={1.8} />
                     </div>
                     <div className="text-left">
-                      <p className="font-heading text-lg font-bold text-foreground">
+                      <p className="font-heading text-xl font-semibold uppercase tracking-wide text-foreground">
                         {location.city}
                       </p>
                       <p className="text-sm text-muted-foreground">{location.region}</p>
                     </div>
-                    <ArrowRight className="h-4 w-4 text-muted-foreground" />
+                    <ArrowRight className="h-4 w-4 text-muted-foreground transition-transform duration-200 group-hover:translate-x-1" />
                   </Link>
                 ))}
               </div>
@@ -910,10 +964,10 @@ export default function HomePage() {
 
             {/* Common Delivery Regions */}
             <div className="mt-12">
-              <h3 className="mb-6 text-center font-heading text-lg font-bold text-foreground">
+              <h3 className="mb-6 text-center font-mono text-[0.68rem] font-bold uppercase tracking-[0.18em] text-primary">
                 Common Delivery Regions
               </h3>
-              <div className="flex flex-wrap justify-center gap-3">
+              <div className="flex flex-wrap justify-center gap-2.5">
                 {[
                   "Monterey County",
                   "San Joaquin County",
@@ -927,7 +981,7 @@ export default function HomePage() {
                 ].map((area) => (
                   <span
                     key={area}
-                    className="rounded-full bg-white px-4 py-2 text-sm font-medium text-foreground shadow-sm"
+                    className="border border-border bg-paper px-3.5 py-2 font-mono text-[0.66rem] font-bold uppercase tracking-[0.1em] text-foreground"
                   >
                     {area}
                   </span>
@@ -935,7 +989,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="mt-10 flex flex-wrap justify-center gap-4 text-sm">
+            <div className="mt-10 flex flex-wrap justify-center gap-4 font-mono text-xs uppercase tracking-[0.08em]">
               <Link href="/electric-skid-steer-salinas" className="text-primary hover:underline">
                 Electric Skid Steer Rental Salinas
               </Link>
@@ -957,11 +1011,11 @@ export default function HomePage() {
         <Container>
           <div className="mx-auto max-w-4xl">
             <div className="text-center">
-              <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
+              <div className="mb-5 inline-flex items-center gap-2 border-2 border-ink bg-lime px-4 py-2 font-mono text-[0.68rem] font-bold uppercase tracking-[0.16em] text-ink">
                 <ShieldCheck className="h-4 w-4" />
                 CA Certification #2048623
               </div>
-              <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground lg:text-4xl">
+              <h2 className="font-heading text-4xl font-semibold uppercase tracking-[0.01em] leading-[0.96] text-foreground lg:text-5xl">
                 DVBE Certified Equipment Rental
               </h2>
             </div>
@@ -970,22 +1024,22 @@ export default function HomePage() {
               Frontline EV Rentals is a DVBE-certified business. Equipment rental costs can count toward your DVBE participation goal on California public projects.
             </p>
 
-            <div className="mt-10 grid gap-4 sm:grid-cols-2">
+            <div className="mt-12 grid gap-4 sm:grid-cols-2">
               {[
                 "Equipment rental for public works and utility projects",
                 "Documentation and certification letters on request",
                 "Legitimate participation tied to real project scope",
                 "Fast response for bid support",
               ].map((item) => (
-                <div key={item} className="flex items-start gap-3 rounded-lg border border-border bg-card p-4">
-                  <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                  <span className="text-sm text-foreground">{item}</span>
+                <div key={item} className="flex items-start gap-3.5 border-2 border-ink bg-paper p-5">
+                  <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" strokeWidth={3} />
+                  <span className="text-sm font-semibold text-foreground">{item}</span>
                 </div>
               ))}
             </div>
 
-            <div className="mx-auto mt-8 max-w-2xl rounded-xl border border-border bg-muted/50 p-4">
-              <p className="text-center text-sm text-muted-foreground">
+            <div className="mx-auto mt-8 max-w-2xl border-l-[3px] border-lime bg-concrete-2 p-5">
+              <p className="text-center font-mono text-[0.68rem] uppercase leading-relaxed tracking-[0.06em] text-muted-foreground">
                 Frontline does not provide pass-through participation. Services are based on actual project needs.
               </p>
             </div>
@@ -1003,22 +1057,27 @@ export default function HomePage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-muted py-16 lg:py-24">
+      <section className="border-y-2 border-border bg-concrete-2 py-20 lg:py-24">
         <Container>
           <div className="mx-auto max-w-3xl">
-            <div className="mb-10 flex items-center justify-center gap-2">
-              <HelpCircle className="h-6 w-6 text-primary" />
-              <h2 className="font-heading text-2xl font-bold text-foreground lg:text-3xl">
-                Common Questions
-              </h2>
+            <div className="mb-12 text-center">
+              <p className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground/70">
+                // 11 — ANSWERS
+              </p>
+              <div className="mt-4 flex items-center justify-center gap-3">
+                <HelpCircle className="h-6 w-6 text-primary" />
+                <h2 className="font-heading text-3xl font-semibold uppercase tracking-[0.01em] text-foreground lg:text-4xl">
+                  Common Questions
+                </h2>
+              </div>
             </div>
             <div className="space-y-4">
               {faqItems.map((item) => (
-                <div key={item.question} className="rounded-xl border border-border bg-card p-5">
-                  <h3 className="font-heading text-lg font-bold text-foreground">
+                <div key={item.question} className="border-l-[3px] border-ink bg-paper p-6">
+                  <h3 className="font-heading text-lg font-semibold uppercase tracking-wide text-foreground">
                     {item.question}
                   </h3>
-                  <p className="mt-2 text-muted-foreground">
+                  <p className="mt-3 text-muted-foreground">
                     {item.answer}
                   </p>
                 </div>
@@ -1029,53 +1088,61 @@ export default function HomePage() {
       </section>
 
       {/* Related Contractor Resources */}
-      <section className="py-12">
+      <section className="py-14">
         <Container>
           <div className="mx-auto max-w-4xl">
-            <h3 className="text-center font-heading text-lg font-bold text-foreground">
+            <h3 className="text-center font-mono text-[0.68rem] font-bold uppercase tracking-[0.18em] text-muted-foreground">
               Related Contractor Resources
             </h3>
-            <div className="mt-6 flex flex-wrap justify-center gap-4">
-              <Link href="/dvbe-equipment-rental" className="text-sm text-primary hover:underline">DVBE Equipment Rental</Link>
-              <Link href="/dvbe-participation" className="text-sm text-primary hover:underline">DVBE Participation Support</Link>
-              <Link href="/for-contractors" className="text-sm text-primary hover:underline">Contractor Information</Link>
-              <Link href="/zero-emission-equipment-california" className="text-sm text-primary hover:underline">Zero Emission Equipment CA</Link>
-              <Link href="/utility-public-works" className="text-sm text-primary hover:underline">Utility & Public Works</Link>
+            <div className="mt-6 flex flex-wrap justify-center gap-4 font-mono text-xs uppercase tracking-[0.08em]">
+              <Link href="/dvbe-equipment-rental" className="text-primary hover:underline">DVBE Equipment Rental</Link>
+              <Link href="/dvbe-participation" className="text-primary hover:underline">DVBE Participation Support</Link>
+              <Link href="/for-contractors" className="text-primary hover:underline">Contractor Information</Link>
+              <Link href="/zero-emission-equipment-california" className="text-primary hover:underline">Zero Emission Equipment CA</Link>
+              <Link href="/utility-public-works" className="text-primary hover:underline">Utility & Public Works</Link>
             </div>
           </div>
         </Container>
       </section>
 
       {/* Final CTA */}
-      <section className="bg-primary py-16 lg:py-20">
+      <section className="relative overflow-hidden border-t-[3px] border-lime bg-primary py-20 text-on-dark lg:py-24">
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 opacity-40 [background-image:linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] [background-size:52px_52px]"
+        />
         <Container>
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="font-heading text-3xl font-bold tracking-tight text-white lg:text-4xl">
+          <div className="relative mx-auto max-w-3xl text-center">
+            <p className="flex items-center justify-center gap-3 font-mono text-xs font-bold uppercase tracking-[0.2em] text-lime">
+              <span className="inline-block h-0.5 w-6 bg-lime" aria-hidden="true" />
+              Ready When You Are
+            </p>
+            <h2 className="mt-5 font-heading text-5xl font-semibold uppercase tracking-[0.01em] leading-[0.94] text-white lg:text-6xl">
               Ready to Rent?
             </h2>
-            <p className="mt-4 text-lg text-white/80">
+            <p className="mx-auto mt-5 max-w-xl text-lg text-on-dark/80">
               Tell us your job location and dates. We will confirm availability and get you a quote.
             </p>
-            <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-4">
-              <Button asChild size="lg" className="bg-lime text-primary hover:bg-lime/90">
+            <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+              <Button asChild size="lg" variant="lime">
                 <a href={COMPANY.phoneHref}>
                   <Phone className="h-5 w-5" />
                   Call {COMPANY.phone}
                 </a>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10">
+              <Button asChild size="lg" variant="outline" className="border-on-dark/30 text-on-dark hover:bg-white/10 hover:text-on-dark">
                 <a href={COMPANY.smsHref}>
                   <MessageSquare className="h-5 w-5" />
                   Text Us
                 </a>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10">
+              <Button asChild size="lg" variant="outline" className="border-on-dark/30 text-on-dark hover:bg-white/10 hover:text-on-dark">
                 <Link href="/quote">
                   Request Quote
                 </Link>
               </Button>
             </div>
-            <p className="mt-6 text-sm text-white/70">
+            <p className="mt-8 font-mono text-[0.7rem] uppercase tracking-[0.08em] text-on-dark/65">
               Equipment ready now from Salinas and Lodi. Fast response on availability.
             </p>
           </div>

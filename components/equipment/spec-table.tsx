@@ -4,7 +4,7 @@ interface SpecTableProps {
 
 export function SpecTable({ specifications }: SpecTableProps) {
   return (
-    <div className="overflow-hidden rounded-lg border border-border">
+    <div className="overflow-hidden border border-border">
       <table className="w-full">
         <tbody>
           {Object.entries(specifications).map(([key, value], index) => (

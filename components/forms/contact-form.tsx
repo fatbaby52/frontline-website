@@ -73,7 +73,7 @@ export function ContactForm() {
   if (isSubmitted) {
     return (
       <div className="py-8 text-center" role="status" aria-live="polite">
-        <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-success/10">
+        <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center bg-success/10">
           <Check className="h-6 w-6 text-success" aria-hidden="true" />
         </div>
         <h3 className="font-heading text-lg font-semibold text-foreground">
@@ -149,7 +149,7 @@ export function ContactForm() {
           {...register("subject")}
           aria-invalid={errors.subject ? "true" : undefined}
           aria-describedby={errors.subject ? `${formId}-subject-error` : undefined}
-          className="h-10 w-full rounded-md border border-input bg-card px-3 py-2 text-sm text-foreground focus:border-ring focus:outline-none focus:ring-2 focus:ring-ring/50"
+          className="h-10 w-full border border-input bg-card px-3 py-2 text-sm text-foreground focus:border-ring focus:outline-none focus:ring-2 focus:ring-ring/50"
         >
           <option value="">Select a subject</option>
           {subjects.map((s) => (
@@ -189,7 +189,7 @@ export function ContactForm() {
           ref={errorSummaryRef}
           tabIndex={-1}
           role="alert"
-          className="rounded-md border border-destructive/20 bg-destructive/5 p-3 focus:outline-none focus:ring-2 focus:ring-destructive/50"
+          className="border border-destructive/20 bg-destructive/5 p-3 focus:outline-none focus:ring-2 focus:ring-destructive/50"
         >
           <p className="text-sm text-destructive">{submitError}</p>
         </div>

@@ -115,7 +115,7 @@ export function ChatWidget() {
       <button
         onClick={() => setIsOpen(!isOpen)}
         className={cn(
-          "fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full shadow-lg transition-all duration-300 hover:scale-110",
+          "fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center shadow-lg transition-all duration-300 hover:scale-110",
           isOpen
             ? "bg-foreground text-white"
             : "bg-primary text-white hover:bg-primary-light"
@@ -132,7 +132,7 @@ export function ChatWidget() {
       {/* Chat Panel */}
       <div
         className={cn(
-          "fixed bottom-24 right-6 z-50 w-[350px] overflow-hidden rounded-2xl border border-border bg-white shadow-2xl transition-all duration-300 sm:w-[400px]",
+          "fixed bottom-24 right-6 z-50 w-[350px] overflow-hidden border border-border bg-paper shadow-2xl transition-all duration-300 sm:w-[400px]",
           isOpen
             ? "translate-y-0 opacity-100"
             : "pointer-events-none translate-y-4 opacity-0"
@@ -169,7 +169,7 @@ export function ChatWidget() {
                       setInput(suggestion);
                       inputRef.current?.focus();
                     }}
-                    className="rounded-full bg-muted px-3 py-1.5 text-xs font-medium text-foreground transition-colors hover:bg-primary/10 hover:text-primary"
+                    className="bg-muted px-3 py-1.5 text-xs font-medium text-foreground transition-colors hover:bg-primary/10 hover:text-primary"
                   >
                     {suggestion}
                   </button>
@@ -188,7 +188,7 @@ export function ChatWidget() {
                 >
                   <div
                     className={cn(
-                      "max-w-[85%] rounded-2xl px-4 py-2.5 text-sm",
+                      "max-w-[85%] px-4 py-2.5 text-sm",
                       message.role === "user"
                         ? "bg-primary text-white"
                         : "bg-muted text-foreground"
@@ -200,7 +200,7 @@ export function ChatWidget() {
               ))}
               {isLoading && (
                 <div className="flex justify-start">
-                  <div className="rounded-2xl bg-muted px-4 py-2.5">
+                  <div className="bg-muted px-4 py-2.5">
                     <Loader2 className="h-5 w-5 animate-spin text-muted-foreground" />
                   </div>
                 </div>
@@ -208,7 +208,7 @@ export function ChatWidget() {
 
               {/* Lead Capture Form */}
               {showForm && !formSubmitted && !isLoading && (
-                <div className="rounded-xl bg-teal-light/50 p-4">
+                <div className="bg-teal-light/50 p-4">
                   <p className="mb-3 text-sm font-medium text-foreground">
                     Want us to follow up?
                   </p>
@@ -218,7 +218,7 @@ export function ChatWidget() {
                       placeholder="Your name"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full rounded-lg border border-border bg-white px-3 py-2 text-sm outline-none focus:border-primary"
+                      className="w-full border border-border bg-paper px-3 py-2 text-sm outline-none focus:border-primary"
                       required
                     />
                     <input
@@ -226,7 +226,7 @@ export function ChatWidget() {
                       placeholder="Email address"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full rounded-lg border border-border bg-white px-3 py-2 text-sm outline-none focus:border-primary"
+                      className="w-full border border-border bg-paper px-3 py-2 text-sm outline-none focus:border-primary"
                       required
                     />
                     <input
@@ -234,19 +234,19 @@ export function ChatWidget() {
                       placeholder="Phone (optional)"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full rounded-lg border border-border bg-white px-3 py-2 text-sm outline-none focus:border-primary"
+                      className="w-full border border-border bg-paper px-3 py-2 text-sm outline-none focus:border-primary"
                     />
                     <div className="flex gap-2 pt-1">
                       <button
                         type="submit"
-                        className="flex-1 rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-primary/90"
+                        className="flex-1 bg-primary px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-primary/90"
                       >
                         Send
                       </button>
                       <button
                         type="button"
                         onClick={() => setShowForm(false)}
-                        className="rounded-lg border border-border px-4 py-2 text-sm text-muted-foreground transition-colors hover:bg-muted"
+                        className="border border-border px-4 py-2 text-sm text-muted-foreground transition-colors hover:bg-muted"
                       >
                         Skip
                       </button>
@@ -257,7 +257,7 @@ export function ChatWidget() {
 
               {/* Success Message */}
               {formSubmitted && (
-                <div className="rounded-xl bg-lime/20 p-4">
+                <div className="bg-lime/20 p-4">
                   <div className="flex items-center gap-2 text-primary">
                     <Sparkles className="h-4 w-4" />
                     <span className="text-sm font-semibold">Thanks! We'll be in touch soon.</span>
@@ -279,13 +279,13 @@ export function ChatWidget() {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Type your question..."
-              className="flex-1 rounded-xl border border-border bg-muted/50 px-4 py-2.5 text-sm outline-none transition-colors focus:border-primary focus:bg-white"
+              className="flex-1 border border-border bg-muted/50 px-4 py-2.5 text-sm outline-none transition-colors focus:border-primary focus:bg-paper"
               disabled={isLoading}
             />
             <button
               type="submit"
               disabled={!input.trim() || isLoading}
-              className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-white transition-all hover:bg-primary-light disabled:opacity-50"
+              className="flex h-10 w-10 items-center justify-center bg-primary text-white transition-all hover:bg-primary-light disabled:opacity-50"
             >
               <Send className="h-4 w-4" />
             </button>

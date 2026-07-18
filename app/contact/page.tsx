@@ -91,7 +91,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="mt-8 rounded-xl border border-border bg-muted/50 p-5">
+                <div className="mt-8 border border-border bg-muted/50 p-5">
                   <h3 className="font-semibold text-foreground">
                     Service Area
                   </h3>

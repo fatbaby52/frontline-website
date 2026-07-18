@@ -29,7 +29,7 @@ export default function AboutPage() {
         <div className="absolute bottom-0 left-0 right-0 h-2 bg-lime" aria-hidden="true" />
         <Container className="relative">
           <div className="mx-auto max-w-4xl text-center">
-            <h1 className="font-heading text-4xl font-bold tracking-tight text-white sm:text-5xl">
+            <h1 className="font-heading text-4xl font-bold uppercase tracking-[0.01em] text-white sm:text-5xl">
               About Frontline EV Rentals
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-xl text-white/90">
@@ -43,7 +43,7 @@ export default function AboutPage() {
       <section className="py-16 lg:py-24">
         <Container>
           <div className="mx-auto max-w-3xl">
-            <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
+            <div className="mb-6 flex h-14 w-14 items-center justify-center bg-primary/10">
               <Zap className="h-7 w-7 text-primary" />
             </div>
             <h2 className="font-heading text-2xl font-bold text-foreground lg:text-3xl">
@@ -63,7 +63,7 @@ export default function AboutPage() {
       <section className="bg-muted py-16 lg:py-24">
         <Container>
           <div className="mx-auto max-w-3xl">
-            <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
+            <div className="mb-6 flex h-14 w-14 items-center justify-center bg-primary/10">
               <Wrench className="h-7 w-7 text-primary" />
             </div>
             <h2 className="font-heading text-2xl font-bold text-foreground lg:text-3xl">
@@ -103,7 +103,7 @@ export default function AboutPage() {
             </div>
 
             <div className="grid gap-6 sm:grid-cols-2">
-              <div className="rounded-xl border border-border bg-card p-6">
+              <div className="border border-border bg-card p-6">
                 <h3 className="mb-4 font-heading text-lg font-bold text-foreground">
                   California
                 </h3>
@@ -115,7 +115,7 @@ export default function AboutPage() {
                     </li>
                   ))}
                 </ul>
-                <div className="mt-4 rounded-lg bg-muted p-3">
+                <div className="mt-4 bg-muted p-3">
                   <p className="font-mono text-sm text-muted-foreground">
                     Certification ID:{" "}
                     <span className="font-semibold text-foreground">#2048623</span>
@@ -123,7 +123,7 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              <div className="rounded-xl border border-border bg-card p-6">
+              <div className="border border-border bg-card p-6">
                 <h3 className="mb-4 font-heading text-lg font-bold text-foreground">
                   Federal
                 </h3>
@@ -135,7 +135,7 @@ export default function AboutPage() {
                     </li>
                   ))}
                 </ul>
-                <div className="mt-4 rounded-lg bg-muted p-3">
+                <div className="mt-4 bg-muted p-3">
                   <p className="font-mono text-sm text-muted-foreground">
                     CAGE Code:{" "}
                     <span className="font-semibold text-foreground">17WA3</span>
@@ -192,7 +192,7 @@ export default function AboutPage() {
               ].map((area) => (
                 <span
                   key={area}
-                  className="rounded-full bg-white px-4 py-2 text-sm font-medium text-foreground shadow-sm"
+                  className="bg-paper px-4 py-2 text-sm font-medium text-foreground shadow-sm"
                 >
                   {area}
                 </span>

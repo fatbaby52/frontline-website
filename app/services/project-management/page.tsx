@@ -57,9 +57,9 @@ export default function ProjectManagementPage() {
               {services.map((service) => (
                 <div
                   key={service.title}
-                  className="flex items-start gap-4 rounded-xl border border-border bg-card p-6"
+                  className="flex items-start gap-4 border border-border bg-card p-6"
                 >
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/5">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center bg-primary/5">
                     <service.icon className="h-5 w-5 text-primary" />
                   </div>
                   <div>
@@ -93,7 +93,7 @@ export default function ProjectManagementPage() {
               ].map((item) => (
                 <div
                   key={item}
-                  className="flex items-center gap-3 rounded-lg border border-border bg-card p-4"
+                  className="flex items-center gap-3 border border-border bg-card p-4"
                 >
                   <Check className="h-4 w-4 shrink-0 text-success" />
                   <span className="text-sm text-foreground">{item}</span>

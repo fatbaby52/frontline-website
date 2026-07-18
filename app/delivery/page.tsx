@@ -99,11 +99,11 @@ export default function DeliveryPage() {
 
         <Container className="relative">
           <div className="mx-auto max-w-4xl text-center">
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-lime px-4 py-2 text-sm font-bold text-primary">
+            <div className="mb-6 inline-flex items-center gap-2 bg-lime px-4 py-2 text-sm font-bold text-primary">
               <Truck className="h-4 w-4" />
               Statewide Delivery
             </div>
-            <h1 className="font-heading text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            <h1 className="font-heading text-4xl font-bold uppercase tracking-[0.01em] text-white sm:text-5xl lg:text-6xl">
               Delivery Anywhere in California Within 48 Hours
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-xl text-white/90">
@@ -112,14 +112,14 @@ export default function DeliveryPage() {
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
               <Link
                 href="/quote"
-                className="inline-flex h-14 items-center justify-center gap-2 rounded-xl bg-lime px-10 text-lg font-bold text-primary shadow-lg shadow-lime/30 transition-all duration-200 hover:bg-accent-hover"
+                className="inline-flex h-14 items-center justify-center gap-2 bg-lime px-10 text-lg font-bold text-primary shadow-lg shadow-lime/30 transition-all duration-200 hover:bg-accent-hover"
               >
                 Get Delivery Quote
                 <ArrowRight className="h-5 w-5" />
               </Link>
               <a
                 href={COMPANY.phoneHref}
-                className="inline-flex h-14 items-center justify-center gap-2 rounded-xl border-2 border-white/30 px-8 text-lg font-semibold text-white transition-all duration-200 hover:border-white/60 hover:bg-white/10"
+                className="inline-flex h-14 items-center justify-center gap-2 border-2 border-white/30 px-8 text-lg font-semibold text-white transition-all duration-200 hover:border-white/60 hover:bg-white/10"
               >
                 <Phone className="h-5 w-5" />
                 {COMPANY.phone}
@@ -133,16 +133,16 @@ export default function DeliveryPage() {
       <section className="py-16 lg:py-24">
         <Container>
           <div className="mx-auto max-w-5xl">
-            <h2 className="text-center font-heading text-3xl font-bold tracking-tight text-foreground lg:text-4xl">
+            <h2 className="text-center font-heading text-3xl font-bold uppercase tracking-[0.01em] text-foreground lg:text-4xl">
               How Delivery Works
             </h2>
             <div className="mt-12 grid gap-6 sm:grid-cols-2">
               {deliveryBenefits.map((benefit) => (
                 <div
                   key={benefit.title}
-                  className="rounded-xl border border-border bg-card p-6"
+                  className="border border-border bg-card p-6"
                 >
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center bg-primary/10">
                     <benefit.icon className="h-6 w-6 text-primary" />
                   </div>
                   <h3 className="font-heading text-lg font-bold text-foreground">
@@ -160,7 +160,7 @@ export default function DeliveryPage() {
       <section className="bg-muted py-16 lg:py-24">
         <Container>
           <div className="mx-auto max-w-4xl">
-            <h2 className="text-center font-heading text-3xl font-bold tracking-tight text-foreground lg:text-4xl">
+            <h2 className="text-center font-heading text-3xl font-bold uppercase tracking-[0.01em] text-foreground lg:text-4xl">
               Pickup or Delivery
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-center text-lg text-muted-foreground">
@@ -169,8 +169,8 @@ export default function DeliveryPage() {
 
             <div className="mt-12 grid gap-6 sm:grid-cols-2">
               {/* Free Pickup */}
-              <div className="rounded-xl border-2 border-primary bg-white p-8">
-                <div className="mb-4 inline-flex rounded-full bg-lime px-4 py-1 text-sm font-bold text-primary">
+              <div className="border-2 border-primary bg-paper p-8">
+                <div className="mb-4 inline-flex bg-lime px-4 py-1 text-sm font-bold text-primary">
                   Free
                 </div>
                 <h3 className="font-heading text-2xl font-bold text-foreground">
@@ -203,8 +203,8 @@ export default function DeliveryPage() {
               </div>
 
               {/* Delivery */}
-              <div className="rounded-xl border border-border bg-white p-8">
-                <div className="mb-4 inline-flex rounded-full bg-primary/10 px-4 py-1 text-sm font-bold text-primary">
+              <div className="border border-border bg-paper p-8">
+                <div className="mb-4 inline-flex bg-primary/10 px-4 py-1 text-sm font-bold text-primary">
                   Statewide
                 </div>
                 <h3 className="font-heading text-2xl font-bold text-foreground">
@@ -239,7 +239,7 @@ export default function DeliveryPage() {
       <section className="py-16 lg:py-24">
         <Container>
           <div className="mx-auto max-w-5xl">
-            <h2 className="text-center font-heading text-3xl font-bold tracking-tight text-foreground lg:text-4xl">
+            <h2 className="text-center font-heading text-3xl font-bold uppercase tracking-[0.01em] text-foreground lg:text-4xl">
               Areas We Serve
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-center text-lg text-muted-foreground">
@@ -250,7 +250,7 @@ export default function DeliveryPage() {
               {regions.map((region) => (
                 <div
                   key={region.name}
-                  className="rounded-xl border border-border bg-card p-6"
+                  className="border border-border bg-card p-6"
                 >
                   <div className="flex items-center gap-3">
                     <MapPin className="h-5 w-5 text-primary" />
@@ -265,7 +265,7 @@ export default function DeliveryPage() {
                     {region.cities.map((city) => (
                       <span
                         key={city}
-                        className="rounded-full bg-muted px-3 py-1 text-sm text-foreground"
+                        className="bg-muted px-3 py-1 text-sm text-foreground"
                       >
                         {city}
                       </span>
@@ -286,14 +286,14 @@ export default function DeliveryPage() {
       <section className="bg-teal-light py-16 lg:py-24">
         <Container>
           <div className="mx-auto max-w-4xl">
-            <h2 className="text-center font-heading text-3xl font-bold tracking-tight text-foreground lg:text-4xl">
+            <h2 className="text-center font-heading text-3xl font-bold uppercase tracking-[0.01em] text-foreground lg:text-4xl">
               Equipment Available for Delivery
             </h2>
             <div className="mt-10 grid gap-6 sm:grid-cols-2">
               {equipment.map((item) => (
                 <div
                   key={item.slug}
-                  className="rounded-xl bg-white p-6 shadow-sm"
+                  className="bg-paper p-6 shadow-sm"
                 >
                   <h3 className="font-heading text-lg font-bold text-foreground">
                     {item.name}
@@ -322,12 +322,12 @@ export default function DeliveryPage() {
       <section className="py-16 lg:py-24">
         <Container>
           <div className="mx-auto max-w-3xl">
-            <h2 className="text-center font-heading text-3xl font-bold tracking-tight text-foreground lg:text-4xl">
+            <h2 className="text-center font-heading text-3xl font-bold uppercase tracking-[0.01em] text-foreground lg:text-4xl">
               How to Schedule Delivery
             </h2>
             <div className="mt-12 grid gap-8 sm:grid-cols-3">
               <div className="text-center">
-                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-primary text-xl font-bold text-white">
+                <div className="mx-auto flex h-14 w-14 items-center justify-center bg-primary text-xl font-bold text-white">
                   1
                 </div>
                 <h3 className="mt-4 font-heading text-lg font-bold text-foreground">
@@ -338,7 +338,7 @@ export default function DeliveryPage() {
                 </p>
               </div>
               <div className="text-center">
-                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-primary text-xl font-bold text-white">
+                <div className="mx-auto flex h-14 w-14 items-center justify-center bg-primary text-xl font-bold text-white">
                   2
                 </div>
                 <h3 className="mt-4 font-heading text-lg font-bold text-foreground">
@@ -349,7 +349,7 @@ export default function DeliveryPage() {
                 </p>
               </div>
               <div className="text-center">
-                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-primary text-xl font-bold text-white">
+                <div className="mx-auto flex h-14 w-14 items-center justify-center bg-primary text-xl font-bold text-white">
                   3
                 </div>
                 <h3 className="mt-4 font-heading text-lg font-bold text-foreground">

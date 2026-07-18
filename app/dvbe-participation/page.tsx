@@ -126,11 +126,11 @@ export default function DVBEParticipationPage() {
 
         <Container className="relative">
           <div className="mx-auto max-w-4xl text-center">
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-lime px-4 py-2 text-sm font-bold text-primary">
+            <div className="mb-6 inline-flex items-center gap-2 bg-lime px-4 py-2 text-sm font-bold text-primary">
               <ShieldCheck className="h-4 w-4" />
               CA Certification ID #2048623
             </div>
-            <h1 className="font-heading text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            <h1 className="font-heading text-4xl font-bold uppercase tracking-[0.01em] text-white sm:text-5xl lg:text-6xl">
               DVBE-Certified Support for California Projects
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-xl text-white/90">
@@ -139,14 +139,14 @@ export default function DVBEParticipationPage() {
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
               <Link
                 href="/contact"
-                className="inline-flex h-14 items-center justify-center gap-2 rounded-xl bg-lime px-10 text-lg font-bold text-primary shadow-lg shadow-lime/30 transition-all duration-200 hover:bg-accent-hover"
+                className="inline-flex h-14 items-center justify-center gap-2 bg-lime px-10 text-lg font-bold text-primary shadow-lg shadow-lime/30 transition-all duration-200 hover:bg-accent-hover"
               >
                 Contact Us
                 <ArrowRight className="h-5 w-5" />
               </Link>
               <a
                 href={COMPANY.phoneHref}
-                className="inline-flex h-14 items-center justify-center gap-2 rounded-xl border-2 border-white/30 px-8 text-lg font-semibold text-white transition-all duration-200 hover:border-white/60 hover:bg-white/10"
+                className="inline-flex h-14 items-center justify-center gap-2 border-2 border-white/30 px-8 text-lg font-semibold text-white transition-all duration-200 hover:border-white/60 hover:bg-white/10"
               >
                 <Phone className="h-5 w-5" />
                 {COMPANY.phone}
@@ -201,16 +201,16 @@ export default function DVBEParticipationPage() {
       <section className="bg-muted py-16 lg:py-24">
         <Container>
           <div className="mx-auto max-w-5xl">
-            <h2 className="mb-12 text-center font-heading text-3xl font-bold tracking-tight text-foreground lg:text-4xl">
+            <h2 className="mb-12 text-center font-heading text-3xl font-bold uppercase tracking-[0.01em] text-foreground lg:text-4xl">
               How We Help
             </h2>
             <div className="grid gap-8 lg:grid-cols-3">
               {services.map((service) => (
                 <div
                   key={service.title}
-                  className="rounded-xl border border-border bg-card p-6"
+                  className="border border-border bg-card p-6"
                 >
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center bg-primary/10">
                     <service.icon className="h-6 w-6 text-primary" />
                   </div>
                   <h3 className="font-heading text-xl font-bold text-foreground">
@@ -228,7 +228,7 @@ export default function DVBEParticipationPage() {
       <section className="py-16 lg:py-24">
         <Container>
           <div className="mx-auto max-w-3xl">
-            <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground lg:text-4xl">
+            <h2 className="font-heading text-3xl font-bold uppercase tracking-[0.01em] text-foreground lg:text-4xl">
               When Rentals Are Not the Right Fit
             </h2>
             <p className="mt-6 text-lg text-muted-foreground">
@@ -245,16 +245,16 @@ export default function DVBEParticipationPage() {
       <section className="bg-teal-light py-16 lg:py-24">
         <Container>
           <div className="mx-auto max-w-4xl">
-            <h2 className="mb-10 text-center font-heading text-3xl font-bold tracking-tight text-foreground lg:text-4xl">
+            <h2 className="mb-10 text-center font-heading text-3xl font-bold uppercase tracking-[0.01em] text-foreground lg:text-4xl">
               Who This May Help
             </h2>
             <div className="grid gap-4 sm:grid-cols-2">
               {whoThisHelps.map((item) => (
                 <div
                   key={item.text}
-                  className="flex items-center gap-4 rounded-xl bg-white p-5 shadow-sm"
+                  className="flex items-center gap-4 bg-paper p-5 shadow-sm"
                 >
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center bg-primary/10">
                     <item.icon className="h-5 w-5 text-primary" />
                   </div>
                   <span className="font-medium text-foreground">{item.text}</span>
@@ -269,9 +269,9 @@ export default function DVBEParticipationPage() {
       <section className="py-16 lg:py-24">
         <Container>
           <div className="mx-auto max-w-3xl">
-            <div className="rounded-xl border-2 border-primary/20 bg-primary/5 p-8">
+            <div className="border-2 border-primary/20 bg-primary/5 p-8">
               <div className="flex items-start gap-4">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center bg-primary">
                   <ShieldCheck className="h-5 w-5 text-white" />
                 </div>
                 <div>
@@ -292,14 +292,14 @@ export default function DVBEParticipationPage() {
       <section className="bg-muted py-16 lg:py-24">
         <Container>
           <div className="mx-auto max-w-4xl">
-            <h2 className="mb-6 text-center font-heading text-3xl font-bold tracking-tight text-foreground lg:text-4xl">
+            <h2 className="mb-6 text-center font-heading text-3xl font-bold uppercase tracking-[0.01em] text-foreground lg:text-4xl">
               Equipment Rentals Remain Our Core Focus
             </h2>
             <p className="mx-auto max-w-2xl text-center text-muted-foreground">
               Frontline EV Rentals is first and foremost an electric equipment rental company. Our fleet of zero-emission skid steers is available from Salinas and Lodi, with delivery statewide.
             </p>
             <div className="mt-10 grid gap-6 sm:grid-cols-2">
-              <div className="rounded-xl border border-border bg-card p-6">
+              <div className="border border-border bg-card p-6">
                 <h3 className="font-heading text-lg font-bold text-foreground">
                   Electric Skid Steers
                 </h3>
@@ -320,7 +320,7 @@ export default function DVBEParticipationPage() {
                   <Link href="/equipment">View Equipment</Link>
                 </Button>
               </div>
-              <div className="rounded-xl border border-border bg-card p-6">
+              <div className="border border-border bg-card p-6">
                 <h3 className="font-heading text-lg font-bold text-foreground">
                   DVBE Certification Details
                 </h3>
@@ -385,7 +385,7 @@ export default function DVBEParticipationPage() {
       <section className="bg-muted py-16 lg:py-24">
         <Container>
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground lg:text-4xl">
+            <h2 className="font-heading text-3xl font-bold uppercase tracking-[0.01em] text-foreground lg:text-4xl">
               Tell Us About Your Project
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
