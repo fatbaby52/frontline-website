@@ -45,7 +45,7 @@ export default function Elise1200CBLPage() {
               <Badge className="mb-4 bg-white/10 text-white hover:bg-white/20">
                 {machine.type}
               </Badge>
-              <h1 className="font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+              <h1 className="font-heading text-3xl font-bold uppercase tracking-[0.01em] text-white sm:text-4xl lg:text-5xl">
                 {machine.name}
               </h1>
               <p className="mt-3 text-lg text-white/70">{machine.tagline}</p>
@@ -56,7 +56,7 @@ export default function Elise1200CBLPage() {
                     size="lg"
                     className="[&_span]:text-white [&_span.text-muted-foreground]:text-white/60 [&_span.text-primary]:text-accent"
                   />
-                  <span className="rounded-full bg-lime px-3 py-1 text-sm font-bold text-primary">
+                  <span className="bg-lime px-3 py-1 text-sm font-bold text-primary">
                     Fuel Included
                   </span>
                 </div>
@@ -101,7 +101,7 @@ export default function Elise1200CBLPage() {
             {machine.highlights.map((highlight) => (
               <div
                 key={highlight}
-                className="flex items-start gap-3 rounded-lg border border-border bg-card p-4"
+                className="flex items-start gap-3 border border-border bg-card p-4"
               >
                 <Check className="mt-0.5 h-5 w-5 shrink-0 text-success" />
                 <span className="text-sm text-foreground">{highlight}</span>
@@ -135,9 +135,9 @@ export default function Elise1200CBLPage() {
                 href={machine.brochureUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 rounded-lg border border-border bg-card p-5 transition-all hover:shadow-md hover:-translate-y-0.5"
+                className="flex items-center gap-4 border border-border bg-card p-5 transition-all hover:shadow-md hover:-translate-y-0.5"
               >
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary/10">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center bg-primary/10">
                   <FileText className="h-6 w-6 text-primary" />
                 </div>
                 <div className="min-w-0">
@@ -156,9 +156,9 @@ export default function Elise1200CBLPage() {
                 href={machine.manufacturerUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 rounded-lg border border-border bg-card p-5 transition-all hover:shadow-md hover:-translate-y-0.5"
+                className="flex items-center gap-4 border border-border bg-card p-5 transition-all hover:shadow-md hover:-translate-y-0.5"
               >
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary/10">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center bg-primary/10">
                   <ExternalLink className="h-6 w-6 text-primary" />
                 </div>
                 <div className="min-w-0">
@@ -222,7 +222,7 @@ export default function Elise1200CBLPage() {
               return (
                 <div
                   key={use}
-                  className="flex items-center gap-3 rounded-lg border border-border bg-card p-4"
+                  className="flex items-center gap-3 border border-border bg-card p-4"
                 >
                   <Icon className="h-5 w-5 shrink-0 text-primary" />
                   <span className="text-sm font-medium text-foreground">
@@ -242,7 +242,7 @@ export default function Elise1200CBLPage() {
             <h2 className="mb-6 text-center font-heading text-2xl font-bold text-foreground lg:text-3xl">
               Rental Details
             </h2>
-            <div className="space-y-4 rounded-xl border border-border bg-card p-6 sm:p-8">
+            <div className="space-y-4 border border-border bg-card p-6 sm:p-8">
               <div>
                 <h3 className="font-semibold text-foreground">Pricing</h3>
                 <p className="text-sm text-muted-foreground">

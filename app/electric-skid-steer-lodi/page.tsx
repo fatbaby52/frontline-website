@@ -128,11 +128,11 @@ export default function ElectricSkidSteerLodiPage() {
         <div className="absolute bottom-0 left-0 right-0 h-2 bg-lime" aria-hidden="true" />
         <Container className="relative">
           <div className="mx-auto max-w-3xl">
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-lime px-4 py-2 text-sm font-bold text-primary">
+            <div className="mb-4 inline-flex items-center gap-2 bg-lime px-4 py-2 text-sm font-bold text-primary">
               <MapPin className="h-4 w-4" />
               Lodi, California
             </div>
-            <h1 className="font-heading text-4xl font-bold tracking-tight text-white lg:text-5xl">
+            <h1 className="font-heading text-4xl font-bold uppercase tracking-[0.01em] text-white lg:text-5xl">
               Electric Skid Steer Rental in Lodi, California
             </h1>
           </div>
@@ -196,7 +196,7 @@ export default function ElectricSkidSteerLodiPage() {
 
             <div className="mt-8 space-y-6">
               {/* Elise 1200 */}
-              <div className="rounded-xl border border-border bg-card p-6">
+              <div className="border border-border bg-card p-6">
                 <h3 className="font-heading text-xl font-bold text-foreground">
                   Elise 1200
                 </h3>
@@ -212,7 +212,7 @@ export default function ElectricSkidSteerLodiPage() {
               </div>
 
               {/* CBL 1000 */}
-              <div className="rounded-xl border border-border bg-card p-6">
+              <div className="border border-border bg-card p-6">
                 <h3 className="font-heading text-xl font-bold text-foreground">
                   CBL 1000
                 </h3>

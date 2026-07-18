@@ -39,7 +39,7 @@ export function ImageGallery({
   return (
     <div className="space-y-3">
       {/* Main image */}
-      <div className="relative flex aspect-[5/4] items-center justify-center rounded-xl bg-white/5 p-6">
+      <div className="relative flex aspect-[5/4] items-center justify-center bg-white/5 p-6">
         <Image
           src={active.src}
           alt={active.alt}
@@ -61,7 +61,7 @@ export function ImageGallery({
               aria-selected={index === activeIndex}
               aria-label={`View ${img.alt || `image ${index + 1}`}`}
               onClick={() => handleThumbnailClick(index)}
-              className={`relative h-16 w-20 overflow-hidden rounded-lg border-2 transition-all duration-200 ${
+              className={`relative h-16 w-20 overflow-hidden border-2 transition-all duration-200 ${
                 index === activeIndex
                   ? "border-accent ring-1 ring-accent"
                   : "border-white/20 opacity-60 hover:opacity-100"

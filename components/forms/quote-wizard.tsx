@@ -174,7 +174,7 @@ export function QuoteWizard() {
   if (isSubmitted) {
     return (
       <div className="mx-auto max-w-lg text-center" role="status" aria-live="polite">
-        <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-success/10">
+        <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center bg-success/10">
           <Check className="h-8 w-8 text-success" aria-hidden="true" />
         </div>
         <h2 className="font-heading text-2xl font-bold text-foreground">
@@ -184,7 +184,7 @@ export function QuoteWizard() {
           We&apos;ll respond within 1 business day. If you need a faster
           response, call us directly.
         </p>
-        <div className="mt-6 rounded-lg border border-border bg-muted/50 p-4">
+        <div className="mt-6 border border-border bg-muted/50 p-4">
           <p className="font-mono text-sm text-muted-foreground">
             (831) 262-2847
           </p>
@@ -205,7 +205,7 @@ export function QuoteWizard() {
             <li key={step.title} className="flex items-center gap-2">
               <div
                 aria-current={index === currentStep ? "step" : undefined}
-                className={`flex h-10 w-10 items-center justify-center rounded-full text-sm font-medium ${
+                className={`flex h-10 w-10 items-center justify-center text-sm font-medium ${
                   index <= currentStep
                     ? "bg-primary text-primary-foreground"
                     : "bg-muted text-muted-foreground"
@@ -259,7 +259,7 @@ export function QuoteWizard() {
                     role="checkbox"
                     aria-checked={isSelected}
                     onClick={() => toggleEquipment(option.value)}
-                    className={`flex w-full items-center justify-between rounded-lg border p-4 text-left transition-all ${
+                    className={`flex w-full items-center justify-between border p-4 text-left transition-all ${
                       isSelected
                         ? "border-primary bg-primary/5"
                         : "border-border hover:border-primary/30"
@@ -268,7 +268,7 @@ export function QuoteWizard() {
                     <div className="flex items-center gap-3">
                       <div
                         aria-hidden="true"
-                        className={`flex h-5 w-5 items-center justify-center rounded border ${
+                        className={`flex h-5 w-5 items-center justify-center border ${
                           isSelected
                             ? "border-primary bg-primary"
                             : "border-border"
@@ -315,7 +315,7 @@ export function QuoteWizard() {
                   {...register("projectType")}
                   aria-invalid={errors.projectType ? "true" : undefined}
                   aria-describedby={errors.projectType ? `${formId}-projectType-error` : undefined}
-                  className="h-10 w-full rounded-md border border-input bg-card px-3 py-2 text-sm text-foreground focus:border-ring focus:outline-none focus:ring-2 focus:ring-ring/50"
+                  className="h-10 w-full border border-input bg-card px-3 py-2 text-sm text-foreground focus:border-ring focus:outline-none focus:ring-2 focus:ring-ring/50"
                 >
                   <option value="">Select a project type</option>
                   {projectTypes.map((type) => (
@@ -397,7 +397,7 @@ export function QuoteWizard() {
                     {...register("duration")}
                     aria-invalid={errors.duration ? "true" : undefined}
                     aria-describedby={errors.duration ? `${formId}-duration-error` : undefined}
-                    className="h-10 w-full rounded-md border border-input bg-card px-3 py-2 text-sm text-foreground focus:border-ring focus:outline-none focus:ring-2 focus:ring-ring/50"
+                    className="h-10 w-full border border-input bg-card px-3 py-2 text-sm text-foreground focus:border-ring focus:outline-none focus:ring-2 focus:ring-ring/50"
                   >
                     <option value="">Select duration</option>
                     {durations.map((d) => (
@@ -422,7 +422,7 @@ export function QuoteWizard() {
                   {deliveryOptions.map((option) => (
                     <label
                       key={option.value}
-                      className="flex min-h-[44px] cursor-pointer items-center gap-3 rounded-md border border-border p-3 hover:border-primary/30 has-[:checked]:border-primary has-[:checked]:bg-primary/5"
+                      className="flex min-h-[44px] cursor-pointer items-center gap-3 border border-border p-3 hover:border-primary/30 has-[:checked]:border-primary has-[:checked]:bg-primary/5"
                     >
                       <input
                         type="radio"
@@ -534,7 +534,7 @@ export function QuoteWizard() {
                 <select
                   id={`${formId}-hearAboutUs`}
                   {...register("hearAboutUs")}
-                  className="h-10 w-full rounded-md border border-input bg-card px-3 py-2 text-sm text-foreground focus:border-ring focus:outline-none focus:ring-2 focus:ring-ring/50"
+                  className="h-10 w-full border border-input bg-card px-3 py-2 text-sm text-foreground focus:border-ring focus:outline-none focus:ring-2 focus:ring-ring/50"
                 >
                   <option value="">Select an option</option>
                   {hearAboutOptions.map((opt) => (
@@ -558,11 +558,11 @@ export function QuoteWizard() {
                 />
               </div>
 
-              <label className="flex min-h-[44px] cursor-pointer items-center gap-3 rounded-md border border-border p-3 hover:border-primary/30 has-[:checked]:border-primary has-[:checked]:bg-primary/5">
+              <label className="flex min-h-[44px] cursor-pointer items-center gap-3 border border-border p-3 hover:border-primary/30 has-[:checked]:border-primary has-[:checked]:bg-primary/5">
                 <input
                   type="checkbox"
                   {...register("needDvbeDocs")}
-                  className="h-4 w-4 rounded accent-primary"
+                  className="h-4 w-4 accent-primary"
                 />
                 <span className="text-sm text-foreground">
                   I need DVBE documentation for my bid
@@ -575,7 +575,7 @@ export function QuoteWizard() {
                 ref={errorSummaryRef}
                 tabIndex={-1}
                 role="alert"
-                className="mt-4 rounded-md border border-destructive/20 bg-destructive/5 p-3 focus:outline-none focus:ring-2 focus:ring-destructive/50"
+                className="mt-4 border border-destructive/20 bg-destructive/5 p-3 focus:outline-none focus:ring-2 focus:ring-destructive/50"
               >
                 <p className="text-sm text-destructive">{submitError}</p>
               </div>
