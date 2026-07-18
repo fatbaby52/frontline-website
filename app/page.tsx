@@ -267,8 +267,8 @@ export default function HomePage() {
 
       {/* Hero */}
       <Hero
-        headline="Zero Emission Construction Equipment Rentals"
-        subhead="Electric skid steers and excavators that arrive fully charged. No diesel costs, no fumes, no noise. Ready to go."
+        headline="Zero-emission equipment. Ready now."
+        subhead="Electric skid steers and excavators for construction equipment rentals across California. They arrive fully charged. No diesel costs, no fumes, no noise. Ready to go."
         primaryCta={{ label: "Check Availability", href: "/quote" }}
         secondaryCta={{ label: "Get a Quote", href: "/quote" }}
         badges={["Ready Now", "DVBE Certified", "Fuel Included"]}
