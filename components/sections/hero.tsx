@@ -54,22 +54,6 @@ export function Hero({
           className="sh-seam absolute bottom-0 left-[57%] top-0 z-30 hidden w-1.5 -translate-x-1/2 bg-lime shadow-[0_0_26px_rgba(197,232,31,0.4)] lg:block"
         />
 
-        {/* Fleet photo, teal right block */}
-        <div className="sh-photo pointer-events-none absolute inset-x-0 bottom-0 z-10 h-[42vh] overflow-hidden lg:inset-y-0 lg:left-[57%] lg:right-0 lg:h-auto">
-          <Image
-            src={backgroundImage}
-            alt="Frontline EV Rentals zero emission construction equipment fleet in California"
-            fill
-            className="object-cover object-center [filter:brightness(0.52)_saturate(1.05)]"
-            priority
-            quality={85}
-          />
-          <div
-            aria-hidden="true"
-            className="absolute inset-0 bg-gradient-to-br from-primary/55 to-ink/75"
-          />
-        </div>
-
         {/* Content */}
         <Container className="relative z-40">
           <div className="grid grid-cols-1 lg:grid-cols-[57%_43%]">
@@ -149,6 +133,24 @@ export function Hero({
             <div aria-hidden="true" className="hidden lg:block" />
           </div>
         </Container>
+
+        {/* Fleet photo: stacked band below the copy on mobile, teal right
+            block on desktop. Kept out of the text flow so the badges never
+            sit on top of the image. */}
+        <div className="sh-photo pointer-events-none relative z-10 h-[38vh] min-h-[240px] w-full overflow-hidden border-t-[6px] border-lime lg:absolute lg:inset-y-0 lg:left-[57%] lg:right-0 lg:h-auto lg:min-h-0 lg:w-auto lg:border-t-0">
+          <Image
+            src={backgroundImage}
+            alt="Frontline EV Rentals zero emission construction equipment fleet in California"
+            fill
+            className="object-cover object-center [filter:brightness(0.52)_saturate(1.05)]"
+            priority
+            quality={85}
+          />
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 bg-gradient-to-br from-primary/55 to-ink/75"
+          />
+        </div>
       </section>
     );
   }
