@@ -61,9 +61,9 @@ export function ImageGallery({
               aria-selected={index === activeIndex}
               aria-label={`View ${img.alt || `image ${index + 1}`}`}
               onClick={() => handleThumbnailClick(index)}
-              className={`relative h-16 w-20 overflow-hidden border-2 transition-all duration-200 ${
+              className={`relative h-16 w-20 overflow-hidden border transition-all duration-200 ${
                 index === activeIndex
-                  ? "border-accent ring-1 ring-accent"
+                  ? "border-white/80"
                   : "border-white/20 opacity-60 hover:opacity-100"
               }`}
             >

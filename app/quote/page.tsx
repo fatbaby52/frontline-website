@@ -14,7 +14,7 @@ export default function QuotePage() {
       <section className="bg-primary py-12 lg:py-16">
         <Container>
           <div className="mx-auto max-w-2xl text-center">
-            <h1 className="font-heading text-3xl font-bold uppercase tracking-[0.01em] text-white lg:text-4xl">
+            <h1 className="font-heading text-3xl font-semibold text-white lg:text-4xl">
               Request a Quote
             </h1>
             <p className="mt-3 text-white/70">

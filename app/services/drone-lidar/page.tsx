@@ -143,7 +143,7 @@ export default function DroneLidarPage() {
         <Container>
           <div className="mx-auto max-w-5xl">
             <div className="mb-12 text-center">
-              <h2 className="font-heading text-3xl font-bold uppercase tracking-[0.01em] text-foreground lg:text-4xl">
+              <h2 className="font-heading text-3xl font-semibold text-foreground lg:text-4xl">
                 Services
               </h2>
               <p className="mt-3 text-lg text-muted-foreground">
@@ -173,7 +173,7 @@ export default function DroneLidarPage() {
             </div>
 
             {/* Coming Soon */}
-            <div className="mt-6 border-2 border-dashed border-accent/40 bg-accent/5 p-5 sm:p-6">
+            <div className="mt-6 border border-border bg-paper p-5 sm:p-6">
               <div className="flex items-start gap-4">
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center bg-accent/20">
                   <Plane className="h-5 w-5 text-primary" />
@@ -206,7 +206,7 @@ export default function DroneLidarPage() {
       <section className="bg-bg-alt py-16 lg:py-24">
         <Container>
           <div className="mx-auto max-w-4xl">
-            <h2 className="mb-10 text-center font-heading text-2xl font-bold text-foreground lg:text-3xl">
+            <h2 className="mb-10 text-center font-heading text-2xl font-semibold text-foreground lg:text-3xl">
               Why Aerial Documentation?
             </h2>
             <div className="grid gap-6 sm:grid-cols-2">
@@ -237,7 +237,7 @@ export default function DroneLidarPage() {
           <div className="mx-auto max-w-2xl">
             <div className="mb-8 flex items-center gap-3">
               <BadgeCheck className="h-7 w-7 text-primary" />
-              <h2 className="font-heading text-2xl font-bold text-foreground lg:text-3xl">
+              <h2 className="font-heading text-2xl font-semibold text-foreground lg:text-3xl">
                 Certification & Compliance
               </h2>
             </div>
@@ -260,7 +260,7 @@ export default function DroneLidarPage() {
       <section className="bg-bg-alt py-16 lg:py-24">
         <Container>
           <div className="mx-auto max-w-4xl">
-            <h2 className="mb-10 text-center font-heading text-2xl font-bold text-foreground lg:text-3xl">
+            <h2 className="mb-10 text-center font-heading text-2xl font-semibold text-foreground lg:text-3xl">
               Industries Served
             </h2>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -288,7 +288,7 @@ export default function DroneLidarPage() {
         <Container>
           <div className="mx-auto max-w-2xl text-center">
             <Zap className="mx-auto mb-4 h-7 w-7 text-primary" />
-            <h2 className="font-heading text-2xl font-bold text-foreground lg:text-3xl">
+            <h2 className="font-heading text-2xl font-semibold text-foreground lg:text-3xl">
               Service Area
             </h2>
             <p className="mt-4 text-muted-foreground">

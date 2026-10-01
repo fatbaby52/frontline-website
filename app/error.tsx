@@ -20,7 +20,7 @@ export default function Error({
     <div className="flex min-h-[50vh] items-center justify-center py-16">
       <Container>
         <div className="mx-auto max-w-md text-center">
-          <h1 className="font-heading text-2xl font-bold text-foreground">
+          <h1 className="font-heading text-2xl font-semibold text-foreground">
             Something went wrong
           </h1>
           <p className="mt-3 text-muted-foreground">

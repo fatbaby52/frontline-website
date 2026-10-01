@@ -26,10 +26,9 @@ export default function AboutPage() {
     <>
       {/* Hero */}
       <section className="relative overflow-hidden bg-primary py-20 lg:py-28">
-        <div className="absolute bottom-0 left-0 right-0 h-2 bg-lime" aria-hidden="true" />
         <Container className="relative">
           <div className="mx-auto max-w-4xl text-center">
-            <h1 className="font-heading text-4xl font-bold uppercase tracking-[0.01em] text-white sm:text-5xl">
+            <h1 className="font-heading text-4xl font-semibold text-white sm:text-5xl">
               About Frontline EV Rentals
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-xl text-white/90">
@@ -46,7 +45,7 @@ export default function AboutPage() {
             <div className="mb-6 flex h-14 w-14 items-center justify-center bg-primary/10">
               <Zap className="h-7 w-7 text-primary" />
             </div>
-            <h2 className="font-heading text-2xl font-bold text-foreground lg:text-3xl">
+            <h2 className="font-heading text-2xl font-semibold text-foreground lg:text-3xl">
               Electric Equipment for Compliance-Driven Jobs
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
@@ -66,7 +65,7 @@ export default function AboutPage() {
             <div className="mb-6 flex h-14 w-14 items-center justify-center bg-primary/10">
               <Wrench className="h-7 w-7 text-primary" />
             </div>
-            <h2 className="font-heading text-2xl font-bold text-foreground lg:text-3xl">
+            <h2 className="font-heading text-2xl font-semibold text-foreground lg:text-3xl">
               We Understand the Field
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
@@ -97,14 +96,14 @@ export default function AboutPage() {
           <div className="mx-auto max-w-4xl">
             <div className="mb-10 text-center">
               <ShieldCheck className="mx-auto mb-4 h-8 w-8 text-primary" />
-              <h2 className="font-heading text-2xl font-bold text-foreground lg:text-3xl">
+              <h2 className="font-heading text-2xl font-semibold text-foreground lg:text-3xl">
                 Certifications
               </h2>
             </div>
 
             <div className="grid gap-6 sm:grid-cols-2">
               <div className="border border-border bg-card p-6">
-                <h3 className="mb-4 font-heading text-lg font-bold text-foreground">
+                <h3 className="mb-4 font-heading text-lg font-semibold text-foreground">
                   California
                 </h3>
                 <ul className="space-y-3">
@@ -124,7 +123,7 @@ export default function AboutPage() {
               </div>
 
               <div className="border border-border bg-card p-6">
-                <h3 className="mb-4 font-heading text-lg font-bold text-foreground">
+                <h3 className="mb-4 font-heading text-lg font-semibold text-foreground">
                   Federal
                 </h3>
                 <ul className="space-y-3">
@@ -157,7 +156,7 @@ export default function AboutPage() {
       <section className="bg-muted py-16 lg:py-24">
         <Container>
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="font-heading text-2xl font-bold text-foreground lg:text-3xl">
+            <h2 className="font-heading text-2xl font-semibold text-foreground lg:text-3xl">
               Serving California
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">

@@ -41,7 +41,7 @@ export default function Elise1200Page() {
               <Badge className="mb-4 bg-white/10 text-white hover:bg-white/20">
                 {machine.type}
               </Badge>
-              <h1 className="font-heading text-3xl font-bold uppercase tracking-[0.01em] text-white sm:text-4xl lg:text-5xl">
+              <h1 className="font-heading text-3xl font-semibold text-white sm:text-4xl lg:text-5xl">
                 {machine.name}
               </h1>
               <p className="mt-3 text-lg text-white/70">{machine.tagline}</p>
@@ -50,9 +50,9 @@ export default function Elise1200Page() {
                   <PricingDisplay
                     dailyRate={machine.dailyRate}
                     size="lg"
-                    className="[&_span]:text-white [&_span.text-muted-foreground]:text-white/60 [&_span.text-primary]:text-accent"
+                    className="[&_span]:text-white [&_span.text-muted-foreground]:text-white/60 [&_span.text-primary]:text-white"
                   />
-                  <span className="bg-lime px-3 py-1 text-sm font-bold text-primary">
+                  <span className="border border-white/20 bg-white/10 px-3 py-1 text-sm font-medium text-white/90">
                     Fuel Included
                   </span>
                 </div>
@@ -64,7 +64,7 @@ export default function Elise1200Page() {
                 <Button
                   asChild
                   size="lg"
-                  className="bg-accent text-accent-foreground hover:bg-accent-hover"
+                  variant="lime"
                 >
                   <Link href="/quote">Get a Quote for This Equipment</Link>
                 </Button>
@@ -90,7 +90,7 @@ export default function Elise1200Page() {
       {/* Highlights */}
       <section className="py-16 lg:py-24">
         <Container>
-          <h2 className="mb-8 font-heading text-2xl font-bold text-foreground lg:text-3xl">
+          <h2 className="mb-8 font-heading text-2xl font-semibold text-foreground lg:text-3xl">
             Key Highlights
           </h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -110,7 +110,7 @@ export default function Elise1200Page() {
       {/* Specifications */}
       <section className="bg-bg-alt py-16 lg:py-24">
         <Container>
-          <h2 className="mb-8 font-heading text-2xl font-bold text-foreground lg:text-3xl">
+          <h2 className="mb-8 font-heading text-2xl font-semibold text-foreground lg:text-3xl">
             Specifications
           </h2>
           <div className="mx-auto max-w-2xl">
@@ -122,7 +122,7 @@ export default function Elise1200Page() {
       {/* Downloads & Resources */}
       <section className="py-16 lg:py-24">
         <Container>
-          <h2 className="mb-8 font-heading text-2xl font-bold text-foreground lg:text-3xl">
+          <h2 className="mb-8 font-heading text-2xl font-semibold text-foreground lg:text-3xl">
             Downloads & Resources
           </h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -131,7 +131,7 @@ export default function Elise1200Page() {
                 href={machine.brochureUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 border border-border bg-card p-5 transition-all hover:shadow-md hover:-translate-y-0.5"
+                className="flex items-center gap-4 border border-border bg-card p-5 transition-colors hover:border-primary/40"
               >
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center bg-primary/10">
                   <FileText className="h-6 w-6 text-primary" />
@@ -152,7 +152,7 @@ export default function Elise1200Page() {
                 href={machine.manufacturerUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 border border-border bg-card p-5 transition-all hover:shadow-md hover:-translate-y-0.5"
+                className="flex items-center gap-4 border border-border bg-card p-5 transition-colors hover:border-primary/40"
               >
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center bg-primary/10">
                   <ExternalLink className="h-6 w-6 text-primary" />
@@ -177,7 +177,7 @@ export default function Elise1200Page() {
         <Container>
           <div className="grid gap-8 lg:grid-cols-2">
             <div>
-              <h2 className="mb-6 font-heading text-2xl font-bold text-foreground lg:text-3xl">
+              <h2 className="mb-6 font-heading text-2xl font-semibold text-foreground lg:text-3xl">
                 What&apos;s Included
               </h2>
               <ul className="space-y-3">
@@ -190,7 +190,7 @@ export default function Elise1200Page() {
               </ul>
             </div>
             <div>
-              <h2 className="mb-6 font-heading text-2xl font-bold text-foreground lg:text-3xl">
+              <h2 className="mb-6 font-heading text-2xl font-semibold text-foreground lg:text-3xl">
                 Optional Add-ons
               </h2>
               <ul className="space-y-3">
@@ -209,7 +209,7 @@ export default function Elise1200Page() {
       {/* Ideal Applications */}
       <section className="bg-bg-alt py-16 lg:py-24">
         <Container>
-          <h2 className="mb-8 text-center font-heading text-2xl font-bold text-foreground lg:text-3xl">
+          <h2 className="mb-8 text-center font-heading text-2xl font-semibold text-foreground lg:text-3xl">
             Ideal Applications
           </h2>
           <div className="mx-auto grid max-w-4xl gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -235,7 +235,7 @@ export default function Elise1200Page() {
       <section className="py-16 lg:py-24">
         <Container>
           <div className="mx-auto max-w-2xl">
-            <h2 className="mb-6 text-center font-heading text-2xl font-bold text-foreground lg:text-3xl">
+            <h2 className="mb-6 text-center font-heading text-2xl font-semibold text-foreground lg:text-3xl">
               Rental Information
             </h2>
             <div className="space-y-4 border border-border bg-card p-6 sm:p-8">

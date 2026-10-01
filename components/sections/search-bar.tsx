@@ -88,11 +88,11 @@ export function SearchBar({ onResponse }: SearchBarProps) {
   };
 
   return (
-    <section className="relative -mt-8 z-10 pb-12">
+    <section className="pb-10 pt-10">
       <Container>
-        <div className="mx-auto max-w-3xl">
+        <div className="max-w-3xl">
           {/* Search Input */}
-          <div className="animate-glow-pulse border-[3px] border-ink bg-paper p-2 shadow-[8px_8px_0_var(--primary)]">
+          <div className="border border-border bg-paper p-2 shadow-[0_14px_36px_-22px_rgba(22,32,30,0.35)]">
             <form onSubmit={handleSubmit} className="flex gap-2">
               <div className="relative flex-1">
                 <input
@@ -101,7 +101,7 @@ export function SearchBar({ onResponse }: SearchBarProps) {
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
                   placeholder="Ask about equipment, pricing, delivery..."
-                  className="w-full border-0 bg-muted/60 px-5 py-4 text-lg outline-none transition-colors placeholder:text-muted-foreground/60 focus:bg-muted"
+                  className="w-full border-0 bg-transparent px-4 py-3 text-base outline-none placeholder:text-muted-foreground/70"
                   disabled={isLoading || hasAsked}
                 />
               </div>
@@ -109,7 +109,7 @@ export function SearchBar({ onResponse }: SearchBarProps) {
                 <button
                   type="submit"
                   disabled={!query.trim() || isLoading}
-                  className="flex h-14 w-14 items-center justify-center border-2 border-ink bg-primary text-white transition-all hover:bg-primary-light disabled:opacity-50"
+                  className="flex h-12 w-12 items-center justify-center rounded-[2px] bg-primary text-primary-foreground transition-colors hover:bg-primary-light disabled:opacity-40"
                 >
                   {isLoading ? (
                     <Loader2 className="h-5 w-5 animate-spin" />
@@ -122,15 +122,15 @@ export function SearchBar({ onResponse }: SearchBarProps) {
 
             {/* Nudge Text */}
             {!hasAsked && (
-              <div className="mt-3 flex items-center justify-center gap-2 text-sm text-muted-foreground">
-                <Sparkles className="h-4 w-4 text-lime" />
+              <div className="flex items-center gap-2 border-t border-border px-4 pb-1.5 pt-2.5 text-xs text-muted-foreground">
+                <Sparkles className="h-3.5 w-3.5 text-primary/60" />
                 <span>AI-powered answers about our equipment and services</span>
               </div>
             )}
 
             {/* Answer Display */}
             {hasAsked && (
-              <div className="mt-4 border-2 border-border bg-teal-light/50 p-5">
+              <div className="mt-2 border-t border-border p-5">
                 {isLoading ? (
                   <div className="flex items-center gap-3 text-muted-foreground">
                     <Loader2 className="h-5 w-5 animate-spin" />
@@ -153,7 +153,7 @@ export function SearchBar({ onResponse }: SearchBarProps) {
                               placeholder="Your name"
                               value={formData.name}
                               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                              className="border-2 border-border bg-paper px-4 py-2.5 text-sm outline-none focus:border-primary"
+                              className="border border-border bg-paper px-4 py-2.5 text-sm outline-none focus:border-primary"
                               required
                             />
                             <input
@@ -161,7 +161,7 @@ export function SearchBar({ onResponse }: SearchBarProps) {
                               placeholder="Email address"
                               value={formData.email}
                               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                              className="border-2 border-border bg-paper px-4 py-2.5 text-sm outline-none focus:border-primary"
+                              className="border border-border bg-paper px-4 py-2.5 text-sm outline-none focus:border-primary"
                               required
                             />
                             <input
@@ -169,20 +169,20 @@ export function SearchBar({ onResponse }: SearchBarProps) {
                               placeholder="Phone (optional)"
                               value={formData.phone}
                               onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                              className="border-2 border-border bg-paper px-4 py-2.5 text-sm outline-none focus:border-primary"
+                              className="border border-border bg-paper px-4 py-2.5 text-sm outline-none focus:border-primary"
                             />
                           </div>
                           <div className="flex gap-3">
                             <button
                               type="submit"
-                              className="border-2 border-ink bg-primary px-6 py-2.5 text-sm font-bold uppercase tracking-wide text-white transition-colors hover:bg-primary-light"
+                              className="rounded-[2px] bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary-light"
                             >
                               Send My Info
                             </button>
                             <button
                               type="button"
                               onClick={handleNewQuestion}
-                              className="border-2 border-ink px-6 py-2.5 text-sm font-bold uppercase tracking-wide text-foreground transition-colors hover:bg-muted"
+                              className="rounded-[2px] border border-foreground/25 px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-foreground/[0.04]"
                             >
                               Ask Another Question
                             </button>
@@ -195,7 +195,7 @@ export function SearchBar({ onResponse }: SearchBarProps) {
                     {formSubmitted && (
                       <div className="mt-6 border-t border-primary/10 pt-6">
                         <div className="flex items-center gap-3 text-primary">
-                          <div className="flex h-8 w-8 items-center justify-center border-2 border-ink bg-lime">
+                          <div className="flex h-8 w-8 items-center justify-center bg-teal-light">
                             <Sparkles className="h-4 w-4 text-primary" />
                           </div>
                           <div>

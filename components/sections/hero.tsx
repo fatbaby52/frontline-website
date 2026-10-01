@@ -18,6 +18,24 @@ interface HeroProps {
   microcopy?: string;
 }
 
+const primaryCtaClass =
+  "group inline-flex h-[52px] items-center justify-center gap-2.5 rounded-[2px] bg-primary px-7 text-[0.9375rem] font-medium text-primary-foreground transition-colors duration-200 hover:bg-primary-light";
+const secondaryCtaClass =
+  "inline-flex h-[52px] items-center justify-center rounded-[2px] border border-foreground/25 px-7 text-[0.9375rem] font-medium text-foreground transition-colors duration-200 hover:border-foreground/50 hover:bg-foreground/[0.04]";
+
+function Badges({ badges, className }: { badges: string[]; className?: string }) {
+  return (
+    <ul className={cn("flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground", className)}>
+      {badges.map((badge) => (
+        <li key={badge} className="flex items-center gap-2">
+          <span className="h-1.5 w-1.5 rounded-full bg-lime-dark" aria-hidden="true" />
+          {badge}
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 export function Hero({
   headline,
   subhead,
@@ -30,174 +48,153 @@ export function Hero({
   serviceArea,
   microcopy,
 }: HeroProps) {
-  // Full color-blocked split hero (homepage) when a background image is provided.
+  // Split hero (homepage): viewport-scale heading beside a circular fleet photo.
   if (backgroundImage) {
+    const sentences = headline.split(/(?<=\.)\s+/);
+    const lead = sentences.slice(0, -1).join(" ");
+    const closer = sentences[sentences.length - 1];
+
     return (
       <section
         className={cn(
-          "relative overflow-hidden border-b-[3px] border-ink bg-concrete",
+          "relative flex flex-col overflow-hidden border-b border-border bg-concrete [background-image:radial-gradient(ellipse_at_22%_12%,rgba(251,250,245,0.95)_0%,transparent_55%)] lg:min-h-[calc(100dvh-6.5rem)]",
           className
         )}
       >
-        {/* Color blocks */}
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 z-0 grid grid-cols-1 lg:grid-cols-[57%_43%]"
-        >
-          <div className="hidden bg-concrete lg:block" />
-          <div className="relative hidden bg-gradient-to-br from-primary to-teal-dark lg:block" />
-        </div>
-
-        {/* Hard lime vertical seam */}
-        <div
-          aria-hidden="true"
-          className="sh-seam absolute bottom-0 left-[57%] top-0 z-30 hidden w-1.5 -translate-x-1/2 bg-lime shadow-[0_0_26px_rgba(197,232,31,0.4)] lg:block"
-        />
-
-        {/* Content */}
-        <Container className="relative z-40">
-          <div className="grid grid-cols-1 lg:grid-cols-[57%_43%]">
-            <div className="max-w-2xl py-14 pr-0 lg:py-24 lg:pr-12">
-              <p className="sh-anim sh-a1 mb-6 flex flex-wrap items-center gap-x-3 gap-y-2 font-mono text-[0.7rem] font-bold uppercase tracking-[0.2em] text-primary">
-                <span className="inline-block h-0.5 w-7 bg-lime" aria-hidden="true" />
-                Electric Construction Equipment · DVBE Certified CA #2048623
+        <Container className="flex flex-1 flex-col">
+          <div className="grid flex-1 grid-cols-1 gap-10 pb-10 pt-12 lg:grid-cols-[1.25fr_1fr] lg:gap-16 lg:pb-12 lg:pt-14">
+            <div className="flex flex-col justify-center">
+              <p className="sh-anim sh-a1 eyebrow mb-6 flex items-center gap-3">
+                <span className="h-px w-8 bg-primary/40" aria-hidden="true" />
+                Electric construction equipment · DVBE certified, CA #2048623
               </p>
 
-              <h1 className="sh-anim sh-a2 font-heading text-[2.6rem] font-semibold uppercase leading-[0.94] tracking-[0.008em] text-ink sm:text-6xl lg:text-[5.2rem]">
-                {headline}
+              <h1 className="sh-anim sh-a2 hero-heading font-heading font-semibold text-foreground">
+                {lead && <>{lead} </>}
+                <span className={lead ? "hero-underline text-primary" : undefined}>{closer}</span>
               </h1>
 
-              <p className="sh-anim sh-a3 mt-6 max-w-[46ch] text-lg leading-relaxed text-muted-foreground">
+              <p className="sh-anim sh-a3 mt-7 max-w-[44ch] text-lg leading-relaxed text-muted-foreground">
                 {subhead}
               </p>
 
-              <div className="sh-anim sh-a4 mt-8 flex flex-wrap items-center gap-5">
+              <div className="sh-anim sh-a4 mt-9 flex flex-wrap items-center gap-x-7 gap-y-4">
                 {primaryCta && (
-                  <Link
-                    href={primaryCta.href}
-                    className="group inline-flex h-[52px] items-center justify-center gap-2.5 border-2 border-ink bg-lime px-7 text-sm font-bold uppercase tracking-wide text-ink transition-all duration-200 hover:-translate-y-0.5 hover:[box-shadow:6px_6px_0_var(--primary)]"
-                  >
+                  <Link href={primaryCta.href} className={cn(primaryCtaClass, "hero-cta h-14 px-8")}>
                     {primaryCta.label}
-                    <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
+                    <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
                   </Link>
                 )}
-                <a
-                  href={COMPANY.phoneHref}
-                  className="group flex flex-col gap-0.5"
-                >
-                  <span className="font-mono text-[0.6rem] uppercase tracking-[0.16em] text-muted-foreground">
-                    Call the yard
+                <a href={COMPANY.phoneHref} className="group flex flex-col">
+                  <span className="text-xs text-muted-foreground">
+                    Or call the yard
                   </span>
-                  <span className="font-heading text-xl font-semibold uppercase tracking-wide text-ink transition-colors group-hover:text-primary">
+                  <span className="font-heading text-xl font-semibold text-foreground transition-colors group-hover:text-primary">
                     {COMPANY.phone}
                   </span>
                 </a>
-                {secondaryCta && (
-                  <Link
-                    href={secondaryCta.href}
-                    className="inline-flex h-[52px] items-center justify-center border-2 border-ink px-7 text-sm font-bold uppercase tracking-wide text-ink transition-colors duration-200 hover:bg-ink hover:text-on-dark"
-                  >
-                    {secondaryCta.label}
-                  </Link>
-                )}
               </div>
-
-              {microcopy && (
-                <p className="sh-anim sh-a4 mt-5 text-sm text-muted-foreground">
-                  {microcopy}
-                </p>
-              )}
-
-              {badges && badges.length > 0 && (
-                <div className="sh-anim sh-a5 mt-9 flex flex-wrap gap-2.5">
-                  {badges.map((badge) => (
-                    <span
-                      key={badge}
-                      className="flex items-center gap-2 border border-border bg-primary/[0.06] px-3.5 py-2 font-mono text-[0.66rem] font-bold uppercase tracking-[0.1em] text-primary"
-                    >
-                      <span className="h-1.5 w-1.5 bg-lime" aria-hidden="true" />
-                      {badge}
-                    </span>
-                  ))}
-                </div>
-              )}
-
-              {serviceArea && (
-                <p className="sh-anim sh-a5 mt-6 max-w-md text-sm text-muted-foreground">
-                  {serviceArea}
-                </p>
-              )}
             </div>
 
-            {/* Spacer for photo column on desktop */}
-            <div aria-hidden="true" className="hidden lg:block" />
-          </div>
-        </Container>
+            {/* Fleet photo: a circle sized to the copy block, with a lime arc
+                and a slow-turning badge. */}
+            <div className="flex items-center justify-center lg:justify-end">
+              <div className="sh-photo relative aspect-square w-full max-w-[min(20rem,78vw)] lg:max-w-[min(30rem,56vh)]">
+                <span
+                  aria-hidden="true"
+                  className="absolute -inset-3 rounded-full border border-primary/15 lg:-inset-4"
+                />
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 100 100"
+                  className="absolute -inset-3 -rotate-[38deg] lg:-inset-4"
+                  fill="none"
+                >
+                  <circle
+                    className="hero-arc"
+                    cx="50"
+                    cy="50"
+                    r="49.25"
+                    pathLength="100"
+                    stroke="var(--lime)"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                  />
+                </svg>
+                <div className="relative h-full w-full overflow-hidden rounded-full">
+                  <Image
+                    src={backgroundImage}
+                    alt="Frontline EV Rentals zero emission construction equipment fleet in California"
+                    fill
+                    sizes="(max-width: 1024px) 78vw, 30rem"
+                    className="hero-photo-img object-cover object-center"
+                    priority
+                    quality={85}
+                  />
+                </div>
 
-        {/* Fleet photo: stacked band below the copy on mobile, teal right
-            block on desktop. Kept out of the text flow so the badges never
-            sit on top of the image. */}
-        <div className="sh-photo pointer-events-none relative z-10 h-[38vh] min-h-[240px] w-full overflow-hidden border-t-[6px] border-lime lg:absolute lg:inset-y-0 lg:left-[57%] lg:right-0 lg:h-auto lg:min-h-0 lg:w-auto lg:border-t-0">
-          <Image
-            src={backgroundImage}
-            alt="Frontline EV Rentals zero emission construction equipment fleet in California"
-            fill
-            className="object-cover object-center [filter:brightness(0.52)_saturate(1.05)]"
-            priority
-            quality={85}
-          />
-          <div
-            aria-hidden="true"
-            className="absolute inset-0 bg-gradient-to-br from-primary/55 to-ink/75"
-          />
-        </div>
+                {/* Turning badge */}
+                <div
+                  aria-hidden="true"
+                  className="absolute -bottom-1 -left-3 h-24 w-24 rounded-full bg-primary text-primary-foreground shadow-[0_10px_28px_-12px_rgba(7,42,47,0.6)] lg:-left-6 lg:bottom-2 lg:h-32 lg:w-32"
+                >
+                  <svg viewBox="0 0 120 120" className="hero-badge-spin h-full w-full">
+                    <defs>
+                      <path id="hero-badge-path" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0" />
+                    </defs>
+                    <text fill="currentColor" fontSize="10.5" fontWeight="500" letterSpacing="0.6">
+                      <textPath href="#hero-badge-path" textLength="270">
+                        Ready now · Zero emission · DVBE certified ·
+                      </textPath>
+                    </text>
+                  </svg>
+                  <span className="absolute inset-0 m-auto h-3 w-3 rounded-full bg-lime" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {(badges?.length || serviceArea) && (
+            <div className="sh-anim sh-a5 flex flex-col gap-3 border-t border-border py-5 sm:flex-row sm:items-center sm:justify-between">
+              {badges && badges.length > 0 && <Badges badges={badges} />}
+              {serviceArea && (
+                <p className="text-sm text-muted-foreground">{serviceArea}</p>
+              )}
+            </div>
+          )}
+        </Container>
       </section>
     );
   }
 
-  // Calmer interior / compact hero: concrete band, ink rules, mono eyebrow.
+  // Interior / compact hero: quiet concrete band.
   return (
     <section
       className={cn(
-        "relative overflow-hidden border-b-[3px] border-ink bg-concrete",
-        compact ? "py-16 lg:py-20" : "py-20 lg:py-28",
+        "border-b border-border bg-concrete",
+        compact ? "py-14 lg:py-16" : "py-16 lg:py-24",
         className
       )}
     >
-      {/* Subtle teal grid texture */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 opacity-[0.4] [background-image:radial-gradient(ellipse_70%_60%_at_20%_30%,rgba(255,255,255,0.6)_0%,transparent_60%)]"
-      />
-      <Container className="relative">
-        <div className="mx-auto max-w-4xl text-center">
-          <span
-            className="mx-auto mb-6 block h-0.5 w-14 bg-lime"
-            aria-hidden="true"
-          />
-          <h1 className="font-heading text-4xl font-semibold uppercase leading-[0.96] tracking-[0.008em] text-ink sm:text-5xl lg:text-6xl">
+      <Container>
+        <div className="mx-auto max-w-3xl text-center">
+          <h1 className="font-heading text-4xl font-semibold leading-[1.06] text-foreground sm:text-5xl">
             {headline}
           </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground lg:text-xl">
+          <p className="mx-auto mt-5 max-w-2xl text-lg text-muted-foreground">
             {subhead}
           </p>
 
           {(primaryCta || secondaryCta) && (
-            <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
               {primaryCta && (
-                <Link
-                  href={primaryCta.href}
-                  className="group inline-flex h-[52px] items-center justify-center gap-2.5 border-2 border-ink bg-lime px-8 text-sm font-bold uppercase tracking-wide text-ink transition-all duration-200 hover:-translate-y-0.5 hover:[box-shadow:6px_6px_0_var(--primary)]"
-                >
+                <Link href={primaryCta.href} className={primaryCtaClass}>
                   {primaryCta.label}
-                  <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
+                  <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
                 </Link>
               )}
               {secondaryCta && (
-                <Link
-                  href={secondaryCta.href}
-                  className="inline-flex h-[52px] items-center justify-center border-2 border-ink px-8 text-sm font-bold uppercase tracking-wide text-ink transition-colors duration-200 hover:bg-ink hover:text-on-dark"
-                >
+                <Link href={secondaryCta.href} className={secondaryCtaClass}>
                   {secondaryCta.label}
                 </Link>
               )}
@@ -209,21 +206,11 @@ export function Hero({
           )}
 
           {badges && badges.length > 0 && (
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-2.5">
-              {badges.map((badge) => (
-                <span
-                  key={badge}
-                  className="flex items-center gap-2 border border-border bg-primary/[0.06] px-3.5 py-2 font-mono text-[0.66rem] font-bold uppercase tracking-[0.1em] text-primary"
-                >
-                  <span className="h-1.5 w-1.5 bg-lime" aria-hidden="true" />
-                  {badge}
-                </span>
-              ))}
-            </div>
+            <Badges badges={badges} className="mt-8 justify-center" />
           )}
 
           {serviceArea && (
-            <p className="mx-auto mt-8 max-w-xl text-sm text-muted-foreground">
+            <p className="mx-auto mt-6 max-w-xl text-sm text-muted-foreground">
               {serviceArea}
             </p>
           )}

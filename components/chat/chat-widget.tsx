@@ -115,7 +115,7 @@ export function ChatWidget() {
       <button
         onClick={() => setIsOpen(!isOpen)}
         className={cn(
-          "fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center shadow-lg transition-all duration-300 hover:scale-110",
+          "fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center shadow-[0_6px_20px_-8px_rgba(22,32,30,0.45)] transition-colors duration-200",
           isOpen
             ? "bg-foreground text-white"
             : "bg-primary text-white hover:bg-primary-light"
@@ -132,7 +132,7 @@ export function ChatWidget() {
       {/* Chat Panel */}
       <div
         className={cn(
-          "fixed bottom-24 right-6 z-50 w-[350px] overflow-hidden border border-border bg-paper shadow-2xl transition-all duration-300 sm:w-[400px]",
+          "fixed bottom-24 right-6 z-50 w-[350px] overflow-hidden border border-border bg-paper shadow-[0_18px_48px_-20px_rgba(22,32,30,0.4)] transition-all duration-300 sm:w-[400px]",
           isOpen
             ? "translate-y-0 opacity-100"
             : "pointer-events-none translate-y-4 opacity-0"
@@ -140,7 +140,7 @@ export function ChatWidget() {
       >
         {/* Header */}
         <div className="bg-primary p-4">
-          <h3 className="font-heading font-bold text-white">
+          <h3 className="font-heading font-semibold text-white">
             Frontline Assistant
           </h3>
           <p className="text-sm text-white/70">
@@ -257,7 +257,7 @@ export function ChatWidget() {
 
               {/* Success Message */}
               {formSubmitted && (
-                <div className="bg-lime/20 p-4">
+                <div className="bg-teal-light p-4">
                   <div className="flex items-center gap-2 text-primary">
                     <Sparkles className="h-4 w-4" />
                     <span className="text-sm font-semibold">Thanks! We'll be in touch soon.</span>

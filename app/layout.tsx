@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Oswald, Inter, Space_Mono } from "next/font/google";
+import { Barlow_Semi_Condensed, Inter, Space_Mono } from "next/font/google";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ChatWidget } from "@/components/chat/chat-widget";
 import "./globals.css";
 
-const oswald = Oswald({
+const headingFont = Barlow_Semi_Condensed({
   variable: "--font-heading",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["500", "600"],
   display: "swap",
 });
 
@@ -108,7 +108,7 @@ export default function RootLayout({
         `}
       </Script>
       <body
-        className={`${oswald.variable} ${inter.variable} ${spaceMono.variable} antialiased`}
+        className={`${headingFont.variable} ${inter.variable} ${spaceMono.variable} antialiased`}
       >
         <a
           href="#main-content"

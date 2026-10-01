@@ -126,14 +126,13 @@ export default function ElectricSkidSteerSalinasPage() {
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-primary py-16 lg:py-24">
-        <div className="absolute bottom-0 left-0 right-0 h-2 bg-lime" aria-hidden="true" />
         <Container className="relative">
           <div className="mx-auto max-w-3xl">
-            <div className="mb-4 inline-flex items-center gap-2 bg-lime px-4 py-2 text-sm font-bold text-primary">
+            <div className="mb-4 inline-flex items-center gap-2 border border-white/20 bg-white/10 px-3 py-1.5 text-sm font-medium text-white/90">
               <MapPin className="h-4 w-4" />
               Salinas, California
             </div>
-            <h1 className="font-heading text-4xl font-bold uppercase tracking-[0.01em] text-white lg:text-5xl">
+            <h1 className="font-heading text-4xl font-semibold text-white lg:text-5xl">
               Electric Skid Steer Rental in Salinas, California
             </h1>
           </div>
@@ -172,7 +171,7 @@ export default function ElectricSkidSteerSalinasPage() {
       <section className="bg-muted py-12 lg:py-16">
         <Container>
           <div className="mx-auto max-w-3xl">
-            <h2 className="font-heading text-2xl font-bold text-foreground lg:text-3xl">
+            <h2 className="font-heading text-2xl font-semibold text-foreground lg:text-3xl">
               Built for Salinas and Monterey County Job Sites
             </h2>
             <ul className="mt-6 space-y-3">
@@ -191,14 +190,14 @@ export default function ElectricSkidSteerSalinasPage() {
       <section className="py-12 lg:py-16">
         <Container>
           <div className="mx-auto max-w-3xl">
-            <h2 className="font-heading text-2xl font-bold text-foreground lg:text-3xl">
+            <h2 className="font-heading text-2xl font-semibold text-foreground lg:text-3xl">
               Available Electric Skid Steers
             </h2>
 
             <div className="mt-8 space-y-6">
               {/* Elise 1200 */}
               <div className="border border-border bg-card p-6">
-                <h3 className="font-heading text-xl font-bold text-foreground">
+                <h3 className="font-heading text-xl font-semibold text-foreground">
                   Elise 1200
                 </h3>
                 <p className="mt-2 text-muted-foreground">
@@ -214,7 +213,7 @@ export default function ElectricSkidSteerSalinasPage() {
 
               {/* CBL 1000 */}
               <div className="border border-border bg-card p-6">
-                <h3 className="font-heading text-xl font-bold text-foreground">
+                <h3 className="font-heading text-xl font-semibold text-foreground">
                   CBL 1000
                 </h3>
                 <p className="mt-2 text-muted-foreground">
@@ -236,7 +235,7 @@ export default function ElectricSkidSteerSalinasPage() {
       <section className="bg-muted py-12 lg:py-16">
         <Container>
           <div className="mx-auto max-w-3xl">
-            <h2 className="font-heading text-2xl font-bold text-foreground lg:text-3xl">
+            <h2 className="font-heading text-2xl font-semibold text-foreground lg:text-3xl">
               Common Jobs We Support in Salinas
             </h2>
             <p className="mt-4 text-muted-foreground">
@@ -261,7 +260,7 @@ export default function ElectricSkidSteerSalinasPage() {
       <section className="py-12 lg:py-16">
         <Container>
           <div className="mx-auto max-w-3xl">
-            <h2 className="font-heading text-2xl font-bold text-foreground lg:text-3xl">
+            <h2 className="font-heading text-2xl font-semibold text-foreground lg:text-3xl">
               Why Electric Equipment Makes Sense Here
             </h2>
             <p className="mt-4 text-muted-foreground">
@@ -286,7 +285,7 @@ export default function ElectricSkidSteerSalinasPage() {
       <section className="bg-muted py-12 lg:py-16">
         <Container>
           <div className="mx-auto max-w-3xl">
-            <h2 className="font-heading text-2xl font-bold text-foreground lg:text-3xl">
+            <h2 className="font-heading text-2xl font-semibold text-foreground lg:text-3xl">
               Why Not a Traditional Rental Yard
             </h2>
             <ul className="mt-6 space-y-3">
@@ -307,7 +306,7 @@ export default function ElectricSkidSteerSalinasPage() {
           <div className="mx-auto max-w-3xl">
             <div className="flex items-center gap-2">
               <ShieldCheck className="h-6 w-6 text-primary" />
-              <h2 className="font-heading text-2xl font-bold text-foreground lg:text-3xl">
+              <h2 className="font-heading text-2xl font-semibold text-foreground lg:text-3xl">
                 DVBE Participation Support
               </h2>
             </div>
@@ -334,12 +333,12 @@ export default function ElectricSkidSteerSalinasPage() {
       <section className="bg-muted py-12 lg:py-16">
         <Container>
           <div className="mx-auto max-w-3xl">
-            <h2 className="font-heading text-2xl font-bold text-foreground lg:text-3xl">
+            <h2 className="font-heading text-2xl font-semibold text-foreground lg:text-3xl">
               How It Works
             </h2>
             <div className="mt-8 space-y-6">
               <div>
-                <h3 className="font-heading text-lg font-bold text-foreground">
+                <h3 className="font-heading text-lg font-semibold text-foreground">
                   1. Tell us about your job
                 </h3>
                 <p className="mt-2 text-muted-foreground">
@@ -347,7 +346,7 @@ export default function ElectricSkidSteerSalinasPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-heading text-lg font-bold text-foreground">
+                <h3 className="font-heading text-lg font-semibold text-foreground">
                   2. We match the right machine
                 </h3>
                 <p className="mt-2 text-muted-foreground">
@@ -355,7 +354,7 @@ export default function ElectricSkidSteerSalinasPage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-heading text-lg font-bold text-foreground">
+                <h3 className="font-heading text-lg font-semibold text-foreground">
                   3. Pick up or schedule delivery
                 </h3>
                 <p className="mt-2 text-muted-foreground">
@@ -371,14 +370,14 @@ export default function ElectricSkidSteerSalinasPage() {
       <section className="bg-primary py-12 lg:py-16">
         <Container>
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="font-heading text-2xl font-bold text-white lg:text-3xl">
+            <h2 className="font-heading text-2xl font-semibold text-white lg:text-3xl">
               Check Availability in Salinas Today
             </h2>
             <p className="mt-4 text-white/80">
               If you need electric skid steer rental in Salinas or Monterey County, we can help you get the right machine quickly.
             </p>
             <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-              <Button asChild size="lg" className="bg-lime text-primary hover:bg-lime/90">
+              <Button asChild size="lg" variant="lime">
                 <Link href="/quote">
                   Check Availability Today
                   <ArrowRight className="h-5 w-5" />

@@ -6,7 +6,7 @@ const valueProps = [
     icon: Zap,
     title: "Zero Emissions",
     text: "Work indoors, near schools, hospitals. Meet AQMD requirements with clean electric power.",
-    color: "bg-lime text-primary",
+    color: "bg-teal-light text-primary",
   },
   {
     icon: VolumeX,
@@ -31,8 +31,8 @@ export function ValueProps() {
             {valueProps.map((prop) => (
               <div
                 key={prop.title}
-                className="group relative overflow-hidden p-8 transition-transform duration-300 hover:-translate-y-1"
-                style={{ backgroundColor: prop.color.includes("lime") ? "#C5E81F" : prop.color.includes("teal-light") ? "#DCE9E7" : "#0F4B53" }}
+                className="group relative overflow-hidden p-8 "
+                style={{ backgroundColor: prop.color.includes("teal-light") ? "#DCE9E7" : "#0F4B53" }}
               >
                 <div className={`mb-5 inline-flex h-14 w-14 items-center justify-center ${prop.color.includes("lime") ? "bg-primary/10" : prop.color.includes("primary") ? "bg-white/20" : "bg-primary/10"}`}>
                   <prop.icon
@@ -41,7 +41,7 @@ export function ValueProps() {
                     aria-hidden="true"
                   />
                 </div>
-                <h3 className={`font-heading text-xl font-bold ${prop.color.includes("primary text-white") ? "text-white" : "text-primary"}`}>
+                <h3 className={`font-heading text-xl font-semibold ${prop.color.includes("primary text-white") ? "text-white" : "text-primary"}`}>
                   {prop.title}
                 </h3>
                 <p className={`mt-3 leading-relaxed ${prop.color.includes("primary text-white") ? "text-white/80" : "text-primary/70"}`}>

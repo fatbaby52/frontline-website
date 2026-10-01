@@ -80,7 +80,7 @@ export default function ProjectManagementPage() {
       <section className="bg-bg-alt py-16 lg:py-24">
         <Container>
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="mb-8 font-heading text-2xl font-bold text-foreground lg:text-3xl">
+            <h2 className="mb-8 font-heading text-2xl font-semibold text-foreground lg:text-3xl">
               What&apos;s Included with Every Rental
             </h2>
             <div className="space-y-3 text-left">

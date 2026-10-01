@@ -15,7 +15,7 @@ export function SpecTable({ specifications }: SpecTableProps) {
               <td className="px-4 py-3 text-sm font-medium text-muted-foreground sm:px-6">
                 {key}
               </td>
-              <td className="px-4 py-3 font-mono text-sm text-foreground sm:px-6">
+              <td className="px-4 py-3 text-sm text-foreground sm:px-6">
                 {value}
               </td>
             </tr>

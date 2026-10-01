@@ -47,7 +47,7 @@ const footerLinks = [
 
 export function Footer() {
   return (
-    <footer className="border-t-[3px] border-lime bg-ink text-on-dark/70">
+    <footer className="bg-teal-dark text-on-dark/70">
       <Container>
         <div className="py-16 lg:py-20">
           <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-6 lg:gap-8">
@@ -67,20 +67,20 @@ export function Footer() {
               <div className="mt-6 space-y-3">
                 <a
                   href={COMPANY.phoneHref}
-                  className="flex items-center gap-3 text-on-dark/70 transition-colors hover:text-lime"
+                  className="flex items-center gap-3 text-on-dark/70 transition-colors hover:text-on-dark"
                 >
-                  <Phone className="h-5 w-5" />
+                  <Phone className="h-4 w-4" />
                   {COMPANY.phone}
                 </a>
                 <a
                   href={COMPANY.emailHref}
-                  className="flex items-center gap-3 text-on-dark/70 transition-colors hover:text-lime"
+                  className="flex items-center gap-3 text-on-dark/70 transition-colors hover:text-on-dark"
                 >
-                  <Mail className="h-5 w-5" />
+                  <Mail className="h-4 w-4" />
                   {COMPANY.email}
                 </a>
                 <div className="flex items-center gap-3 text-on-dark/70">
-                  <MapPin className="h-5 w-5" />
+                  <MapPin className="h-4 w-4" />
                   Salinas & Lodi, California
                 </div>
               </div>
@@ -89,7 +89,7 @@ export function Footer() {
             {/* Link columns */}
             {footerLinks.map((group) => (
               <nav key={group.title} aria-label={`${group.title} links`}>
-                <p className="font-mono text-[0.68rem] font-bold uppercase tracking-[0.16em] text-lime">{group.title}</p>
+                <p className="text-sm font-medium text-on-dark">{group.title}</p>
                 <ul className="mt-4 space-y-3">
                   {group.links.map((link) => (
                     <li key={link.name}>
@@ -107,12 +107,12 @@ export function Footer() {
           </div>
 
           {/* Bottom */}
-          <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-on-dark/15 pt-8 sm:flex-row">
+          <div className="mt-14 flex flex-col items-center justify-between gap-6 border-t border-on-dark/10 pt-8 sm:flex-row">
             <div className="flex flex-wrap items-center gap-4">
-              <span className="border-2 border-ink bg-lime px-4 py-1.5 text-sm font-bold uppercase tracking-wide text-ink">
+              <span className="flex items-center gap-2 text-sm font-medium text-on-dark before:h-1.5 before:w-1.5 before:rounded-full before:bg-lime">
                 DVBE Certified
               </span>
-              <span className="font-mono text-xs uppercase tracking-[0.08em] text-on-dark/50">
+              <span className="text-xs text-on-dark/60">
                 CA #{COMPANY.certificationId} • CAGE {COMPANY.cageCode}
               </span>
               <a
@@ -130,7 +130,7 @@ export function Footer() {
                 />
               </a>
             </div>
-            <p className="font-mono text-xs uppercase tracking-[0.08em] text-on-dark/50">
+            <p className="text-xs text-on-dark/60">
               © {CURRENT_YEAR} {COMPANY.name}
             </p>
           </div>

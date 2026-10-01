@@ -53,14 +53,13 @@ export default function ForContractorsPage() {
     <>
       {/* Hero */}
       <section className="relative overflow-hidden bg-primary py-20 lg:py-28">
-        <div className="absolute bottom-0 left-0 right-0 h-2 bg-lime" aria-hidden="true" />
         <Container className="relative">
           <div className="mx-auto max-w-4xl text-center">
-            <div className="mb-6 inline-flex items-center gap-2 bg-lime px-4 py-2 text-sm font-bold text-primary">
+            <div className="mb-6 inline-flex items-center gap-2 border border-white/20 bg-white/10 px-3 py-1.5 text-sm font-medium text-white/90">
               <ShieldCheck className="h-4 w-4" />
               DVBE Certified
             </div>
-            <h1 className="font-heading text-4xl font-bold uppercase tracking-[0.01em] text-white sm:text-5xl">
+            <h1 className="font-heading text-4xl font-semibold text-white sm:text-5xl">
               For Contractors
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-xl text-white/90">
@@ -69,14 +68,14 @@ export default function ForContractorsPage() {
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
               <Link
                 href="/quote"
-                className="inline-flex h-14 items-center justify-center gap-2 bg-lime px-10 text-lg font-bold text-primary shadow-lg shadow-lime/30 transition-all duration-200 hover:bg-accent-hover"
+                className="inline-flex h-14 items-center justify-center gap-2 bg-lime px-8 text-base font-semibold text-ink transition-colors duration-200 hover:bg-accent-hover"
               >
                 Get a Quote
                 <ArrowRight className="h-5 w-5" />
               </Link>
               <Link
                 href="/dvbe-equipment-rental"
-                className="inline-flex h-14 items-center justify-center gap-2 border-2 border-white/30 px-8 text-lg font-semibold text-white transition-all duration-200 hover:border-white/60 hover:bg-white/10"
+                className="inline-flex h-14 items-center justify-center gap-2 border border-white/30 px-8 text-base font-medium text-white transition-colors duration-200 hover:border-white/60 hover:bg-white/10"
               >
                 DVBE Information
               </Link>
@@ -94,7 +93,7 @@ export default function ForContractorsPage() {
               <div className="border border-border bg-card p-6 sm:p-8">
                 <div className="mb-4 flex items-center gap-2">
                   <ShieldCheck className="h-6 w-6 text-primary" />
-                  <h2 className="font-heading text-xl font-bold text-foreground">
+                  <h2 className="font-heading text-xl font-semibold text-foreground">
                     California Certifications
                   </h2>
                 </div>
@@ -122,7 +121,7 @@ export default function ForContractorsPage() {
               <div className="border border-border bg-card p-6 sm:p-8">
                 <div className="mb-4 flex items-center gap-2">
                   <ShieldCheck className="h-6 w-6 text-primary" />
-                  <h2 className="font-heading text-xl font-bold text-foreground">
+                  <h2 className="font-heading text-xl font-semibold text-foreground">
                     Federal Certifications
                   </h2>
                 </div>
@@ -154,7 +153,7 @@ export default function ForContractorsPage() {
       <section className="bg-muted py-16 lg:py-24">
         <Container>
           <div className="mx-auto max-w-3xl">
-            <h2 className="mb-10 text-center font-heading text-2xl font-bold text-foreground lg:text-3xl">
+            <h2 className="mb-10 text-center font-heading text-2xl font-semibold text-foreground lg:text-3xl">
               How It Works
             </h2>
             <div className="space-y-6">
@@ -163,7 +162,7 @@ export default function ForContractorsPage() {
                   key={item.step}
                   className="flex items-start gap-4 border border-border bg-card p-5"
                 >
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center bg-primary text-sm font-bold text-white">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center bg-teal-light font-heading text-sm font-semibold text-primary">
                     {item.step}
                   </div>
                   <div>
@@ -185,7 +184,7 @@ export default function ForContractorsPage() {
       <section className="py-16 lg:py-24">
         <Container>
           <div className="mx-auto max-w-3xl">
-            <h2 className="font-heading text-2xl font-bold text-foreground lg:text-3xl">
+            <h2 className="font-heading text-2xl font-semibold text-foreground lg:text-3xl">
               A DVBE Vendor Contractors Can Actually Use
             </h2>
             <p className="mt-4 text-muted-foreground">
@@ -220,7 +219,7 @@ export default function ForContractorsPage() {
           <div className="mx-auto max-w-2xl">
             <div className="mb-8 flex items-center gap-2">
               <FileText className="h-6 w-6 text-primary" />
-              <h2 className="font-heading text-2xl font-bold text-foreground lg:text-3xl">
+              <h2 className="font-heading text-2xl font-semibold text-foreground lg:text-3xl">
                 Documentation Available
               </h2>
             </div>
@@ -243,7 +242,7 @@ export default function ForContractorsPage() {
       <section className="bg-muted py-16 lg:py-24">
         <Container>
           <div className="mx-auto max-w-xl text-center">
-            <h2 className="font-heading text-2xl font-bold text-foreground lg:text-3xl">
+            <h2 className="font-heading text-2xl font-semibold text-foreground lg:text-3xl">
               Contact for Documentation
             </h2>
             <p className="mt-3 text-muted-foreground">
@@ -281,7 +280,7 @@ export default function ForContractorsPage() {
       <section className="py-12">
         <Container>
           <div className="mx-auto max-w-3xl">
-            <h3 className="text-center font-heading text-lg font-bold text-foreground">
+            <h3 className="text-center font-heading text-lg font-semibold text-foreground">
               Related Contractor Resources
             </h3>
             <div className="mt-6 flex flex-wrap justify-center gap-4">

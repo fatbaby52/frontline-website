@@ -177,7 +177,7 @@ export function QuoteWizard() {
         <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center bg-success/10">
           <Check className="h-8 w-8 text-success" aria-hidden="true" />
         </div>
-        <h2 className="font-heading text-2xl font-bold text-foreground">
+        <h2 className="font-heading text-2xl font-semibold text-foreground">
           Quote Request Submitted
         </h2>
         <p className="mt-3 text-muted-foreground">

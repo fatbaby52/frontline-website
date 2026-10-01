@@ -12,11 +12,11 @@ export function PricingDisplay({
   size = "sm",
 }: PricingDisplayProps) {
   return (
-    <div className={cn("font-mono", className)}>
-      <span className="text-sm text-muted-foreground">From </span>
+    <div className={cn("flex items-baseline gap-1.5", className)}>
+      <span className="text-sm text-muted-foreground">From</span>
       <span
         className={cn(
-          "font-bold text-primary",
+          "font-heading font-semibold text-primary",
           size === "lg" ? "text-3xl lg:text-4xl" : "text-xl"
         )}
       >

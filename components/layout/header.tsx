@@ -100,30 +100,30 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50">
-      {/* Utility data bar */}
-      <div className="border-b-2 border-lime bg-ink text-on-dark/70">
+      {/* Utility bar */}
+      <div className="border-b border-border bg-concrete-2 text-muted-foreground">
         <Container>
-          <div className="flex h-9 items-center justify-between gap-6">
-            <span className="eyebrow-mono truncate text-[0.68rem] text-lime">
-              DVBE CERTIFIED · CA #2048623
+          <div className="flex h-8 items-center justify-between gap-6 text-xs">
+            <span className="truncate">
+              DVBE certified · CA #2048623
             </span>
-            <span className="eyebrow-mono hidden truncate text-[0.68rem] md:inline">
-              ZERO-EMISSION CONSTRUCTION EQUIPMENT · SALINAS + LODI, CA
+            <span className="hidden truncate md:inline">
+              Zero-emission construction equipment · Salinas and Lodi, CA
             </span>
             <a
               href="tel:8312622847"
-              className="eyebrow-mono whitespace-nowrap text-[0.68rem] transition-colors hover:text-lime"
+              className="flex items-center whitespace-nowrap transition-colors hover:text-primary"
             >
-              CALL (831) 262-2847
+              Call (831) 262-2847
             </a>
           </div>
         </Container>
       </div>
 
       {/* Nav */}
-      <div className="border-b-[3px] border-ink bg-concrete">
+      <div className="border-b border-border bg-concrete/95 backdrop-blur-sm">
       <Container>
-        <div className="flex h-16 items-center justify-between lg:h-20">
+        <div className="flex h-16 items-center justify-between lg:h-[72px]">
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
@@ -131,7 +131,7 @@ export function Header() {
               alt="Frontline EV Rentals"
               width={160}
               height={54}
-              className="h-10 w-auto lg:h-12"
+              className="h-10 w-auto lg:h-11"
               priority
             />
           </Link>
@@ -141,10 +141,10 @@ export function Header() {
             <Link
               href="/equipment"
               aria-current={isCurrentPage("/equipment") ? "page" : undefined}
-              className={`eyebrow-mono relative py-1.5 text-[0.74rem] tracking-[0.12em] transition-colors duration-200 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-right after:scale-x-0 after:bg-lime after:transition-transform after:duration-200 hover:after:origin-left hover:after:scale-x-100 ${
+              className={`relative py-1.5 text-sm font-medium transition-colors duration-200 after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-primary after:transition-transform after:duration-200 hover:after:scale-x-100 ${
                 isCurrentPage("/equipment")
-                  ? "text-ink after:origin-left after:scale-x-100"
-                  : "text-muted-foreground hover:text-ink"
+                  ? "text-foreground after:scale-x-100"
+                  : "text-muted-foreground hover:text-foreground"
               }`}
             >
               Equipment
@@ -154,10 +154,10 @@ export function Header() {
             <div ref={locationsRef} className="relative">
               <button
                 onClick={() => setLocationsOpen(!locationsOpen)}
-                className={`eyebrow-mono flex items-center gap-1 py-1.5 text-[0.74rem] tracking-[0.12em] transition-colors duration-200 ${
+                className={`flex items-center gap-1 py-1.5 text-sm font-medium transition-colors duration-200 ${
                   isLocationActive
-                    ? "text-ink"
-                    : "text-muted-foreground hover:text-ink"
+                    ? "text-foreground"
+                    : "text-muted-foreground hover:text-foreground"
                 }`}
               >
                 Locations
@@ -165,7 +165,7 @@ export function Header() {
               </button>
 
               {locationsOpen && (
-                <div className="absolute left-0 top-full mt-2 w-64 border-2 border-ink bg-paper p-2 shadow-[6px_6px_0_rgba(13,20,18,0.16)]">
+                <div className="absolute left-0 top-full mt-2 w-64 border border-border bg-paper p-2 shadow-[0_12px_32px_-16px_rgba(22,32,30,0.3)]">
                   {locations.map((location) => (
                     <Link
                       key={location.href}
@@ -177,7 +177,7 @@ export function Header() {
                       }`}
                       onClick={() => setLocationsOpen(false)}
                     >
-                      <span className="font-heading font-semibold uppercase tracking-wide">{location.name}</span>
+                      <span className="text-sm font-medium">{location.name}</span>
                       <span className="block text-xs text-muted-foreground">{location.description}</span>
                     </Link>
                   ))}
@@ -190,10 +190,10 @@ export function Header() {
                 key={item.name}
                 href={item.href}
                 aria-current={isCurrentPage(item.href) ? "page" : undefined}
-                className={`eyebrow-mono relative py-1.5 text-[0.74rem] tracking-[0.12em] transition-colors duration-200 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-right after:scale-x-0 after:bg-lime after:transition-transform after:duration-200 hover:after:origin-left hover:after:scale-x-100 ${
+                className={`relative py-1.5 text-sm font-medium transition-colors duration-200 after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-primary after:transition-transform after:duration-200 hover:after:scale-x-100 ${
                   isCurrentPage(item.href)
-                    ? "text-ink after:origin-left after:scale-x-100"
-                    : "text-muted-foreground hover:text-ink"
+                    ? "text-foreground after:scale-x-100"
+                    : "text-muted-foreground hover:text-foreground"
                 }`}
               >
                 {item.name}
@@ -205,14 +205,14 @@ export function Header() {
           <div className="hidden items-center gap-3 lg:flex">
             <a
               href="tel:8312622847"
-              className="eyebrow-mono flex items-center gap-2 text-[0.72rem] text-muted-foreground transition-colors hover:text-primary"
+              className="flex items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
             >
               <Phone className="h-4 w-4" />
               (831) 262-2847
             </a>
             <Link
               href="/quote"
-              className="inline-flex h-11 items-center justify-center border-2 border-ink bg-lime px-6 text-xs font-bold uppercase tracking-wide text-ink transition-all duration-200 hover:-translate-y-0.5 hover:[box-shadow:6px_6px_0_var(--primary)]"
+              className="inline-flex h-10 items-center justify-center rounded-[2px] bg-primary px-5 text-sm font-medium text-primary-foreground transition-colors duration-200 hover:bg-primary-light"
             >
               Get a Quote
             </Link>
@@ -222,7 +222,7 @@ export function Header() {
           <button
             ref={menuButtonRef}
             type="button"
-            className="flex h-11 w-11 items-center justify-center border-2 border-ink bg-concrete text-ink lg:hidden"
+            className="flex h-11 w-11 items-center justify-center text-foreground lg:hidden"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-expanded={mobileMenuOpen}
             aria-controls="mobile-menu"
@@ -244,7 +244,7 @@ export function Header() {
           aria-modal={mobileMenuOpen}
           aria-label="Mobile navigation"
           aria-hidden={!mobileMenuOpen}
-          className={`grid border-t-2 border-ink lg:hidden transition-[grid-template-rows] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+          className={`grid border-t border-border lg:hidden transition-[grid-template-rows] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${
             mobileMenuOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
           }`}
         >
@@ -254,7 +254,7 @@ export function Header() {
                 href="/equipment"
                 aria-current={isCurrentPage("/equipment") ? "page" : undefined}
                 tabIndex={mobileMenuOpen ? 0 : -1}
-                className={`px-4 py-3 font-heading text-base font-semibold uppercase tracking-wide transition-colors duration-200 ${
+                className={`px-4 py-3 text-base font-medium transition-colors duration-200 ${
                   isCurrentPage("/equipment")
                     ? "bg-teal-light text-primary"
                     : "text-foreground hover:bg-muted"
@@ -266,7 +266,7 @@ export function Header() {
 
               {/* Location links in mobile */}
               <div className="px-4 py-2">
-                <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                <span className="text-xs font-medium text-muted-foreground">
                   Locations
                 </span>
               </div>
@@ -276,7 +276,7 @@ export function Header() {
                   href={location.href}
                   aria-current={isCurrentPage(location.href) ? "page" : undefined}
                   tabIndex={mobileMenuOpen ? 0 : -1}
-                  className={`px-4 py-3 font-heading text-base font-semibold uppercase tracking-wide transition-colors duration-200 ${
+                  className={`px-4 py-3 text-base font-medium transition-colors duration-200 ${
                     isCurrentPage(location.href)
                       ? "bg-teal-light text-primary"
                       : "text-foreground hover:bg-muted"
@@ -296,7 +296,7 @@ export function Header() {
                   href={item.href}
                   aria-current={isCurrentPage(item.href) ? "page" : undefined}
                   tabIndex={mobileMenuOpen ? 0 : -1}
-                  className={`px-4 py-3 font-heading text-base font-semibold uppercase tracking-wide transition-colors duration-200 ${
+                  className={`px-4 py-3 text-base font-medium transition-colors duration-200 ${
                     isCurrentPage(item.href)
                       ? "bg-teal-light text-primary"
                       : "text-foreground hover:bg-muted"
@@ -311,7 +311,7 @@ export function Header() {
               <a
                 href="tel:8312622847"
                 tabIndex={mobileMenuOpen ? 0 : -1}
-                className="flex items-center justify-center gap-2 border-2 border-ink py-3 text-base font-bold uppercase tracking-wide text-ink"
+                className="flex items-center justify-center gap-2 rounded-[2px] border border-foreground/25 py-3 text-base font-medium text-foreground"
               >
                 <Phone className="h-5 w-5" />
                 (831) 262-2847
@@ -319,7 +319,7 @@ export function Header() {
               <Link
                 href="/quote"
                 tabIndex={mobileMenuOpen ? 0 : -1}
-                className="flex items-center justify-center border-2 border-ink bg-lime py-4 text-base font-bold uppercase tracking-wide text-ink"
+                className="flex items-center justify-center rounded-[2px] bg-primary py-3.5 text-base font-medium text-primary-foreground"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Get a Quote

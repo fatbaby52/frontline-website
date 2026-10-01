@@ -49,7 +49,7 @@ export default function FAQPage() {
           <div className="mx-auto max-w-3xl">
             {faqData.map((category) => (
               <div key={category.name} className="mb-10 last:mb-0">
-                <h2 className="mb-4 font-heading text-xl font-bold text-foreground">
+                <h2 className="mb-4 font-heading text-xl font-semibold text-foreground">
                   {category.name}
                 </h2>
                 <Accordion type="single" collapsible className="space-y-2">

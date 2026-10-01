@@ -134,19 +134,14 @@ export default function UtilityPublicWorksPage() {
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-primary py-20 lg:py-28">
-        <div
-          className="absolute -right-20 top-20 h-40 w-[500px] rotate-[-20deg] bg-lime opacity-20 blur-3xl"
-          aria-hidden="true"
-        />
-        <div className="absolute bottom-0 left-0 right-0 h-2 bg-lime" aria-hidden="true" />
 
         <Container className="relative">
           <div className="mx-auto max-w-4xl text-center">
-            <div className="mb-6 inline-flex items-center gap-2 bg-lime px-4 py-2 text-sm font-bold text-primary">
+            <div className="mb-6 inline-flex items-center gap-2 border border-white/20 bg-white/10 px-3 py-1.5 text-sm font-medium text-white/90">
               <Zap className="h-4 w-4" />
               Zero Emission Equipment
             </div>
-            <h1 className="font-heading text-4xl font-bold uppercase tracking-[0.01em] text-white sm:text-5xl lg:text-6xl">
+            <h1 className="font-heading text-4xl font-semibold text-white sm:text-5xl lg:text-6xl">
               Electric Equipment Rentals for Utility, Public Works, and Compliance-Driven Jobs
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-xl text-white/90">
@@ -155,14 +150,14 @@ export default function UtilityPublicWorksPage() {
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
               <Link
                 href="/quote"
-                className="inline-flex h-14 items-center justify-center gap-2 bg-lime px-10 text-lg font-bold text-primary shadow-lg shadow-lime/30 transition-all duration-200 hover:bg-accent-hover"
+                className="inline-flex h-14 items-center justify-center gap-2 bg-lime px-8 text-base font-semibold text-ink transition-colors duration-200 hover:bg-accent-hover"
               >
                 Check Availability
                 <ArrowRight className="h-5 w-5" />
               </Link>
               <a
                 href={COMPANY.phoneHref}
-                className="inline-flex h-14 items-center justify-center gap-2 border-2 border-white/30 px-8 text-lg font-semibold text-white transition-all duration-200 hover:border-white/60 hover:bg-white/10"
+                className="inline-flex h-14 items-center justify-center gap-2 border border-white/30 px-8 text-base font-medium text-white transition-colors duration-200 hover:border-white/60 hover:bg-white/10"
               >
                 <Phone className="h-5 w-5" />
                 {COMPANY.phone}
@@ -176,15 +171,15 @@ export default function UtilityPublicWorksPage() {
       </section>
 
       {/* Ready for Compliance-Driven Jobs */}
-      <section className="border-b border-lime/30 bg-lime/10 py-8">
+      <section className="border-b border-border bg-paper py-8">
         <Container>
           <div className="mx-auto max-w-4xl">
             <div className="flex flex-col items-center gap-6 text-center lg:flex-row lg:text-left">
-              <div className="flex h-16 w-16 shrink-0 items-center justify-center bg-lime">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center bg-teal-light">
                 <CheckCircle className="h-8 w-8 text-primary" />
               </div>
               <div className="flex-1">
-                <h2 className="font-heading text-2xl font-bold text-foreground">
+                <h2 className="font-heading text-2xl font-semibold text-foreground">
                   Ready for Compliance-Driven Jobs
                 </h2>
                 <p className="mt-2 text-muted-foreground">
@@ -211,7 +206,7 @@ export default function UtilityPublicWorksPage() {
       <section className="py-16 lg:py-24">
         <Container>
           <div className="mx-auto max-w-5xl">
-            <h2 className="text-center font-heading text-3xl font-bold uppercase tracking-[0.01em] text-foreground lg:text-4xl">
+            <h2 className="text-center font-heading text-3xl font-semibold text-foreground lg:text-4xl">
               Built for Jobs Where Diesel Is a Problem
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-center text-lg text-muted-foreground">
@@ -227,7 +222,7 @@ export default function UtilityPublicWorksPage() {
                   <div className="mb-4 flex h-12 w-12 items-center justify-center bg-primary/10">
                     <item.icon className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="font-heading text-lg font-bold text-foreground">
+                  <h3 className="font-heading text-lg font-semibold text-foreground">
                     {item.title}
                   </h3>
                   <p className="mt-2 text-muted-foreground">{item.description}</p>
@@ -242,7 +237,7 @@ export default function UtilityPublicWorksPage() {
       <section className="bg-muted py-16 lg:py-24">
         <Container>
           <div className="mx-auto max-w-3xl">
-            <h2 className="text-center font-heading text-3xl font-bold uppercase tracking-[0.01em] text-foreground lg:text-4xl">
+            <h2 className="text-center font-heading text-3xl font-semibold text-foreground lg:text-4xl">
               Why Electric Equipment for Utility Work
             </h2>
             <div className="mt-10 space-y-6">
@@ -251,7 +246,7 @@ export default function UtilityPublicWorksPage() {
                   key={item.title}
                   className="border border-border bg-card p-6"
                 >
-                  <h3 className="font-heading text-lg font-bold text-foreground">
+                  <h3 className="font-heading text-lg font-semibold text-foreground">
                     {item.title}
                   </h3>
                   <p className="mt-2 text-muted-foreground">{item.description}</p>
@@ -266,7 +261,7 @@ export default function UtilityPublicWorksPage() {
       <section className="py-16 lg:py-24">
         <Container>
           <div className="mx-auto max-w-4xl">
-            <h2 className="text-center font-heading text-3xl font-bold uppercase tracking-[0.01em] text-foreground lg:text-4xl">
+            <h2 className="text-center font-heading text-3xl font-semibold text-foreground lg:text-4xl">
               Project Types We Support
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-center text-muted-foreground">
@@ -291,7 +286,7 @@ export default function UtilityPublicWorksPage() {
       <section className="bg-teal-light py-16 lg:py-24">
         <Container>
           <div className="mx-auto max-w-4xl">
-            <h2 className="mb-4 text-center font-heading text-3xl font-bold uppercase tracking-[0.01em] text-foreground lg:text-4xl">
+            <h2 className="mb-4 text-center font-heading text-3xl font-semibold text-foreground lg:text-4xl">
               Equipment Available
             </h2>
             <p className="mx-auto mb-10 max-w-2xl text-center text-muted-foreground">
@@ -303,7 +298,7 @@ export default function UtilityPublicWorksPage() {
                   key={item.slug}
                   className="bg-paper p-6 shadow-sm"
                 >
-                  <h3 className="font-heading text-lg font-bold text-foreground">
+                  <h3 className="font-heading text-lg font-semibold text-foreground">
                     {item.name}
                   </h3>
                   <p className="mt-1 text-sm text-muted-foreground">{item.type}</p>
@@ -318,7 +313,7 @@ export default function UtilityPublicWorksPage() {
                       </li>
                     ))}
                   </ul>
-                  <p className="mt-4 text-2xl font-bold text-primary">
+                  <p className="mt-4 text-2xl font-semibold text-primary">
                     ${item.dailyRate}
                     <span className="text-base font-normal text-muted-foreground">
                       /day
@@ -343,7 +338,7 @@ export default function UtilityPublicWorksPage() {
               <div className="border border-border bg-card p-6">
                 <div className="mb-4 flex items-center gap-2">
                   <ShieldCheck className="h-6 w-6 text-primary" />
-                  <h3 className="font-heading text-xl font-bold text-foreground">
+                  <h3 className="font-heading text-xl font-semibold text-foreground">
                     DVBE Certified
                   </h3>
                 </div>
@@ -363,7 +358,7 @@ export default function UtilityPublicWorksPage() {
               <div className="border border-border bg-card p-6">
                 <div className="mb-4 flex items-center gap-2">
                   <MapPin className="h-6 w-6 text-primary" />
-                  <h3 className="font-heading text-xl font-bold text-foreground">
+                  <h3 className="font-heading text-xl font-semibold text-foreground">
                     Serving California
                   </h3>
                 </div>
@@ -395,15 +390,15 @@ export default function UtilityPublicWorksPage() {
       <section className="bg-muted py-16 lg:py-24">
         <Container>
           <div className="mx-auto max-w-3xl">
-            <h2 className="text-center font-heading text-3xl font-bold uppercase tracking-[0.01em] text-foreground lg:text-4xl">
+            <h2 className="text-center font-heading text-3xl font-semibold text-foreground lg:text-4xl">
               How It Works
             </h2>
             <div className="mt-12 grid gap-8 sm:grid-cols-3">
               <div className="text-center">
-                <div className="mx-auto flex h-14 w-14 items-center justify-center bg-primary text-xl font-bold text-white">
+                <div className="mx-auto flex h-14 w-14 items-center justify-center bg-teal-light font-heading text-xl font-semibold text-primary">
                   1
                 </div>
-                <h3 className="mt-4 font-heading text-lg font-bold text-foreground">
+                <h3 className="mt-4 font-heading text-lg font-semibold text-foreground">
                   Tell Us Your Project
                 </h3>
                 <p className="mt-2 text-sm text-muted-foreground">
@@ -411,10 +406,10 @@ export default function UtilityPublicWorksPage() {
                 </p>
               </div>
               <div className="text-center">
-                <div className="mx-auto flex h-14 w-14 items-center justify-center bg-primary text-xl font-bold text-white">
+                <div className="mx-auto flex h-14 w-14 items-center justify-center bg-teal-light font-heading text-xl font-semibold text-primary">
                   2
                 </div>
-                <h3 className="mt-4 font-heading text-lg font-bold text-foreground">
+                <h3 className="mt-4 font-heading text-lg font-semibold text-foreground">
                   Get the Right Machine
                 </h3>
                 <p className="mt-2 text-sm text-muted-foreground">
@@ -422,10 +417,10 @@ export default function UtilityPublicWorksPage() {
                 </p>
               </div>
               <div className="text-center">
-                <div className="mx-auto flex h-14 w-14 items-center justify-center bg-primary text-xl font-bold text-white">
+                <div className="mx-auto flex h-14 w-14 items-center justify-center bg-teal-light font-heading text-xl font-semibold text-primary">
                   3
                 </div>
-                <h3 className="mt-4 font-heading text-lg font-bold text-foreground">
+                <h3 className="mt-4 font-heading text-lg font-semibold text-foreground">
                   Pick Up or Deliver
                 </h3>
                 <p className="mt-2 text-sm text-muted-foreground">
@@ -441,7 +436,7 @@ export default function UtilityPublicWorksPage() {
       <section className="py-12">
         <Container>
           <div className="mx-auto max-w-3xl">
-            <h3 className="text-center font-heading text-lg font-bold text-foreground">
+            <h3 className="text-center font-heading text-lg font-semibold text-foreground">
               Related Contractor Resources
             </h3>
             <div className="mt-6 flex flex-wrap justify-center gap-4">
