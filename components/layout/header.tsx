@@ -101,9 +101,9 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50">
       {/* Utility bar */}
-      <div className="border-b border-border bg-concrete-2 text-muted-foreground">
+      <div className="border-b border-ink bg-lime text-ink">
         <Container>
-          <div className="flex h-8 items-center justify-between gap-6 text-xs">
+          <div className="flex h-8 items-center justify-between gap-6 text-xs font-semibold">
             <span className="truncate">
               DVBE certified · CA #2048623
             </span>
@@ -121,23 +121,27 @@ export function Header() {
       </div>
 
       {/* Nav */}
-      <div className="border-b border-border bg-concrete/95 backdrop-blur-sm">
+      <div className="border-b-2 border-ink bg-paper">
       <Container>
         <div className="flex h-16 items-center justify-between lg:h-[72px]">
           {/* Logo */}
-          <Link href="/" className="flex items-center">
-            <Image
-              src="/images/logo.png"
-              alt="Frontline EV Rentals"
-              width={160}
-              height={54}
-              className="h-10 w-auto lg:h-11"
-              priority
-            />
+          <Link href="/" className="flex items-center gap-2.5" aria-label="Frontline EV Rentals home">
+            {/* Display the existing logo symbol without its small embedded wordmark. */}
+            <span className="relative h-12 w-12 shrink-0 overflow-hidden" aria-hidden="true">
+              <Image
+                src="/images/logo.png"
+                alt=""
+                width={116}
+                height={116}
+                className="absolute -left-[34px] -top-[19px] h-[116px] w-[116px] max-w-none"
+                priority
+              />
+            </span>
+            <span className="text-[0.9375rem] font-extrabold leading-tight tracking-tight sm:text-lg">Frontline EV Rentals</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav aria-label="Main navigation" className="hidden items-center gap-7 lg:flex">
+          <nav aria-label="Main navigation" className="hidden items-center gap-4 lg:flex">
             <Link
               href="/equipment"
               aria-current={isCurrentPage("/equipment") ? "page" : undefined}
@@ -205,14 +209,14 @@ export function Header() {
           <div className="hidden items-center gap-3 lg:flex">
             <a
               href="tel:8312622847"
-              className="flex items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+              className="hidden items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-primary xl:flex"
             >
               <Phone className="h-4 w-4" />
               (831) 262-2847
             </a>
             <Link
               href="/quote"
-              className="inline-flex h-10 items-center justify-center rounded-[2px] bg-primary px-5 text-sm font-medium text-primary-foreground transition-colors duration-200 hover:bg-primary-light"
+              className="inline-flex h-10 items-center justify-center border-2 border-ink bg-lime px-5 text-sm font-bold text-ink transition-colors duration-200 hover:bg-accent-hover"
             >
               Get a Quote
             </Link>
@@ -222,7 +226,7 @@ export function Header() {
           <button
             ref={menuButtonRef}
             type="button"
-            className="flex h-11 w-11 items-center justify-center text-foreground lg:hidden"
+            className="flex h-11 w-11 shrink-0 items-center justify-center text-foreground lg:hidden"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-expanded={mobileMenuOpen}
             aria-controls="mobile-menu"
@@ -319,7 +323,7 @@ export function Header() {
               <Link
                 href="/quote"
                 tabIndex={mobileMenuOpen ? 0 : -1}
-                className="flex items-center justify-center rounded-[2px] bg-primary py-3.5 text-base font-medium text-primary-foreground"
+                className="flex items-center justify-center border-2 border-ink bg-lime py-3.5 text-base font-bold text-ink"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Get a Quote

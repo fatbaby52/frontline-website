@@ -240,7 +240,7 @@ const faqJsonLd = {
   })),
 };
 
-const h2Class = "font-heading text-3xl font-semibold text-foreground lg:text-4xl";
+const h2Class = "font-heading text-3xl font-bold text-foreground lg:text-4xl";
 
 export default function HomePage() {
   return (
@@ -354,7 +354,7 @@ export default function HomePage() {
       {/* Why Contractors Choose Frontline */}
       <section className="py-20 lg:py-24">
         <Container>
-          <p className="eyebrow">The advantage</p>
+          <p className="eyebrow section-rule">The advantage</p>
           <h2 className={`mt-3 max-w-2xl ${h2Class}`}>
             Why Contractors Choose Frontline
           </h2>
@@ -379,7 +379,7 @@ export default function HomePage() {
         <Container>
           <div className="grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:gap-16">
             <div>
-              <p className="eyebrow">True cost of ownership</p>
+              <p className="eyebrow section-rule">True cost of ownership</p>
               <h2 className={`mt-3 ${h2Class}`}>
                 Your Real Rental Cost Is Lower Than You Think
               </h2>
@@ -449,7 +449,7 @@ export default function HomePage() {
       <section className="py-20 lg:py-24">
         <Container>
           <div>
-            <p className="eyebrow">In fleet</p>
+            <p className="eyebrow section-rule">In fleet</p>
             <h2 className={`mt-3 ${h2Class}`}>Available Equipment</h2>
             <p className="mt-3 text-lg text-muted-foreground">
               Electric skid steers in fleet and ready for pickup or delivery
@@ -458,29 +458,29 @@ export default function HomePage() {
               {equipment.map((item) => (
                 <article
                   key={item.slug}
-                  className="group flex flex-col border border-border bg-paper transition-colors duration-200 hover:border-primary/40"
+                  className="fleet-sheet group flex flex-col bg-paper"
                 >
-                  <div className="relative aspect-[16/11] overflow-hidden border-b border-border bg-white">
+                  <div className="relative aspect-[16/11] overflow-hidden border-b border-border bg-white pt-10">
                     {item.image && (
                       <img
                         src={item.image}
                         alt={`${item.name} electric skid steer available for rent in Salinas and Lodi California`}
-                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                        className="h-full w-full object-contain p-4 transition-transform duration-500 group-hover:scale-[1.02]"
                       />
                     )}
-                    <div className="absolute inset-x-3 top-3 flex justify-between text-xs font-medium">
-                      <span className="flex items-center gap-1.5 bg-paper/95 px-2.5 py-1 text-foreground">
-                        <span className="h-1.5 w-1.5 rounded-full bg-lime-dark" aria-hidden="true" />
+                    <div className="absolute inset-x-0 top-0 flex justify-between border-b-2 border-ink bg-ink px-4 py-2.5 text-xs font-bold uppercase tracking-[0.08em] text-on-dark">
+                      <span className="flex items-center gap-2">
+                        <span className="h-1.5 w-1.5 bg-lime" aria-hidden="true" />
                         Ready Now
                       </span>
-                      <span className="bg-paper/95 px-2.5 py-1 text-muted-foreground">
+                      <span className="text-on-dark/80">
                         {item.unitsAvailable} Available
                       </span>
                     </div>
                   </div>
-                  <div className="flex flex-1 flex-col p-7">
-                    <p className="text-xs font-medium text-primary">{item.type}</p>
-                    <h3 className="mt-1.5 font-heading text-2xl font-semibold text-foreground">
+                  <div className="flex flex-1 flex-col p-5 lg:p-6">
+                    <p className="text-xs font-bold uppercase tracking-[0.1em] text-lime-dark">{item.type}</p>
+                    <h3 className="mt-2 font-heading text-2xl font-bold text-foreground">
                       {item.name}
                     </h3>
                     <p className="mt-3 text-sm text-muted-foreground">
@@ -499,9 +499,9 @@ export default function HomePage() {
                       <span className="mx-2" aria-hidden="true">·</span>
                       <span className="text-foreground">Fuel Included</span>
                     </p>
-                    <ul className="mt-5 space-y-2.5">
+                    <ul className="mt-5 border-t border-border">
                       {item.highlights.slice(0, 3).map((highlight) => (
-                        <li key={highlight} className="flex items-start gap-2.5 text-sm text-foreground">
+                        <li key={highlight} className="flex items-start gap-2.5 border-b border-border py-2.5 text-sm text-foreground">
                           <Check className="mt-0.5 h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
                           {highlight}
                         </li>
@@ -510,8 +510,8 @@ export default function HomePage() {
                     <p className="mt-5 text-xs text-muted-foreground">
                       Free pickup from Salinas or Lodi. Delivery available statewide.
                     </p>
-                    <div className="mt-5 flex gap-3">
-                      <Button asChild className="flex-1">
+                    <div className="mt-auto flex flex-col gap-3 pt-6 sm:flex-row">
+                      <Button asChild variant="lime" className="flex-1">
                         <Link href="/quote">Check Availability</Link>
                       </Button>
                       <Button asChild variant="outline">
@@ -578,7 +578,7 @@ export default function HomePage() {
       <section className="py-20 lg:py-24">
         <Container>
           <div>
-            <p className="eyebrow">The yard</p>
+            <p className="eyebrow section-rule">The yard</p>
             <h2 className={`mt-3 ${h2Class}`}>Our Fleet Up Close</h2>
             <p className="mt-3 max-w-2xl text-muted-foreground">
               Real equipment, real photos. See the FirstGreen Elise 1200 electric skid steers in our fleet.
@@ -659,7 +659,7 @@ export default function HomePage() {
       <section className="py-20 lg:py-24">
         <Container>
           <div>
-            <p className="eyebrow">Customers</p>
+            <p className="eyebrow section-rule">Customers</p>
             <h2 className={`mt-3 ${h2Class}`}>Who We Work With</h2>
             <ul className="mt-10 grid gap-x-10 gap-y-5 sm:grid-cols-2 lg:grid-cols-3">
               {whoWeHelp.map((item) => (
@@ -677,7 +677,7 @@ export default function HomePage() {
       <section className="border-y border-border bg-concrete-2 py-20 lg:py-24">
         <Container>
           <div>
-            <p className="eyebrow">The difference</p>
+            <p className="eyebrow section-rule">The difference</p>
             <h2 className={`mt-3 max-w-2xl ${h2Class}`}>
               Why Frontline Instead of a Generic Rental Yard?
             </h2>
@@ -701,7 +701,7 @@ export default function HomePage() {
       <section className="py-20 lg:py-24">
         <Container>
           <div>
-            <p className="eyebrow">Process</p>
+            <p className="eyebrow section-rule">Process</p>
             <h2 className={`mt-3 ${h2Class}`}>How It Works</h2>
             <ol className="mt-12 grid gap-10 sm:grid-cols-3">
               {[
@@ -742,7 +742,7 @@ export default function HomePage() {
       <section className="border-y border-border bg-paper py-20 lg:py-24">
         <Container>
           <div>
-            <p className="eyebrow">Coverage</p>
+            <p className="eyebrow section-rule">Coverage</p>
             <h2 className={`mt-3 ${h2Class}`}>Where We Serve</h2>
             <p className="mt-3 text-lg text-muted-foreground">
               Free pickup from Salinas or Lodi. Delivery available throughout California.
@@ -869,7 +869,7 @@ export default function HomePage() {
         <Container>
           <div className="grid gap-10 lg:grid-cols-[1fr_2fr] lg:gap-16">
             <div>
-              <p className="eyebrow">Answers</p>
+              <p className="eyebrow section-rule">Answers</p>
               <h2 className={`mt-3 ${h2Class}`}>Common Questions</h2>
             </div>
             <div className="border-t border-foreground/15">

@@ -12,10 +12,10 @@ export function EquipmentCard({ equipment, priority = false }: EquipmentCardProp
   return (
     <Link
       href={`/equipment/${equipment.slug}`}
-      className="group relative block overflow-hidden border border-border bg-paper transition-colors duration-200 hover:border-primary/40"
+      className="fleet-sheet group relative block overflow-hidden bg-paper"
     >
       {/* Type badge */}
-      <div className="absolute left-0 top-0 z-10 m-3 bg-paper/90 px-2.5 py-1 text-xs font-medium text-primary">
+      <div className="border-b-2 border-ink bg-ink px-4 py-2.5 text-xs font-bold uppercase tracking-[0.12em] text-on-dark">
         Electric
       </div>
 
@@ -39,8 +39,8 @@ export function EquipmentCard({ equipment, priority = false }: EquipmentCardProp
       </div>
 
       <div className="p-6">
-        <p className="text-xs font-medium text-primary">{equipment.type}</p>
-        <h3 className="mt-1.5 font-heading text-2xl font-semibold text-foreground transition-colors duration-200 group-hover:text-primary">
+        <p className="text-xs font-bold uppercase tracking-[0.1em] text-lime-dark">{equipment.type}</p>
+        <h3 className="mt-1.5 font-heading text-2xl font-bold text-foreground transition-colors duration-200 group-hover:text-primary">
           {equipment.name}
         </h3>
 

@@ -19,16 +19,16 @@ interface HeroProps {
 }
 
 const primaryCtaClass =
-  "group inline-flex h-[52px] items-center justify-center gap-2.5 rounded-[2px] bg-primary px-7 text-[0.9375rem] font-medium text-primary-foreground transition-colors duration-200 hover:bg-primary-light";
+  "group inline-flex h-[52px] items-center justify-center gap-2.5 border-2 border-ink bg-lime px-7 text-[0.9375rem] font-bold text-ink transition-colors duration-200 hover:bg-accent-hover";
 const secondaryCtaClass =
-  "inline-flex h-[52px] items-center justify-center rounded-[2px] border border-foreground/25 px-7 text-[0.9375rem] font-medium text-foreground transition-colors duration-200 hover:border-foreground/50 hover:bg-foreground/[0.04]";
+  "inline-flex h-[52px] items-center justify-center border-2 border-foreground px-7 text-[0.9375rem] font-medium text-foreground transition-colors duration-200 hover:border-foreground/50 hover:bg-foreground/[0.04]";
 
 function Badges({ badges, className }: { badges: string[]; className?: string }) {
   return (
-    <ul className={cn("flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground", className)}>
+    <ul className={cn("flex flex-wrap gap-x-6 gap-y-2 text-xs font-bold uppercase tracking-[0.1em] text-foreground", className)}>
       {badges.map((badge) => (
         <li key={badge} className="flex items-center gap-2">
-          <span className="h-1.5 w-1.5 rounded-full bg-lime-dark" aria-hidden="true" />
+          <span className="h-2 w-2 bg-lime-dark" aria-hidden="true" />
           {badge}
         </li>
       ))}
@@ -48,7 +48,7 @@ export function Hero({
   serviceArea,
   microcopy,
 }: HeroProps) {
-  // Split hero (homepage): viewport-scale heading beside a circular fleet photo.
+  // Homepage: strong typography and a square fleet-photo frame from the flyer.
   if (backgroundImage) {
     const sentences = headline.split(/(?<=\.)\s+/);
     const lead = sentences.slice(0, -1).join(" ");
@@ -57,28 +57,27 @@ export function Hero({
     return (
       <section
         className={cn(
-          "relative flex flex-col overflow-hidden border-b border-border bg-concrete [background-image:radial-gradient(ellipse_at_22%_12%,rgba(251,250,245,0.95)_0%,transparent_55%)] lg:min-h-[calc(100dvh-6.5rem)]",
+          "border-b-2 border-ink bg-paper",
           className
         )}
       >
         <Container className="flex flex-1 flex-col">
-          <div className="grid flex-1 grid-cols-1 gap-10 pb-10 pt-12 lg:grid-cols-[1.25fr_1fr] lg:gap-16 lg:pb-12 lg:pt-14">
+          <div className="grid grid-cols-1 items-center gap-9 py-10 sm:py-12 lg:grid-cols-[1.16fr_1fr] lg:gap-12 lg:py-16">
             <div className="flex flex-col justify-center">
-              <p className="sh-anim sh-a1 eyebrow mb-6 flex items-center gap-3">
-                <span className="h-px w-8 bg-primary/40" aria-hidden="true" />
+              <p className="mb-6 border-l-4 border-lime pl-3 text-xs font-bold uppercase leading-relaxed tracking-[0.1em]">
                 Electric construction equipment · DVBE certified, CA #2048623
               </p>
 
-              <h1 className="sh-anim sh-a2 hero-heading font-heading font-semibold text-foreground">
+              <h1 className="hero-heading font-heading font-extrabold text-foreground">
                 {lead && <>{lead} </>}
-                <span className={lead ? "hero-underline text-primary" : undefined}>{closer}</span>
+                <span className={lead ? "hero-highlight" : undefined}>{closer}</span>
               </h1>
 
-              <p className="sh-anim sh-a3 mt-7 max-w-[44ch] text-lg leading-relaxed text-muted-foreground">
+              <p className="mt-6 max-w-[44ch] text-lg leading-relaxed text-muted-foreground">
                 {subhead}
               </p>
 
-              <div className="sh-anim sh-a4 mt-9 flex flex-wrap items-center gap-x-7 gap-y-4">
+              <div className="mt-8 flex flex-wrap items-center gap-x-7 gap-y-4">
                 {primaryCta && (
                   <Link href={primaryCta.href} className={cn(primaryCtaClass, "hero-cta h-14 px-8")}>
                     {primaryCta.label}
@@ -96,66 +95,31 @@ export function Hero({
               </div>
             </div>
 
-            {/* Fleet photo: a circle sized to the copy block, with a lime arc
-                and a slow-turning badge. */}
-            <div className="flex items-center justify-center lg:justify-end">
-              <div className="sh-photo relative aspect-square w-full max-w-[min(20rem,78vw)] lg:max-w-[min(30rem,56vh)]">
-                <span
-                  aria-hidden="true"
-                  className="absolute -inset-3 rounded-full border border-primary/15 lg:-inset-4"
+            <div className="border-2 border-ink bg-concrete-2">
+              <div className="flex items-center justify-between gap-3 bg-ink px-4 py-3 text-xs font-bold uppercase tracking-[0.12em] text-on-dark">
+                <span>Electric construction equipment</span>
+                <span className="h-2.5 w-2.5 shrink-0 bg-lime" aria-hidden="true" />
+              </div>
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <Image
+                  src={backgroundImage}
+                  alt="Frontline EV Rentals zero emission construction equipment fleet in California"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 540px"
+                  className="object-cover object-center"
+                  priority
+                  quality={85}
                 />
-                <svg
-                  aria-hidden="true"
-                  viewBox="0 0 100 100"
-                  className="absolute -inset-3 -rotate-[38deg] lg:-inset-4"
-                  fill="none"
-                >
-                  <circle
-                    className="hero-arc"
-                    cx="50"
-                    cy="50"
-                    r="49.25"
-                    pathLength="100"
-                    stroke="var(--lime)"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                  />
-                </svg>
-                <div className="relative h-full w-full overflow-hidden rounded-full">
-                  <Image
-                    src={backgroundImage}
-                    alt="Frontline EV Rentals zero emission construction equipment fleet in California"
-                    fill
-                    sizes="(max-width: 1024px) 78vw, 30rem"
-                    className="hero-photo-img object-cover object-center"
-                    priority
-                    quality={85}
-                  />
-                </div>
-
-                {/* Turning badge */}
-                <div
-                  aria-hidden="true"
-                  className="absolute -bottom-1 -left-3 h-24 w-24 rounded-full bg-primary text-primary-foreground shadow-[0_10px_28px_-12px_rgba(7,42,47,0.6)] lg:-left-6 lg:bottom-2 lg:h-32 lg:w-32"
-                >
-                  <svg viewBox="0 0 120 120" className="hero-badge-spin h-full w-full">
-                    <defs>
-                      <path id="hero-badge-path" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0" />
-                    </defs>
-                    <text fill="currentColor" fontSize="10.5" fontWeight="500" letterSpacing="0.6">
-                      <textPath href="#hero-badge-path" textLength="270">
-                        Ready now · Zero emission · DVBE certified ·
-                      </textPath>
-                    </text>
-                  </svg>
-                  <span className="absolute inset-0 m-auto h-3 w-3 rounded-full bg-lime" />
-                </div>
+              </div>
+              <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-1 border-t-2 border-ink bg-lime px-4 py-3 text-xs font-bold uppercase tracking-[0.1em]">
+                <span>DVBE certified</span>
+                <span>CA #2048623</span>
               </div>
             </div>
           </div>
 
           {(badges?.length || serviceArea) && (
-            <div className="sh-anim sh-a5 flex flex-col gap-3 border-t border-border py-5 sm:flex-row sm:items-center sm:justify-between">
+            <div className="flex flex-col gap-3 border-t-2 border-ink py-5 sm:flex-row sm:items-center sm:justify-between">
               {badges && badges.length > 0 && <Badges badges={badges} />}
               {serviceArea && (
                 <p className="text-sm text-muted-foreground">{serviceArea}</p>
@@ -167,11 +131,11 @@ export function Hero({
     );
   }
 
-  // Interior / compact hero: quiet concrete band.
+  // Interior pages keep the same crisp white surface and ruled edge.
   return (
     <section
       className={cn(
-        "border-b border-border bg-concrete",
+        "border-b-2 border-ink bg-concrete",
         compact ? "py-14 lg:py-16" : "py-16 lg:py-24",
         className
       )}

@@ -92,7 +92,7 @@ export function SearchBar({ onResponse }: SearchBarProps) {
       <Container>
         <div className="max-w-3xl">
           {/* Search Input */}
-          <div className="border border-border bg-paper p-2 shadow-[0_14px_36px_-22px_rgba(22,32,30,0.35)]">
+          <div className="border-2 border-ink bg-paper p-2">
             <form onSubmit={handleSubmit} className="flex gap-2">
               <div className="relative flex-1">
                 <input

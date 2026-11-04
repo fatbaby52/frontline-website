@@ -1,17 +1,10 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Barlow_Semi_Condensed, Inter, Space_Mono } from "next/font/google";
+import { Inter, Space_Mono } from "next/font/google";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ChatWidget } from "@/components/chat/chat-widget";
 import "./globals.css";
-
-const headingFont = Barlow_Semi_Condensed({
-  variable: "--font-heading",
-  subsets: ["latin"],
-  weight: ["500", "600"],
-  display: "swap",
-});
 
 const inter = Inter({
   variable: "--font-body",
@@ -108,7 +101,7 @@ export default function RootLayout({
         `}
       </Script>
       <body
-        className={`${headingFont.variable} ${inter.variable} ${spaceMono.variable} antialiased`}
+        className={`${inter.variable} ${spaceMono.variable} antialiased`}
       >
         <a
           href="#main-content"
