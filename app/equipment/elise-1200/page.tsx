@@ -36,7 +36,7 @@ export default function Elise1200Page() {
       {/* Hero */}
       <section className="bg-primary py-16 lg:py-24">
         <Container>
-          <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
+          <div className="grid min-w-0 items-center gap-8 lg:grid-cols-2 lg:gap-12 [&>div]:min-w-0">
             <div>
               <Badge className="mb-4 bg-white/10 text-white hover:bg-white/20">
                 {machine.type}
@@ -60,7 +60,7 @@ export default function Elise1200Page() {
                   Weekly and monthly rates available
                 </p>
               </div>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <Button
                   asChild
                   size="lg"

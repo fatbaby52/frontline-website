@@ -253,6 +253,7 @@ export function Header() {
           }`}
         >
           <div className="overflow-hidden">
+            <div className="max-h-[calc(100dvh-98px)] overflow-y-auto overscroll-contain">
             <nav aria-label="Mobile navigation" className="flex flex-col gap-1 py-4">
               <Link
                 href="/equipment"
@@ -328,6 +329,7 @@ export function Header() {
               >
                 Get a Quote
               </Link>
+            </div>
             </div>
           </div>
         </div>
