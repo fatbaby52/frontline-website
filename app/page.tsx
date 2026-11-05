@@ -526,6 +526,27 @@ export default function HomePage() {
         </Container>
       </section>
 
+      <section aria-labelledby="ag-rebates-heading" className="border-y border-ink bg-lime-soft py-10 lg:py-12">
+        <Container>
+          <p className="eyebrow">For agricultural customers</p>
+          <h2 id="ag-rebates-heading" className="mt-3 font-heading text-2xl font-bold text-foreground sm:text-3xl">
+            Explore 3CE agricultural electrification rebates
+          </h2>
+          <p className="mt-4 max-w-3xl leading-relaxed text-muted-foreground">
+            Eligible Central Coast Community Energy (3CE) agricultural customers may qualify for rebates on eligible all-electric agricultural equipment. For qualifying leased equipment, 3CE lists 50% of a one-year lease term, capped at $15,000, with one lease rebate per customer for the life of the program.
+          </p>
+          <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+            Confirm your customer, equipment, agricultural-use, and lease eligibility directly with 3CE before committing. Short-term rentals are not confirmed eligible. Awards require 3CE approval and available funding; a rebate is not guaranteed.
+          </p>
+          <a
+            href="https://3cenergy.org/rebates/ag-electrification-program-2/"
+            className="mt-5 inline-flex min-h-11 items-center font-semibold text-foreground underline underline-offset-4 hover:text-lime-dark"
+          >
+            Check current 3CE eligibility and program terms
+          </a>
+        </Container>
+      </section>
+
       {/* Real Fleet, Ready Now */}
       <section className="bg-teal-dark text-on-dark">
         <div className="grid items-stretch lg:grid-cols-[1.05fr_1fr]">
