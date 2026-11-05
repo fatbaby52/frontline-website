@@ -20,7 +20,7 @@ export const faqData: FAQCategory[] = [
       {
         question: "What are your rental rates?",
         answer:
-          "The Elise 1200 rents for $525/day and the CBL 1200 for $450/day. Weekly and monthly rates are available - contact us for a quote. All rates include standard bucket or forks.",
+          "The Elise 1200 rents for $525/day and the CBL 1200 for $450/day. All machines, including the JCB 19C-1E, rent for $1,200/month. Contact us for weekly rates. All rates include standard bucket or forks.",
       },
       {
         question: "What's included with the rental?",

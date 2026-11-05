@@ -109,7 +109,7 @@ export default function Jcb19c1ePage() {
                   </span>
                 </div>
                 <p className="mt-2 text-sm text-white/50">
-                  {machine.weeklyRate ? `Weekly rate: ${machine.weeklyRate}. ` : ""}Monthly rates available
+                  {machine.weeklyRate ? `Weekly rate: ${machine.weeklyRate}. ` : ""}{machine.monthlyRate}/month
                 </p>
               </div>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
@@ -273,8 +273,7 @@ export default function Jcb19c1ePage() {
               <div>
                 <h3 className="font-semibold text-foreground">Pricing</h3>
                 <p className="text-sm text-muted-foreground">
-                  ${machine.dailyRate}/day{machine.weeklyRate ? ` or ${machine.weeklyRate}/week` : ""}. Monthly
-                  rates available on request. All rates include a standard
+                  ${machine.dailyRate}/day{machine.weeklyRate ? ` or ${machine.weeklyRate}/week` : ""}. {machine.monthlyRate}/month. All rates include a standard
                   bucket.
                 </p>
               </div>

@@ -491,11 +491,11 @@ export default function HomePage() {
                     </p>
                     <div className="mt-5 flex flex-wrap items-baseline gap-x-3 gap-y-1 border-t border-border pt-5">
                       <span className="text-xs text-muted-foreground">For a limited time:</span>
-                      <span className="font-heading text-3xl font-semibold leading-none text-foreground">{item.slug === "elise-1200" ? "$1,200" : "$1,000"}</span>
-                      <span className="text-sm text-muted-foreground">/week</span>
+                      <span className="font-heading text-3xl font-semibold leading-none text-foreground">{item.monthlyRate}</span>
+                      <span className="text-sm text-muted-foreground">/month</span>
                     </div>
                     <p className="mt-2 text-sm text-muted-foreground">
-                      <span className="line-through">${item.dailyRate}/day</span>
+                      <span>${item.dailyRate}/day</span>
                       <span className="mx-2" aria-hidden="true">·</span>
                       <span className="text-foreground">Fuel Included</span>
                     </p>

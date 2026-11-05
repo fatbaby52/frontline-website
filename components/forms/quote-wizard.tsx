@@ -7,6 +7,7 @@ import { z } from "zod";
 import { Check, ChevronRight, ChevronLeft, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { equipment } from "@/lib/data/equipment";
 import { Textarea } from "@/components/ui/textarea";
 
 const quoteSchema = z.object({
@@ -29,8 +30,11 @@ const quoteSchema = z.object({
 type QuoteFormData = z.infer<typeof quoteSchema>;
 
 const equipmentOptions = [
-  { value: "elise-1200", label: "FirstGreen Elise 1200", price: "$525/day" },
-  { value: "cbl-1200", label: "FirstGreen CBL 1200", price: "$450/day" },
+  ...equipment.map((machine) => ({
+    value: machine.slug === "elise-1200-cbl" ? "cbl-1200" : machine.slug,
+    label: machine.name,
+    price: `${machine.monthlyRate}/month`,
+  })),
   { value: "drone-lidar", label: "Drone LiDAR Services", price: "" },
   { value: "not-sure", label: "Not sure - need guidance", price: "" },
 ];
@@ -259,7 +263,7 @@ export function QuoteWizard() {
                     role="checkbox"
                     aria-checked={isSelected}
                     onClick={() => toggleEquipment(option.value)}
-                    className={`flex w-full items-center justify-between border p-4 text-left transition-all ${
+                    className={`flex w-full flex-wrap items-center justify-between gap-3 border p-4 text-left transition-all ${
                       isSelected
                         ? "border-primary bg-primary/5"
                         : "border-border hover:border-primary/30"

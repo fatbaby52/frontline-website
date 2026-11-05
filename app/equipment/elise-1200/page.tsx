@@ -57,7 +57,7 @@ export default function Elise1200Page() {
                   </span>
                 </div>
                 <p className="mt-2 text-sm text-white/50">
-                  Weekly and monthly rates available
+                  {machine.monthlyRate}/month. Weekly rates available
                 </p>
               </div>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
@@ -242,7 +242,7 @@ export default function Elise1200Page() {
               <div>
                 <h3 className="font-semibold text-foreground">Pricing</h3>
                 <p className="text-sm text-muted-foreground">
-                  ${machine.dailyRate}/day. Weekly and monthly rates available on
+                  ${machine.dailyRate}/day. {machine.monthlyRate}/month. Weekly rates available on
                   request. All rates include standard bucket or forks.
                 </p>
               </div>

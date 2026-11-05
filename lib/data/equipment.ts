@@ -28,7 +28,7 @@ export const equipment: Equipment[] = [
     bestFor: "Best for operators who need climate control and comfort on all-day jobs",
     dailyRate: 525,
     weeklyRate: "Contact for rates",
-    monthlyRate: "Contact for rates",
+    monthlyRate: "$1,200",
     unitsAvailable: 2,
     image: "/images/elise-1200.jpg",
     galleryImages: [
@@ -84,7 +84,7 @@ export const equipment: Equipment[] = [
     bestFor: "Best for operators who need visibility and maneuverability on tight-access work",
     dailyRate: 450,
     weeklyRate: "Contact for rates",
-    monthlyRate: "Contact for rates",
+    monthlyRate: "$1,200",
     unitsAvailable: 2,
     image: "/images/cbl-1200.jpg",
     galleryImages: [
@@ -138,7 +138,7 @@ export const equipment: Equipment[] = [
     bestFor: "Best for digging, trenching, and utility work where emissions and noise matter",
     dailyRate: 450,
     weeklyRate: "$1,000",
-    monthlyRate: "Contact for rates",
+    monthlyRate: "$1,200",
     unitsAvailable: 3,
     image: "/images/jcb-19c-1e.jpg",
     galleryImages: [

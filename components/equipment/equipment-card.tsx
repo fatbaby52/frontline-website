@@ -48,6 +48,7 @@ export function EquipmentCard({ equipment, priority = false }: EquipmentCardProp
           {equipment.tagline}
         </p>
 
+        <p className="mt-4 font-semibold text-foreground">{equipment.monthlyRate}/month</p>
         <div className="mt-6 flex items-end justify-between border-t border-border pt-5">
           <div>
             <span className="font-heading text-3xl font-semibold text-primary">
