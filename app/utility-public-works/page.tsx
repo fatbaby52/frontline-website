@@ -313,6 +313,7 @@ export default function UtilityPublicWorksPage() {
                       </li>
                     ))}
                   </ul>
+                  <p className="mt-4 font-semibold text-foreground">{item.monthlyRate}/month</p>
                   <p className="mt-4 text-2xl font-semibold text-primary">
                     ${item.dailyRate}
                     <span className="text-base font-normal text-muted-foreground">
